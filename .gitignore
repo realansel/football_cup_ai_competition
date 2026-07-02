@@ -1,0 +1,19 @@
+# Private exports and account data
+conversations.json
+memories.json
+users.json
+
+# Scratch and transient workspace folders
+work/
+projects/
+.agents/
+.codex/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Transfer bundles are generated artifacts
+*.bundle

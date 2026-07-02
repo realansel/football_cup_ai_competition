@@ -1,0 +1,248 @@
+{
+  "contest": "2026世界杯 · AI赛事预测分析挑战赛",
+  "role": "裁判 / 记录员 / 出图助手",
+  "lastCompletedDay": {
+    "n": 2,
+    "date": "06/30",
+    "stage": "1/16决赛"
+  },
+  "scoringRules": {
+    "currency": "金球币，虚拟积分，无现金价值",
+    "carryOver": true,
+    "allowedBets": [
+      10,
+      20,
+      50,
+      100,
+      500
+    ],
+    "wrongBetConsolation": 5,
+    "payout": "押中回报含本金 = 配置积分 × (1 ÷ 最终占比)",
+    "jackpotQualification": "必须对当日要求的全部比赛/全部维度实际下注且全部命中；未下注不算全中"
+  },
+  "models": [
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "balance": 609,
+      "dayDelta": 178,
+      "jackpot": 0,
+      "color": "#0FB6D6",
+      "ini": "豆"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "balance": 371,
+      "dayDelta": -64,
+      "jackpot": 0,
+      "color": "#D97757",
+      "ini": "C"
+    },
+    {
+      "id": "qwen",
+      "name": "通义千问",
+      "balance": 359,
+      "dayDelta": -117,
+      "jackpot": 0,
+      "color": "#7C5CFF",
+      "ini": "通"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "balance": 348,
+      "dayDelta": -128,
+      "jackpot": 0,
+      "color": "#2D6BF0",
+      "ini": "DS"
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "balance": 344,
+      "dayDelta": -117,
+      "jackpot": 0,
+      "color": "#10A37F",
+      "ini": "GPT"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "balance": 344,
+      "dayDelta": -117,
+      "jackpot": 0,
+      "color": "#DB3E8E",
+      "ini": "GM"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "balance": 344,
+      "dayDelta": -117,
+      "jackpot": 0,
+      "color": "#1F2329",
+      "ini": "GK"
+    },
+    {
+      "id": "glm",
+      "name": "智谱GLM",
+      "balance": 344,
+      "dayDelta": -117,
+      "jackpot": 0,
+      "color": "#3B49C9",
+      "ini": "智"
+    }
+  ],
+  "sourceFiles": {
+    "promptTemplate": "世界杯AI竞猜_每日提示词模板-1.md",
+    "predictionHtmlTemplate": "世界杯AI竞猜_预测_0630-1.html",
+    "settlementHtmlTemplate": "世界杯AI竞猜_结算三榜_0630-4.html"
+  },
+  "nextWorkflow": [
+    "赛前：用户提供日期、阶段、当天比赛、每个选项的赛前占比、当天预测维度。",
+    "我根据 Markdown 模板生成每个 AI 可用的当日提示词，填入该 AI 最新余额。",
+    "用户陆续发送各 AI 回复后，我按模型解析预测、押注额、是否冲击瓜分资格。",
+    "八家齐后，我用预测 HTML 模板生成当日赛前预测图。",
+    "赛后：用户提供赛果、最终占比或实际倍率、是否有人瓜分奖池。",
+    "我计算每个 AI 的单日盈亏、最新余额、命中情况、瓜分次数，并用结算 HTML 模板生成最新积分榜。",
+    "完成后更新本 state 文件，保证下一天从最新余额继续。"
+  ],
+  "currentDay": {
+    "n": 3,
+    "date": "07/03",
+    "stage": "1/16决赛",
+    "status": "predictions_ready",
+    "note": "Claude禁赛，今日有效参赛7家",
+    "matches": [
+      {
+        "home": "西班牙",
+        "away": "奥地利",
+        "time": "03:00",
+        "odds": {
+          "home": 95,
+          "away": 5
+        }
+      },
+      {
+        "home": "葡萄牙",
+        "away": "克罗地亚",
+        "time": "07:00",
+        "odds": {
+          "home": 72,
+          "away": 28
+        }
+      },
+      {
+        "home": "瑞士",
+        "away": "阿尔及利亚",
+        "time": "11:00",
+        "odds": {
+          "home": 85,
+          "away": 15
+        }
+      }
+    ],
+    "picks": {
+      "gemini": [
+        {
+          "pick": "西班牙",
+          "bet": 100
+        },
+        {
+          "pick": "葡萄牙",
+          "bet": 100
+        },
+        {
+          "pick": "瑞士",
+          "bet": 100
+        }
+      ],
+      "doubao": [
+        {
+          "pick": "西班牙",
+          "bet": 100
+        },
+        {
+          "pick": "葡萄牙",
+          "bet": 100
+        },
+        {
+          "pick": "阿尔及利亚",
+          "bet": 100
+        }
+      ],
+      "grok": [
+        {
+          "pick": "西班牙",
+          "bet": 100
+        },
+        {
+          "pick": "葡萄牙",
+          "bet": 50
+        },
+        {
+          "pick": "瑞士",
+          "bet": 50
+        }
+      ],
+      "deepseek": [
+        {
+          "pick": "西班牙",
+          "bet": 10
+        },
+        {
+          "pick": "葡萄牙",
+          "bet": 50
+        },
+        {
+          "pick": "瑞士",
+          "bet": 10
+        }
+      ],
+      "qwen": [
+        {
+          "pick": "西班牙",
+          "bet": 100
+        },
+        {
+          "pick": "葡萄牙",
+          "bet": 100
+        },
+        {
+          "pick": "瑞士",
+          "bet": 100
+        }
+      ],
+      "glm": [
+        {
+          "pick": "西班牙",
+          "bet": 10
+        },
+        {
+          "pick": "葡萄牙",
+          "bet": 100
+        },
+        {
+          "pick": "瑞士",
+          "bet": 100
+        }
+      ],
+      "chatgpt": [
+        {
+          "pick": "西班牙",
+          "bet": 100
+        },
+        {
+          "pick": "葡萄牙",
+          "bet": 100
+        },
+        {
+          "pick": "瑞士",
+          "bet": 100
+        }
+      ],
+      "claude": "banned"
+    }
+  }
+}
