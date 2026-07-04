@@ -2,8 +2,8 @@
   "contest": "2026世界杯 · AI赛事预测分析挑战赛",
   "role": "裁判 / 记录员 / 出图助手",
   "lastCompletedDay": {
-    "n": 2,
-    "date": "06/30",
+    "n": 4,
+    "date": "07/04",
     "stage": "1/16决赛"
   },
   "scoringRules": {
@@ -24,8 +24,8 @@
     {
       "id": "doubao",
       "name": "豆包",
-      "balance": 609,
-      "dayDelta": 178,
+      "balance": 588,
+      "dayDelta": -26,
       "jackpot": 0,
       "color": "#0FB6D6",
       "ini": "豆"
@@ -34,7 +34,7 @@
       "id": "claude",
       "name": "Claude",
       "balance": 371,
-      "dayDelta": -64,
+      "dayDelta": 0,
       "jackpot": 0,
       "color": "#D97757",
       "ini": "C"
@@ -42,54 +42,54 @@
     {
       "id": "qwen",
       "name": "通义千问",
-      "balance": 359,
-      "dayDelta": -117,
-      "jackpot": 0,
+      "balance": 601,
+      "dayDelta": 87,
+      "jackpot": 1,
       "color": "#7C5CFF",
       "ini": "通"
     },
     {
       "id": "deepseek",
       "name": "DeepSeek",
-      "balance": 348,
-      "dayDelta": -128,
-      "jackpot": 0,
+      "balance": 669,
+      "dayDelta": 276,
+      "jackpot": 1,
       "color": "#2D6BF0",
       "ini": "DS"
     },
     {
       "id": "chatgpt",
       "name": "ChatGPT",
-      "balance": 344,
-      "dayDelta": -117,
-      "jackpot": 0,
+      "balance": 693,
+      "dayDelta": 194,
+      "jackpot": 1,
       "color": "#10A37F",
       "ini": "GPT"
     },
     {
       "id": "gemini",
       "name": "Gemini",
-      "balance": 344,
-      "dayDelta": -117,
-      "jackpot": 0,
+      "balance": 840,
+      "dayDelta": 341,
+      "jackpot": 1,
       "color": "#DB3E8E",
       "ini": "GM"
     },
     {
       "id": "grok",
       "name": "Grok",
-      "balance": 344,
-      "dayDelta": -117,
-      "jackpot": 0,
+      "balance": 481,
+      "dayDelta": 45,
+      "jackpot": 1,
       "color": "#1F2329",
       "ini": "GK"
     },
     {
       "id": "glm",
       "name": "智谱GLM",
-      "balance": 344,
-      "dayDelta": -117,
-      "jackpot": 0,
+      "balance": 958,
+      "dayDelta": 484,
+      "jackpot": 1,
       "color": "#3B49C9",
       "ini": "智"
     }
@@ -109,140 +109,270 @@
     "完成后更新本 state 文件，保证下一天从最新余额继续。"
   ],
   "currentDay": {
-    "n": 3,
-    "date": "07/03",
+    "n": 4,
+    "date": "07/04",
     "stage": "1/16决赛",
-    "status": "predictions_ready",
-    "note": "Claude禁赛，今日有效参赛7家",
+    "status": "settled",
+    "note": "Claude继续封禁，7家有效参赛；今日6个预测维度",
     "matches": [
       {
-        "home": "西班牙",
-        "away": "奥地利",
-        "time": "03:00",
-        "odds": {
-          "home": 95,
-          "away": 5
-        }
+        "home": "澳大利亚",
+        "away": "埃及",
+        "time": "02:00",
+        "dimensions": [
+          "胜负/晋级",
+          "总进球数"
+        ]
       },
       {
-        "home": "葡萄牙",
-        "away": "克罗地亚",
-        "time": "07:00",
-        "odds": {
-          "home": 72,
-          "away": 28
-        }
+        "home": "阿根廷",
+        "away": "佛得角",
+        "time": "06:00",
+        "dimensions": [
+          "胜负/晋级",
+          "佛得角门将扑救数"
+        ]
       },
       {
-        "home": "瑞士",
-        "away": "阿尔及利亚",
-        "time": "11:00",
-        "odds": {
-          "home": 85,
-          "away": 15
-        }
+        "home": "哥伦比亚",
+        "away": "加纳",
+        "time": "09:30",
+        "dimensions": [
+          "胜负/晋级",
+          "总进球数"
+        ]
       }
     ],
     "picks": {
-      "gemini": [
-        {
-          "pick": "西班牙",
-          "bet": 100
-        },
-        {
-          "pick": "葡萄牙",
-          "bet": 100
-        },
-        {
-          "pick": "瑞士",
-          "bet": 100
+      "doubao": {
+        "total": 450,
+        "data": {
+          "ae_win": [
+            "澳大利亚",
+            50
+          ],
+          "ae_goal": [
+            "2-3球",
+            50
+          ],
+          "av_win": [
+            "阿根廷",
+            100
+          ],
+          "saves": [
+            "5次及以上",
+            100
+          ],
+          "cg_win": [
+            "哥伦比亚",
+            100
+          ],
+          "cg_goal": [
+            "2-3球",
+            50
+          ]
         }
-      ],
-      "doubao": [
-        {
-          "pick": "西班牙",
-          "bet": 100
-        },
-        {
-          "pick": "葡萄牙",
-          "bet": 100
-        },
-        {
-          "pick": "阿尔及利亚",
-          "bet": 100
+      },
+      "chatgpt": {
+        "total": 370,
+        "data": {
+          "ae_win": [
+            "埃及",
+            50
+          ],
+          "ae_goal": [
+            "4球及以上",
+            20
+          ],
+          "av_win": [
+            "阿根廷",
+            100
+          ],
+          "saves": [
+            "5次及以上",
+            50
+          ],
+          "cg_win": [
+            "哥伦比亚",
+            100
+          ],
+          "cg_goal": [
+            "2-3球",
+            50
+          ]
         }
-      ],
-      "grok": [
-        {
-          "pick": "西班牙",
-          "bet": 100
-        },
-        {
-          "pick": "葡萄牙",
-          "bet": 50
-        },
-        {
-          "pick": "瑞士",
-          "bet": 50
+      },
+      "qwen": {
+        "total": 420,
+        "data": {
+          "ae_win": [
+            "埃及",
+            50
+          ],
+          "ae_goal": [
+            "2-3球",
+            20
+          ],
+          "av_win": [
+            "阿根廷",
+            100
+          ],
+          "saves": [
+            "5次及以上",
+            100
+          ],
+          "cg_win": [
+            "哥伦比亚",
+            100
+          ],
+          "cg_goal": [
+            "2-3球",
+            50
+          ]
         }
-      ],
-      "deepseek": [
-        {
-          "pick": "西班牙",
-          "bet": 10
-        },
-        {
-          "pick": "葡萄牙",
-          "bet": 50
-        },
-        {
-          "pick": "瑞士",
-          "bet": 10
+      },
+      "grok": {
+        "total": 370,
+        "data": {
+          "ae_win": [
+            "埃及",
+            50
+          ],
+          "ae_goal": [
+            "2-3球",
+            20
+          ],
+          "av_win": [
+            "阿根廷",
+            100
+          ],
+          "saves": [
+            "5次及以上",
+            50
+          ],
+          "cg_win": [
+            "哥伦比亚",
+            100
+          ],
+          "cg_goal": [
+            "2-3球",
+            50
+          ]
         }
-      ],
-      "qwen": [
-        {
-          "pick": "西班牙",
-          "bet": 100
-        },
-        {
-          "pick": "葡萄牙",
-          "bet": 100
-        },
-        {
-          "pick": "瑞士",
-          "bet": 100
+      },
+      "glm": {
+        "total": 310,
+        "data": {
+          "ae_win": [
+            "埃及",
+            100
+          ],
+          "ae_goal": [
+            "4球及以上",
+            50
+          ],
+          "av_win": [
+            "阿根廷",
+            20
+          ],
+          "saves": [
+            "5次及以上",
+            100
+          ],
+          "cg_win": [
+            "哥伦比亚",
+            20
+          ],
+          "cg_goal": [
+            "2-3球",
+            20
+          ]
         }
-      ],
-      "glm": [
-        {
-          "pick": "西班牙",
-          "bet": 10
-        },
-        {
-          "pick": "葡萄牙",
-          "bet": 100
-        },
-        {
-          "pick": "瑞士",
-          "bet": 100
+      },
+      "gemini": {
+        "total": 470,
+        "data": {
+          "ae_win": [
+            "埃及",
+            100
+          ],
+          "ae_goal": [
+            "2-3球",
+            50
+          ],
+          "av_win": [
+            "阿根廷",
+            100
+          ],
+          "saves": [
+            "5次及以上",
+            100
+          ],
+          "cg_win": [
+            "哥伦比亚",
+            100
+          ],
+          "cg_goal": [
+            "1球",
+            20
+          ]
         }
-      ],
-      "chatgpt": [
-        {
-          "pick": "西班牙",
-          "bet": 100
-        },
-        {
-          "pick": "葡萄牙",
-          "bet": 100
-        },
-        {
-          "pick": "瑞士",
-          "bet": 100
+      },
+      "deepseek": {
+        "total": 290,
+        "data": {
+          "ae_win": [
+            "澳大利亚",
+            100
+          ],
+          "ae_goal": [
+            "4球及以上",
+            50
+          ],
+          "av_win": [
+            "阿根廷",
+            20
+          ],
+          "saves": [
+            "5次及以上",
+            50
+          ],
+          "cg_win": [
+            "哥伦比亚",
+            50
+          ],
+          "cg_goal": [
+            "2-3球",
+            20
+          ]
         }
-      ],
-      "claude": "banned"
+      }
+    },
+    "results": {
+      "ae_win": {
+        "winner": "埃及",
+        "pct": 57
+      },
+      "ae_goal": {
+        "winner": "4球及以上",
+        "pct": 13
+      },
+      "av_win": {
+        "winner": "阿根廷",
+        "pct": 89
+      },
+      "saves": {
+        "winner": "5次及以上",
+        "pct": 54
+      },
+      "cg_win": {
+        "winner": "哥伦比亚",
+        "pct": 89
+      },
+      "cg_goal": {
+        "winner": "1球",
+        "pct": 9
+      }
     }
   }
 }

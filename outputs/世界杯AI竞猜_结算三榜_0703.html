@@ -1,0 +1,218 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>结算三榜 · 07/03 · 竖版3:4</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+  :root{
+    --pitch:#0A5C3E; --pitch-2:#063B28; --gold:#F4C84A;
+    --ink:#15211C; --muted:#728178; --line:#E7ECE8; --row:#F4F7F4;
+    --win:#159A66; --loss:#E2544A; --gold-d:#b78f2c; --hot:#E8662A; --g1:#F2B71E; --g2:#B9C0C7; --g3:#CF9A5C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(120% 80% at 50% 0%,#0c3a29,#07251A 60%,#051A12 100%);
+    font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;color:var(--ink);
+    padding:26px 16px 60px;min-height:100vh;font-variant-numeric:tabular-nums;display:flex;flex-direction:column;align-items:center;gap:22px}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;max-width:1180px}
+  .toolbar .hint{color:#bfd6cb;font-size:13px;width:100%;text-align:center;margin-bottom:4px}
+  .toolbar button{background:var(--gold);color:#3a2c05;border:0;border-radius:999px;padding:9px 18px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  .stage{display:flex;flex-wrap:wrap;gap:26px;justify-content:center;align-items:flex-start}
+
+  /* 固定竖版 3:4（600 × 800），内容撑满不溢出 */
+  .card{width:600px;height:800px;background:#fff;border-radius:30px;overflow:hidden;position:relative;
+    box-shadow:0 22px 56px rgba(0,0,0,.42);display:flex;flex-direction:column}
+  .hd{position:relative;background:linear-gradient(135deg,var(--pitch),var(--pitch-2));color:#fff;
+    padding:24px 32px 22px;overflow:hidden;flex:0 0 auto}
+  .hd::before{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 26px,transparent 26px 52px);opacity:.85}
+  .hd::after{content:"";position:absolute;right:-50px;top:-60px;width:200px;height:200px;border-radius:50%;border:2px solid rgba(255,255,255,.1)}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.17em;color:var(--gold);display:flex;align-items:center;gap:8px}
+  .title{font-size:40px;font-weight:900;line-height:1.04;margin-top:8px}
+  .sub{margin-top:9px;font-size:14px;color:#cfe6da;font-weight:600}
+  .sub .chip{display:inline-block;background:rgba(255,255,255,.15);padding:3px 11px;border-radius:999px;margin-left:8px}
+
+  .body{padding:18px 24px 0;flex:1 1 auto;display:flex;flex-direction:column;min-height:0}
+  .rows{display:flex;flex-direction:column;gap:8px;flex:1 1 auto}
+  .rows.tight{gap:7px}
+
+  .champ{display:flex;align-items:center;gap:15px;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,#FFF8E6,#FFFDF7);border:1.5px solid #F2DFA0;margin-bottom:12px;position:relative;flex:0 0 auto}
+  .champ .crown{position:absolute;top:-14px;left:16px;font-size:24px}
+  .champ .dot{width:52px;height:52px;border-radius:15px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:21px;flex:0 0 auto;box-shadow:0 6px 15px rgba(0,0,0,.18)}
+  .champ .who{flex:1;min-width:0}
+  .champ .nm{font-size:22px;font-weight:900}
+  .champ .lab{font-size:12px;color:var(--muted);font-weight:700;margin-top:2px}
+  .champ .bal{text-align:right}
+  .champ .bal b{font-size:36px;font-weight:900;line-height:1;display:block;color:var(--pitch)}
+  .champ .bal span{font-size:12px;color:var(--muted);font-weight:700}
+
+  .row{display:flex;align-items:center;gap:12px;padding:0 13px;border-radius:14px;background:var(--row);flex:1 1 0;min-height:0}
+  .rk{width:26px;text-align:center;font-size:17px;font-weight:900;color:var(--muted);flex:0 0 auto}
+  .rk.t1{color:var(--g1)} .rk.t2{color:var(--g2)} .rk.t3{color:var(--g3)}
+  .dot{width:36px;height:36px;border-radius:10px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:14px}
+  .nm{font-size:16px;font-weight:800}
+  .grow{flex:1;min-width:0}
+  .bar{height:9px;border-radius:6px;background:#E3E9E5;overflow:hidden;max-width:170px}
+  .bar>i{display:block;height:100%;border-radius:6px}
+  .val{font-size:20px;font-weight:900;flex:0 0 auto;text-align:right;min-width:60px}
+  .delta{font-size:13px;font-weight:800;flex:0 0 auto;min-width:54px;text-align:right}
+  .win{color:var(--win)} .loss{color:var(--loss)}
+
+  .picks{display:flex;gap:5px}
+  .pk{width:17px;height:17px;border-radius:5px;font-size:11px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+  .pk.h{background:var(--win)} .pk.m{background:#D7DEDA;color:#8a9690} .pk.a{background:#E7EBE9;color:#AAB3AE}
+  .badge{font-size:11px;font-weight:900;color:#fff;background:var(--win);padding:2px 8px;border-radius:999px;white-space:nowrap}
+
+  .matches{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:9px;flex:0 0 auto}
+  .mt{font-size:12px;font-weight:800;color:#34504a;background:#EAF2EE;border:1px solid #D9E6E0;border-radius:9px;padding:5px 9px}
+  .note{font-size:12.5px;color:#5a6b63;font-weight:700;line-height:1.5;background:#F4F7F5;border-left:3px solid var(--gold);border-radius:8px;padding:9px 11px;margin-bottom:11px;flex:0 0 auto}
+  .note b{color:var(--ink)}
+  .oddsbar{display:flex;gap:7px;margin-bottom:11px;flex:0 0 auto}
+  .ob{flex:1;text-align:center;border-radius:11px;padding:8px 4px;background:#F1F6F3;border:1px solid #E0EAE4}
+  .ob.hit{background:#FFF6E0;border-color:#F0DCA0}
+  .ob .t{font-size:11px;font-weight:800;color:#4a5a52;line-height:1.15}
+  .ob .x{font-size:18px;font-weight:900;color:var(--gold-d);margin-top:3px;line-height:1}
+  .ob.cold .x{color:var(--loss)}
+  .ob .h{font-size:9.5px;font-weight:900;color:#fff;background:var(--hot);border-radius:999px;padding:0 6px;display:inline-block;margin-top:3px}
+
+  .jpbanner{background:#F4F7F5;border:1px dashed #CdD8D2;border-radius:16px;padding:16px;margin-bottom:12px;text-align:center;flex:0 0 auto}
+  .jpbanner .big{font-size:21px;font-weight:900;color:var(--ink)}
+  .jpbanner .small{font-size:12.5px;font-weight:700;color:var(--muted);line-height:1.5;margin-top:5px}
+  .jp .val{color:var(--pitch);min-width:60px}
+
+  .ft{padding:14px 24px 20px;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:12px;font-weight:700;flex:0 0 auto}
+  .ft .gd{color:#b8923a}
+</style>
+
+<div class="toolbar">
+  <div class="hint">↓ 下载竖版 3:4（600×800）PNG。数据改 HTML 顶部 MODELS / DAY</div>
+  <button onclick="dl('card1','01_金球币总榜')">下载 · 总榜</button>
+  <button onclick="dl('card2','02_今日战报')">下载 · 战报</button>
+  <button onclick="dl('card3','03_瓜分榜')">下载 · 瓜分榜</button>
+</div>
+
+<div class="stage">
+  <div class="card" id="card1">
+    <div class="hd"><div class="eyebrow">⚽ AI · 世界杯竞猜实验室</div><div class="title">金球币总榜</div><div class="sub" id="sub1"></div></div>
+    <div class="body"><div id="champWrap" style="flex:0 0 auto"></div><div class="rows" id="rankRows"></div>
+      <div class="ft"><span>押中按占比分成 · 回血 +5</span><span class="gd">豆包 +178 空降榜首</span></div></div>
+  </div>
+  <div class="card" id="card2">
+    <div class="hd"><div class="eyebrow">⚽ AI · 世界杯竞猜实验室</div><div class="title">今日战报</div><div class="sub" id="sub2"></div></div>
+    <div class="body"><div class="matches" id="matches"></div><div class="oddsbar" id="oddsBar"></div><div class="note" id="dayNote"></div>
+      <div class="rows tight" id="reportRows"></div>
+      <div class="ft"><span>✓命中 ✕未中 –弃押 · 按当日盈亏排序</span><span class="gd">🎯 全中可瓜分</span></div></div>
+  </div>
+  <div class="card" id="card3">
+    <div class="hd"><div class="eyebrow">⚽ AI · 世界杯竞猜实验室</div><div class="title">全中瓜分榜</div><div class="sub" id="sub3"></div></div>
+    <div class="body"><div id="jpTop"></div><div class="rows tight" id="jackpotRows"></div>
+      <div class="ft"><span>当日全维度全中 = 瓜分资格</span><span class="gd">谁最稳，一目了然</span></div></div>
+  </div>
+</div>
+
+<script>
+/* ===================== 当日数据 ===================== */
+const DAY = { n:3, date:"07/03", stage:"1/16决赛", tag:"第3天" };
+const MATCHES = ["西班牙 3–0 奥地利 ✓","葡萄牙 2–1 克罗地亚 ✓","瑞士 2–0 阿尔及利亚 ✓"];
+// 今日各场命中档位与实测倍率（cold=爆冷方）
+const ODDS = [
+  { label:'西班牙 晋级', x:'×1.28', cold:false },
+  { label:'葡萄牙 晋级', x:'×1.72', cold:false },
+  { label:'瑞士 晋级',   x:'×1.55', cold:false },
+];
+const DAYNOTE = `<b>三场热门全部打出！</b>西班牙 3–0、葡萄牙 2–1、瑞士 2–0 全部晋级。豆包第三场独押阿尔及利亚失败，但靠前两场收益仍小赚 <b>+5</b> 保住榜首；其余 6 家有效参赛 AI 全部三场命中，瓜分次数各 +1。Claude 今日禁赛，余额不变。`;
+const MODELS = [
+  { id:'doubao', name:'豆包', color:'#0FB6D6', balance:614, dayDelta:+5, jackpot:0, results:[1,1,0] },
+  { id:'qwen', name:'通义千问', color:'#7C5CFF', balance:514, dayDelta:+155, jackpot:1, results:[1,1,1] },
+  { id:'gemini', name:'Gemini', color:'#DB3E8E', balance:499, dayDelta:+155, jackpot:1, results:[1,1,1] },
+  { id:'chatgpt', name:'ChatGPT', color:'#10A37F', balance:499, dayDelta:+155, jackpot:1, results:[1,1,1] },
+  { id:'glm', name:'智谱GLM', color:'#3B49C9', balance:474, dayDelta:+130, jackpot:1, results:[1,1,1] },
+  { id:'grok', name:'Grok', color:'#1F2329', balance:436, dayDelta:+92, jackpot:1, results:[1,1,1] },
+  { id:'deepseek', name:'DeepSeek', color:'#2D6BF0', balance:393, dayDelta:+45, jackpot:1, results:[1,1,1] },
+  { id:'claude', name:'Claude', color:'#D97757', balance:371, dayDelta:+0, jackpot:0, results:[2,2,2] }
+];
+/* ================================================== */
+
+const ini={deepseek:'DS',grok:'GK',claude:'C',chatgpt:'GPT',gemini:'GM',qwen:'通',doubao:'豆',glm:'智'};
+const fmt=n=>(n>0?'+':'')+n;
+const subtxt=`第 ${DAY.n} 天 · ${DAY.date} · ${DAY.stage}`;
+document.getElementById('sub1').innerHTML=subtxt+`<span class="chip">${DAY.tag}</span>`;
+document.getElementById('sub2').innerHTML=subtxt;
+document.getElementById('sub3').innerHTML=`截至第 ${DAY.n} 天`;
+document.getElementById('dayNote').innerHTML=DAYNOTE;
+document.getElementById('matches').innerHTML=MATCHES.map(x=>`<span class="mt">${x}</span>`).join('');
+document.getElementById('oddsBar').innerHTML = ODDS.map(o=>`
+  <div class="ob ${o.cold?'cold':'hit'}">
+    <div class="t">${o.label}</div>
+    <div class="x">${o.x}</div>
+    ${o.cold?'<div class="h">🔥冷门</div>':''}
+  </div>`).join('');
+function rc(r){return r<=3?`t${r}`:''}
+
+/* 总榜 */
+(()=>{
+  const a=[...MODELS].sort((x,y)=>y.balance-x.balance);
+  const ranks=a.map((m,i)=> i>0&&a[i].balance===a[i-1].balance?null:i+1);
+  ranks.forEach((r,i)=>{if(r===null)ranks[i]=ranks[i-1]});
+  const max=a[0].balance,c=a[0],co=a[1]&&a[1].balance===c.balance;
+  document.getElementById('champWrap').innerHTML=`<div class="champ"><span class="crown">👑</span>
+    <div class="dot" style="background:${c.color}">${ini[c.id]}</div>
+    <div class="who"><div class="nm">${c.name}</div><div class="lab">${co?'并列领跑':'当前领跑'} · 今日 <b class="${c.dayDelta>=0?'win':'loss'}">${fmt(c.dayDelta)}</b> · 榜首守擂 · 冷门未遂</div></div>
+    <div class="bal"><b>${c.balance}</b><span>金球币</span></div></div>`;
+  const g=document.getElementById('rankRows');
+  a.slice(1).forEach((m,i)=>{const r=ranks[i+1];
+    g.insertAdjacentHTML('beforeend',`<div class="row">
+      <div class="rk ${rc(r)}">${r}</div>
+      <div class="dot" style="background:${m.color}">${ini[m.id]}</div>
+      <div class="nm" style="min-width:92px">${m.name}</div>
+      <div class="grow"><div class="bar"><i style="width:${Math.max(10,m.balance/max*100)}%;background:${m.color}"></i></div></div>
+      <div class="val">${m.balance}</div>
+      <div class="delta ${m.dayDelta>=0?'win':'loss'}">${fmt(m.dayDelta)}</div></div>`);
+  });
+})();
+
+/* 战报 */
+(()=>{
+  const a=[...MODELS].sort((x,y)=>y.dayDelta-x.dayDelta);
+  const g=document.getElementById('reportRows');
+  a.forEach(m=>{
+    const hits=m.results.filter(v=>v===1).length, absc=m.results.filter(v=>v===2).length;
+    const all=m.results.every(v=>v===1);
+    const picks=m.results.map(v=>{const cls=v===1?'h':(v===2?'a':'m'),s=v===1?'✓':(v===2?'–':'✕');return `<div class="pk ${cls}">${s}</div>`}).join('');
+    const cnt=`命中 ${hits}/3`+(absc?` · 弃${absc}`:'');
+    g.insertAdjacentHTML('beforeend',`<div class="row">
+      <div class="dot" style="background:${m.color}">${ini[m.id]}</div>
+      <div class="nm" style="min-width:92px">${m.name}</div>
+      <div style="font-size:12.5px;color:var(--muted);font-weight:800;min-width:78px">${cnt}</div>
+      <div class="picks grow">${picks}</div>
+      ${all?'<span class="badge">🎯 全中</span>':''}
+      <div class="delta ${m.dayDelta>=0?'win':'loss'}" style="min-width:56px">${fmt(m.dayDelta)}</div></div>`);
+  });
+})();
+
+/* 瓜分榜 */
+(()=>{
+  const maxJp=Math.max(...MODELS.map(m=>m.jackpot));
+  const g=document.getElementById('jackpotRows');
+  if(maxJp===0){
+    document.getElementById('jpTop').innerHTML=`<div class="jpbanner"><div class="big">🫥 连续两天，仍无人全中</div>
+      <div class="small">奖池继续滚存 · 德国爆冷绊倒了所有冲瓜分的 AI，谁来终结？</div></div>`;
+    [...MODELS].sort((x,y)=>y.balance-x.balance).forEach(m=>{
+      g.insertAdjacentHTML('beforeend',`<div class="row">
+        <div class="rk">·</div><div class="dot" style="background:${m.color}">${ini[m.id]}</div>
+        <div class="nm grow">${m.name}</div>
+        <div class="val">0<span style="font-size:12px;color:var(--muted);font-weight:700"> 次</span></div></div>`);
+    });
+    return;
+  }
+  const a=[...MODELS].sort((x,y)=>y.jackpot-x.jackpot||y.balance-x.balance);
+  a.forEach((m,i)=>{const r=i+1,med=r===1?'🏆':(r===2?'🥈':(r===3?'🥉':''));
+    g.insertAdjacentHTML('beforeend',`<div class="row">
+      <div class="rk ${rc(r)}">${r}</div><div class="dot" style="background:${m.color}">${ini[m.id]}</div>
+      <div class="nm grow">${m.name} ${med}</div>
+      <div class="val">${m.jackpot}<span style="font-size:12px;color:var(--muted);font-weight:700"> 次</span></div></div>`);
+  });
+})();
+
+function dl(id,name){
+  html2canvas(document.getElementById(id),{scale:2,backgroundColor:null,useCORS:true})
+    .then(c=>{const a=document.createElement('a');a.download='AI世界杯竞猜_'+name+'.png';a.href=c.toDataURL('image/png');a.click();});
+}
+</script>
