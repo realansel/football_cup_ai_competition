@@ -2,9 +2,9 @@
   "contest": "2026世界杯 · AI赛事预测分析挑战赛",
   "role": "裁判 / 记录员 / 出图助手",
   "lastCompletedDay": {
-    "n": 5,
-    "date": "07/05",
-    "stage": "1/8决赛"
+    "n": 4,
+    "date": "07/04",
+    "stage": "1/16决赛"
   },
   "scoringRules": {
     "currency": "金球币，虚拟积分，无现金价值",
@@ -24,8 +24,8 @@
     {
       "id": "doubao",
       "name": "豆包",
-      "balance": 643,
-      "dayDelta": 55,
+      "balance": 588,
+      "dayDelta": -26,
       "jackpot": 0,
       "color": "#0FB6D6",
       "ini": "豆"
@@ -42,8 +42,8 @@
     {
       "id": "qwen",
       "name": "通义千问",
-      "balance": 640,
-      "dayDelta": 39,
+      "balance": 601,
+      "dayDelta": 87,
       "jackpot": 1,
       "color": "#7C5CFF",
       "ini": "通"
@@ -51,8 +51,8 @@
     {
       "id": "deepseek",
       "name": "DeepSeek",
-      "balance": 552,
-      "dayDelta": -117,
+      "balance": 669,
+      "dayDelta": 276,
       "jackpot": 1,
       "color": "#2D6BF0",
       "ini": "DS"
@@ -60,8 +60,8 @@
     {
       "id": "chatgpt",
       "name": "ChatGPT",
-      "balance": 998,
-      "dayDelta": 305,
+      "balance": 693,
+      "dayDelta": 194,
       "jackpot": 1,
       "color": "#10A37F",
       "ini": "GPT"
@@ -69,8 +69,8 @@
     {
       "id": "gemini",
       "name": "Gemini",
-      "balance": 1175,
-      "dayDelta": 335,
+      "balance": 840,
+      "dayDelta": 341,
       "jackpot": 1,
       "color": "#DB3E8E",
       "ini": "GM"
@@ -78,8 +78,8 @@
     {
       "id": "grok",
       "name": "Grok",
-      "balance": 529,
-      "dayDelta": 48,
+      "balance": 481,
+      "dayDelta": 45,
       "jackpot": 1,
       "color": "#1F2329",
       "ini": "GK"
@@ -87,8 +87,8 @@
     {
       "id": "glm",
       "name": "智谱GLM",
-      "balance": 892,
-      "dayDelta": -66,
+      "balance": 958,
+      "dayDelta": 484,
       "jackpot": 1,
       "color": "#3B49C9",
       "ini": "智"
@@ -109,734 +109,236 @@
     "完成后更新本 state 文件，保证下一天从最新余额继续。"
   ],
   "currentDay": {
-    "n": 5,
-    "date": "07/05",
+    "n": 6,
+    "date": "07/06",
     "stage": "1/8决赛",
-    "status": "settled",
-    "note": "Claude继续封禁，7家有效参赛；今日6个预测维度；Gemini单日+335登顶",
+    "status": "predictions_ready",
+    "note": "Claude继续封禁，7家有效参赛；今日含哈兰德/凯恩进球专项",
     "matches": [
       {
-        "home": "加拿大",
-        "away": "摩洛哥",
-        "time": "01:00",
+        "home": "巴西",
+        "away": "挪威",
+        "time": "04:00",
         "dimensions": [
           "胜负/获胜方",
           "总进球数",
-          "黄牌数量"
+          "哈兰德进球数"
         ]
       },
       {
-        "home": "巴拉圭",
-        "away": "法国",
-        "time": "05:00",
+        "home": "墨西哥",
+        "away": "英格兰",
+        "time": "08:00",
         "dimensions": [
           "胜负/获胜方",
-          "姆巴佩进球数",
-          "黄牌数量"
+          "总进球数",
+          "凯恩进球数"
         ]
       }
     ],
     "picks": {
       "doubao": {
-        "total": 340,
+        "total": 400,
         "data": {
-          "cm_win": [
-            "摩洛哥",
+          "bn_win": [
+            "巴西",
             100
           ],
-          "cm_goal": [
+          "bn_goal": [
             "2-3球",
             50
           ],
-          "cm_card": [
-            "3-5张",
-            20
-          ],
-          "pf_win": [
-            "法国",
-            100
-          ],
-          "mbappe": [
-            "2球及以上",
+          "haaland": [
+            "1球",
             50
           ],
-          "pf_card": [
-            "3-5张",
-            20
-          ]
-        }
-      },
-      "deepseek": {
-        "total": 660,
-        "data": {
-          "cm_win": [
-            "摩洛哥",
-            10
-          ],
-          "cm_goal": [
-            "1球",
-            500
-          ],
-          "cm_card": [
-            "3-5张",
-            20
-          ],
-          "pf_win": [
-            "法国",
-            10
-          ],
-          "mbappe": [
-            "1球",
+          "me_win": [
+            "英格兰",
             100
           ],
-          "pf_card": [
-            "3-5张",
-            20
-          ]
-        }
-      },
-      "grok": {
-        "total": 370,
-        "data": {
-          "cm_win": [
-            "摩洛哥",
-            50
-          ],
-          "cm_goal": [
+          "me_goal": [
             "2-3球",
             50
           ],
-          "cm_card": [
-            "3-5张",
-            20
-          ],
-          "pf_win": [
-            "法国",
-            100
-          ],
-          "mbappe": [
-            "2球及以上",
-            100
-          ],
-          "pf_card": [
-            "3-5张",
-            50
-          ]
-        }
-      },
-      "gemini": {
-        "total": 820,
-        "data": {
-          "cm_win": [
-            "摩洛哥",
-            100
-          ],
-          "cm_goal": [
-            "2-3球",
-            100
-          ],
-          "cm_card": [
-            "3-5张",
-            50
-          ],
-          "pf_win": [
-            "法国",
-            500
-          ],
-          "mbappe": [
+          "kane": [
             "1球",
             50
-          ],
-          "pf_card": [
-            "3-5张",
-            20
           ]
         }
       },
       "chatgpt": {
-        "total": 400,
+        "total": 500,
         "data": {
-          "cm_win": [
-            "摩洛哥",
+          "bn_win": [
+            "巴西",
             100
           ],
-          "cm_goal": [
-            "2-3球",
-            50
-          ],
-          "cm_card": [
-            "3-5张",
-            50
-          ],
-          "pf_win": [
-            "法国",
-            100
-          ],
-          "mbappe": [
-            "1球",
-            50
-          ],
-          "pf_card": [
-            "3-5张",
-            50
-          ]
-        }
-      },
-      "qwen": {
-        "total": 320,
-        "data": {
-          "cm_win": [
-            "摩洛哥",
-            50
-          ],
-          "cm_goal": [
-            "2-3球",
-            50
-          ],
-          "cm_card": [
-            "3-5张",
-            20
-          ],
-          "pf_win": [
-            "法国",
-            50
-          ],
-          "mbappe": [
-            "2球及以上",
-            100
-          ],
-          "pf_card": [
-            "3-5张",
-            50
-          ]
-        }
-      },
-      "glm": {
-        "total": 340,
-        "data": {
-          "cm_win": [
-            "摩洛哥",
-            100
-          ],
-          "cm_goal": [
+          "bn_goal": [
             "4球及以上",
             50
           ],
-          "cm_card": [
-            "3-5张",
-            20
-          ],
-          "pf_win": [
-            "法国",
-            50
-          ],
-          "mbappe": [
-            "2球及以上",
+          "haaland": [
+            "1球",
             100
           ],
-          "pf_card": [
-            "3-5张",
-            20
+          "me_win": [
+            "英格兰",
+            100
+          ],
+          "me_goal": [
+            "2-3球",
+            100
+          ],
+          "kane": [
+            "1球",
+            50
           ]
         }
-      }
-    },
-    "results": {
-      "cm_win": {
-        "winner": "摩洛哥",
-        "score": "加拿大 0-3 摩洛哥",
-        "pct": 91,
-        "payoutMultiplier": 1.38,
-        "source": "截图实付：100 -> 138"
-      },
-      "cm_goal": {
-        "winner": "2-3球",
-        "pct": 75,
-        "payoutMultiplier": 1.3333333333333333,
-        "source": "赛果0-3，总进球3；按截图最终占比75%"
-      },
-      "cm_card": {
-        "winner": "6张及以上",
-        "pct": 4,
-        "payoutMultiplier": 25,
-        "source": "用户确认：加摩黄牌实际为6张及以上；7家均押3-5张，故均未命中"
-      },
-      "pf_win": {
-        "winner": "法国",
-        "score": "巴拉圭 0-1 法国",
-        "pct": 97,
-        "payoutMultiplier": 1.19,
-        "source": "截图实付：100 -> 119"
-      },
-      "mbappe": {
-        "winner": "1球",
-        "pct": 36,
-        "payoutMultiplier": 4.46,
-        "source": "截图实付：50 -> 223"
-      },
-      "pf_card": {
-        "winner": "3-5张",
-        "pct": 52,
-        "payoutMultiplier": 3.05,
-        "source": "截图实付：20 -> 61"
-      }
-    },
-    "settlements": {
-      "doubao": {
-        "hits": 4,
-        "total": 6,
-        "delta": 55,
-        "balanceBefore": 588,
-        "balanceAfter": 643,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": "摩洛哥",
-            "bet": 100,
-            "hit": true,
-            "return": 138,
-            "delta": 38
-          },
-          {
-            "key": "cm_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": true,
-            "return": 67,
-            "delta": 17
-          },
-          {
-            "key": "cm_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": false,
-            "return": 5,
-            "delta": -15
-          },
-          {
-            "key": "pf_win",
-            "pick": "法国",
-            "bet": 100,
-            "hit": true,
-            "return": 119,
-            "delta": 19
-          },
-          {
-            "key": "mbappe",
-            "pick": "2球及以上",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "pf_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": true,
-            "return": 61,
-            "delta": 41
-          }
-        ]
-      },
-      "claude": {
-        "hits": 0,
-        "total": 6,
-        "delta": 0,
-        "balanceBefore": 371,
-        "balanceAfter": 371,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "cm_goal",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "cm_card",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "pf_win",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "mbappe",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "pf_card",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          }
-        ]
-      },
-      "qwen": {
-        "hits": 4,
-        "total": 6,
-        "delta": 39,
-        "balanceBefore": 601,
-        "balanceAfter": 640,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": "摩洛哥",
-            "bet": 50,
-            "hit": true,
-            "return": 69,
-            "delta": 19
-          },
-          {
-            "key": "cm_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": true,
-            "return": 67,
-            "delta": 17
-          },
-          {
-            "key": "cm_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": false,
-            "return": 5,
-            "delta": -15
-          },
-          {
-            "key": "pf_win",
-            "pick": "法国",
-            "bet": 50,
-            "hit": true,
-            "return": 60,
-            "delta": 10
-          },
-          {
-            "key": "mbappe",
-            "pick": "2球及以上",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "pf_card",
-            "pick": "3-5张",
-            "bet": 50,
-            "hit": true,
-            "return": 153,
-            "delta": 103
-          }
-        ]
       },
       "deepseek": {
-        "hits": 4,
-        "total": 6,
-        "delta": -117,
-        "balanceBefore": 669,
-        "balanceAfter": 552,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": "摩洛哥",
-            "bet": 10,
-            "hit": true,
-            "return": 14,
-            "delta": 4
-          },
-          {
-            "key": "cm_goal",
-            "pick": "1球",
-            "bet": 500,
-            "hit": false,
-            "return": 5,
-            "delta": -495
-          },
-          {
-            "key": "cm_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": false,
-            "return": 5,
-            "delta": -15
-          },
-          {
-            "key": "pf_win",
-            "pick": "法国",
-            "bet": 10,
-            "hit": true,
-            "return": 12,
-            "delta": 2
-          },
-          {
-            "key": "mbappe",
-            "pick": "1球",
-            "bet": 100,
-            "hit": true,
-            "return": 446,
-            "delta": 346
-          },
-          {
-            "key": "pf_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": true,
-            "return": 61,
-            "delta": 41
-          }
-        ]
-      },
-      "chatgpt": {
-        "hits": 5,
-        "total": 6,
-        "delta": 305,
-        "balanceBefore": 693,
-        "balanceAfter": 998,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": "摩洛哥",
-            "bet": 100,
-            "hit": true,
-            "return": 138,
-            "delta": 38
-          },
-          {
-            "key": "cm_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": true,
-            "return": 67,
-            "delta": 17
-          },
-          {
-            "key": "cm_card",
-            "pick": "3-5张",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "pf_win",
-            "pick": "法国",
-            "bet": 100,
-            "hit": true,
-            "return": 119,
-            "delta": 19
-          },
-          {
-            "key": "mbappe",
-            "pick": "1球",
-            "bet": 50,
-            "hit": true,
-            "return": 223,
-            "delta": 173
-          },
-          {
-            "key": "pf_card",
-            "pick": "3-5张",
-            "bet": 50,
-            "hit": true,
-            "return": 153,
-            "delta": 103
-          }
-        ]
-      },
-      "gemini": {
-        "hits": 5,
-        "total": 6,
-        "delta": 335,
-        "balanceBefore": 840,
-        "balanceAfter": 1175,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": "摩洛哥",
-            "bet": 100,
-            "hit": true,
-            "return": 138,
-            "delta": 38
-          },
-          {
-            "key": "cm_goal",
-            "pick": "2-3球",
-            "bet": 100,
-            "hit": true,
-            "return": 133,
-            "delta": 33
-          },
-          {
-            "key": "cm_card",
-            "pick": "3-5张",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "pf_win",
-            "pick": "法国",
-            "bet": 500,
-            "hit": true,
-            "return": 595,
-            "delta": 95
-          },
-          {
-            "key": "mbappe",
-            "pick": "1球",
-            "bet": 50,
-            "hit": true,
-            "return": 223,
-            "delta": 173
-          },
-          {
-            "key": "pf_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": true,
-            "return": 61,
-            "delta": 41
-          }
-        ]
+        "total": 500,
+        "data": {
+          "bn_win": [
+            "巴西",
+            50
+          ],
+          "bn_goal": [
+            "0-1球",
+            100
+          ],
+          "haaland": [
+            "0球",
+            100
+          ],
+          "me_win": [
+            "英格兰",
+            50
+          ],
+          "me_goal": [
+            "0-1球",
+            100
+          ],
+          "kane": [
+            "0球",
+            100
+          ]
+        }
       },
       "grok": {
-        "hits": 4,
-        "total": 6,
-        "delta": 48,
-        "balanceBefore": 481,
-        "balanceAfter": 529,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": "摩洛哥",
-            "bet": 50,
-            "hit": true,
-            "return": 69,
-            "delta": 19
-          },
-          {
-            "key": "cm_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": true,
-            "return": 67,
-            "delta": 17
-          },
-          {
-            "key": "cm_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": false,
-            "return": 5,
-            "delta": -15
-          },
-          {
-            "key": "pf_win",
-            "pick": "法国",
-            "bet": 100,
-            "hit": true,
-            "return": 119,
-            "delta": 19
-          },
-          {
-            "key": "mbappe",
-            "pick": "2球及以上",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "pf_card",
-            "pick": "3-5张",
-            "bet": 50,
-            "hit": true,
-            "return": 153,
-            "delta": 103
-          }
-        ]
+        "total": 400,
+        "data": {
+          "bn_win": [
+            "巴西",
+            100
+          ],
+          "bn_goal": [
+            "2-3球",
+            50
+          ],
+          "haaland": [
+            "1球",
+            50
+          ],
+          "me_win": [
+            "英格兰",
+            100
+          ],
+          "me_goal": [
+            "2-3球",
+            50
+          ],
+          "kane": [
+            "1球",
+            50
+          ]
+        }
+      },
+      "qwen": {
+        "total": 240,
+        "data": {
+          "bn_win": [
+            "巴西",
+            50
+          ],
+          "bn_goal": [
+            "2-3球",
+            20
+          ],
+          "haaland": [
+            "1球",
+            50
+          ],
+          "me_win": [
+            "英格兰",
+            50
+          ],
+          "me_goal": [
+            "0-1球",
+            20
+          ],
+          "kane": [
+            "1球",
+            50
+          ]
+        }
       },
       "glm": {
-        "hits": 3,
-        "total": 6,
-        "delta": -66,
-        "balanceBefore": 958,
-        "balanceAfter": 892,
-        "details": [
-          {
-            "key": "cm_win",
-            "pick": "摩洛哥",
-            "bet": 100,
-            "hit": true,
-            "return": 138,
-            "delta": 38
-          },
-          {
-            "key": "cm_goal",
-            "pick": "4球及以上",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "cm_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": false,
-            "return": 5,
-            "delta": -15
-          },
-          {
-            "key": "pf_win",
-            "pick": "法国",
-            "bet": 50,
-            "hit": true,
-            "return": 60,
-            "delta": 10
-          },
-          {
-            "key": "mbappe",
-            "pick": "2球及以上",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "pf_card",
-            "pick": "3-5张",
-            "bet": 20,
-            "hit": true,
-            "return": 61,
-            "delta": 41
-          }
-        ]
+        "total": 400,
+        "data": {
+          "bn_win": [
+            "巴西",
+            100
+          ],
+          "bn_goal": [
+            "2-3球",
+            50
+          ],
+          "haaland": [
+            "1球",
+            50
+          ],
+          "me_win": [
+            "英格兰",
+            100
+          ],
+          "me_goal": [
+            "2-3球",
+            50
+          ],
+          "kane": [
+            "1球",
+            50
+          ]
+        }
+      },
+      "gemini": {
+        "total": 950,
+        "data": {
+          "bn_win": [
+            "巴西",
+            500
+          ],
+          "bn_goal": [
+            "2-3球",
+            100
+          ],
+          "haaland": [
+            "1球",
+            100
+          ],
+          "me_win": [
+            "墨西哥",
+            50
+          ],
+          "me_goal": [
+            "2-3球",
+            100
+          ],
+          "kane": [
+            "1球",
+            100
+          ]
+        }
       }
     }
   }
