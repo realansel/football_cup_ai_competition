@@ -64,3 +64,9 @@ git clone worldcup-ai-contest.bundle worldcup-ai-contest
 ```
 
 After working on another host, commit changes and send the repository or a new bundle back.
+
+## Git Sync Rule
+
+Before generating any new prompt, prediction report, settlement report, balance ledger, or other project artifact, run `git pull` in `football_cup_ai_competition` and treat the repository files as the source of truth.
+
+After generating or modifying files, copy/sync outputs into the Git repository, commit the changes, and run `git push`. If pushing fails because the network is unavailable, report the local commit hash and tell the user to run `git push` manually.

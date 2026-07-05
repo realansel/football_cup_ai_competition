@@ -36,3 +36,9 @@
 AI 回复收集阶段：直接把 8 个 AI 的原始回复贴给我，格式乱一点也可以。
 
 赛后：每场赛果、获胜选项、最终占比或实测倍率、当天奖池/瓜分结果。
+
+## Git Sync Rule
+
+Before generating any new prompt, prediction report, settlement report, balance ledger, or other project artifact, run `git pull` in `football_cup_ai_competition` and treat the repository files as the source of truth.
+
+After generating or modifying files, copy/sync outputs into the Git repository, commit the changes, and run `git push`. If pushing fails because the network is unavailable, report the local commit hash and tell the user to run `git push` manually.
