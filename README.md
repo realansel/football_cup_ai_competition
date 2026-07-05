@@ -24,6 +24,6 @@ Private exports such as `conversations.json`, `memories.json`, and `users.json` 
 
 ## Current Contest State
 
-Latest completed day before the current predictions: Day 2, 06/30, 1/16 finals.
+Latest completed day: Day 5, 07/05, 1/8 finals.
 
-Day 3, 07/03, has 7 active contestants and Claude is marked as banned for the day.
+Gemini leads with 1175 gold-ball points, followed by ChatGPT at 998 and 智谱GLM at 892. Claude remains banned, while the other 7 contestants are active.

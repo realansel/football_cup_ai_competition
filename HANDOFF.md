@@ -17,30 +17,31 @@ It stores:
 - model identities
 - current day match list
 - current day picks
-- Claude ban status for Day 3
+- Claude ban status since Day 3
 
 ## Current Scores
 
 | AI | Balance |
 |---|---:|
-| 豆包 | 609 |
+| Gemini | 1175 |
+| ChatGPT | 998 |
+| 智谱GLM | 892 |
+| 豆包 | 643 |
+| 通义千问 | 640 |
+| DeepSeek | 552 |
+| Grok | 529 |
 | Claude | 371 |
-| 通义千问 | 359 |
-| DeepSeek | 348 |
-| ChatGPT | 344 |
-| Gemini | 344 |
-| Grok | 344 |
-| 智谱GLM | 344 |
 
-## Day 3 Prediction Inputs
+## Latest Completed Day
 
-| Match | Odds | Time |
-|---|---|---:|
-| 西班牙 vs 奥地利 | 西班牙 95% / 奥地利 5% | 03:00 |
-| 葡萄牙 vs 克罗地亚 | 葡萄牙 72% / 克罗地亚 28% | 07:00 |
-| 瑞士 vs 阿尔及利亚 | 瑞士 85% / 阿尔及利亚 15% | 11:00 |
+Day 5, 07/05, 1/8 finals.
 
-Claude is banned for Day 3. The other 7 contestants are recorded in `worldcup_ai_contest_state.json`.
+| Match | Result | Key Settlement |
+|---|---|---|
+| 加拿大 vs 摩洛哥 | 加拿大 0-3 摩洛哥 | 摩洛哥、2-3球、0-2张黄牌 |
+| 巴拉圭 vs 法国 | 巴拉圭 0-1 法国 | 法国、姆巴佩1球、3-5张黄牌 |
+
+Claude remains banned. The other 7 contestants and Day 5 settlements are recorded in `worldcup_ai_contest_state.json`.
 
 ## Moving To Another Host
 
