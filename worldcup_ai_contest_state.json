@@ -109,734 +109,178 @@
     "完成后更新本 state 文件，保证下一天从最新余额继续。"
   ],
   "currentDay": {
-    "n": 6,
-    "date": "07/06",
+    "n": 7,
+    "date": "07/07",
     "stage": "1/8决赛",
-    "status": "settled",
-    "note": "Claude继续封禁，7家有效参赛；挪威爆冷淘汰巴西，智谱GLM重回榜首；哈兰德进球数确认为2球及以上。",
+    "status": "predictions_ready",
+    "note": "Claude封禁，7家有效参赛；今日4个预测维度",
     "matches": [
       {
-        "home": "巴西",
-        "away": "挪威",
-        "time": "04:00",
+        "home": "葡萄牙",
+        "away": "西班牙",
+        "time": "03:00",
         "dimensions": [
           "胜负/获胜方",
-          "总进球数",
-          "哈兰德进球数"
+          "C罗进球数"
         ]
       },
       {
-        "home": "墨西哥",
-        "away": "英格兰",
+        "home": "美国",
+        "away": "比利时",
         "time": "08:00",
         "dimensions": [
           "胜负/获胜方",
-          "总进球数",
-          "凯恩进球数"
+          "是否点球大战"
         ]
       }
     ],
     "picks": {
-      "doubao": {
-        "total": 400,
+      "chatgpt": {
+        "total": 300,
         "data": {
-          "bn_win": [
-            "巴西",
+          "ps_win": [
+            "西班牙",
             100
           ],
-          "bn_goal": [
-            "2-3球",
+          "cr7": [
+            "0球",
             50
           ],
-          "haaland": [
-            "1球",
-            50
-          ],
-          "me_win": [
-            "英格兰",
+          "ub_win": [
+            "比利时",
             100
           ],
-          "me_goal": [
-            "2-3球",
-            50
-          ],
-          "kane": [
-            "1球",
+          "pens": [
+            "否",
             50
           ]
         }
       },
-      "chatgpt": {
-        "total": 500,
+      "doubao": {
+        "total": 250,
         "data": {
-          "bn_win": [
-            "巴西",
-            100
-          ],
-          "bn_goal": [
-            "4球及以上",
+          "ps_win": [
+            "西班牙",
             50
           ],
-          "haaland": [
-            "1球",
-            100
-          ],
-          "me_win": [
-            "英格兰",
-            100
-          ],
-          "me_goal": [
-            "2-3球",
-            100
-          ],
-          "kane": [
+          "cr7": [
             "1球",
             50
+          ],
+          "ub_win": [
+            "比利时",
+            50
+          ],
+          "pens": [
+            "是",
+            100
           ]
         }
       },
       "deepseek": {
-        "total": 500,
+        "total": 140,
         "data": {
-          "bn_win": [
-            "巴西",
+          "ps_win": [
+            "西班牙",
             50
           ],
-          "bn_goal": [
-            "0-1球",
-            100
-          ],
-          "haaland": [
+          "cr7": [
             "0球",
-            100
-          ],
-          "me_win": [
-            "英格兰",
-            50
-          ],
-          "me_goal": [
-            "0-1球",
-            100
-          ],
-          "kane": [
-            "0球",
-            100
-          ]
-        }
-      },
-      "grok": {
-        "total": 400,
-        "data": {
-          "bn_win": [
-            "巴西",
-            100
-          ],
-          "bn_goal": [
-            "2-3球",
-            50
-          ],
-          "haaland": [
-            "1球",
-            50
-          ],
-          "me_win": [
-            "英格兰",
-            100
-          ],
-          "me_goal": [
-            "2-3球",
-            50
-          ],
-          "kane": [
-            "1球",
-            50
-          ]
-        }
-      },
-      "qwen": {
-        "total": 240,
-        "data": {
-          "bn_win": [
-            "巴西",
-            50
-          ],
-          "bn_goal": [
-            "2-3球",
             20
           ],
-          "haaland": [
-            "1球",
+          "ub_win": [
+            "比利时",
             50
           ],
-          "me_win": [
-            "英格兰",
-            50
-          ],
-          "me_goal": [
-            "0-1球",
+          "pens": [
+            "否",
             20
-          ],
-          "kane": [
-            "1球",
-            50
-          ]
-        }
-      },
-      "glm": {
-        "total": 400,
-        "data": {
-          "bn_win": [
-            "巴西",
-            100
-          ],
-          "bn_goal": [
-            "2-3球",
-            50
-          ],
-          "haaland": [
-            "1球",
-            50
-          ],
-          "me_win": [
-            "英格兰",
-            100
-          ],
-          "me_goal": [
-            "2-3球",
-            50
-          ],
-          "kane": [
-            "1球",
-            50
           ]
         }
       },
       "gemini": {
-        "total": 950,
+        "total": 670,
         "data": {
-          "bn_win": [
-            "巴西",
+          "ps_win": [
+            "西班牙",
+            100
+          ],
+          "cr7": [
+            "0球",
+            50
+          ],
+          "ub_win": [
+            "比利时",
+            20
+          ],
+          "pens": [
+            "否",
             500
-          ],
-          "bn_goal": [
-            "2-3球",
-            100
-          ],
-          "haaland": [
-            "1球",
-            100
-          ],
-          "me_win": [
-            "墨西哥",
-            50
-          ],
-          "me_goal": [
-            "2-3球",
-            100
-          ],
-          "kane": [
-            "1球",
-            100
           ]
         }
-      }
-    },
-    "results": {
-      "bn_win": {
-        "winner": "挪威",
-        "score": "巴西 1-2 挪威",
-        "pct": 23,
-        "payoutMultiplier": 4.3478260869565215,
-        "source": "截图赛果；按挪威23%计算"
-      },
-      "bn_goal": {
-        "winner": "2-3球",
-        "pct": 69,
-        "payoutMultiplier": 1.4492753623188408,
-        "source": "巴西1-2挪威，总进球3；按69%计算"
-      },
-      "haaland": {
-        "winner": "2球及以上",
-        "pct": 24,
-        "payoutMultiplier": 4.166666666666667,
-        "source": "用户确认：哈兰德进球数为2球及以上"
-      },
-      "me_win": {
-        "winner": "英格兰",
-        "score": "墨西哥 2-3 英格兰",
-        "pct": 82,
-        "payoutMultiplier": 1.48,
-        "source": "截图实付：100 -> 148"
-      },
-      "me_goal": {
-        "winner": "4球及以上",
-        "pct": 12,
-        "payoutMultiplier": 8.333333333333334,
-        "source": "墨西哥2-3英格兰，总进球5；按12%计算"
-      },
-      "kane": {
-        "winner": "1球",
-        "pct": 66,
-        "payoutMultiplier": 2.88,
-        "source": "截图实付：50 -> 144"
-      }
-    },
-    "settlements": {
-      "doubao": {
-        "hits": 3,
-        "total": 6,
-        "delta": -21,
-        "balanceBefore": 643,
-        "balanceAfter": 622,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": "巴西",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "bn_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": true,
-            "return": 72,
-            "delta": 22
-          },
-          {
-            "key": "haaland",
-            "pick": "1球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "me_win",
-            "pick": "英格兰",
-            "bet": 100,
-            "hit": true,
-            "return": 148,
-            "delta": 48
-          },
-          {
-            "key": "me_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "kane",
-            "pick": "1球",
-            "bet": 50,
-            "hit": true,
-            "return": 144,
-            "delta": 94
-          }
-        ]
-      },
-      "claude": {
-        "hits": 0,
-        "total": 6,
-        "delta": 0,
-        "balanceBefore": 371,
-        "balanceAfter": 371,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "bn_goal",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "haaland",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "me_win",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "me_goal",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          },
-          {
-            "key": "kane",
-            "pick": null,
-            "bet": 0,
-            "hit": false,
-            "return": 0,
-            "delta": 0
-          }
-        ]
-      },
-      "qwen": {
-        "hits": 3,
-        "total": 6,
-        "delta": 22,
-        "balanceBefore": 640,
-        "balanceAfter": 662,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": "巴西",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "bn_goal",
-            "pick": "2-3球",
-            "bet": 20,
-            "hit": true,
-            "return": 29,
-            "delta": 9
-          },
-          {
-            "key": "haaland",
-            "pick": "1球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "me_win",
-            "pick": "英格兰",
-            "bet": 50,
-            "hit": true,
-            "return": 74,
-            "delta": 24
-          },
-          {
-            "key": "me_goal",
-            "pick": "0-1球",
-            "bet": 20,
-            "hit": false,
-            "return": 5,
-            "delta": -15
-          },
-          {
-            "key": "kane",
-            "pick": "1球",
-            "bet": 50,
-            "hit": true,
-            "return": 144,
-            "delta": 94
-          }
-        ]
-      },
-      "deepseek": {
-        "hits": 1,
-        "total": 6,
-        "delta": -401,
-        "balanceBefore": 552,
-        "balanceAfter": 151,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": "巴西",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "bn_goal",
-            "pick": "0-1球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "haaland",
-            "pick": "0球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "me_win",
-            "pick": "英格兰",
-            "bet": 50,
-            "hit": true,
-            "return": 74,
-            "delta": 24
-          },
-          {
-            "key": "me_goal",
-            "pick": "0-1球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "kane",
-            "pick": "0球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          }
-        ]
-      },
-      "chatgpt": {
-        "hits": 2,
-        "total": 6,
-        "delta": -188,
-        "balanceBefore": 998,
-        "balanceAfter": 810,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": "巴西",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "bn_goal",
-            "pick": "4球及以上",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "haaland",
-            "pick": "1球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "me_win",
-            "pick": "英格兰",
-            "bet": 100,
-            "hit": true,
-            "return": 148,
-            "delta": 48
-          },
-          {
-            "key": "me_goal",
-            "pick": "2-3球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "kane",
-            "pick": "1球",
-            "bet": 50,
-            "hit": true,
-            "return": 144,
-            "delta": 94
-          }
-        ]
-      },
-      "gemini": {
-        "hits": 2,
-        "total": 6,
-        "delta": -497,
-        "balanceBefore": 1175,
-        "balanceAfter": 678,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": "巴西",
-            "bet": 500,
-            "hit": false,
-            "return": 5,
-            "delta": -495
-          },
-          {
-            "key": "bn_goal",
-            "pick": "2-3球",
-            "bet": 100,
-            "hit": true,
-            "return": 145,
-            "delta": 45
-          },
-          {
-            "key": "haaland",
-            "pick": "1球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "me_win",
-            "pick": "墨西哥",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "me_goal",
-            "pick": "2-3球",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "kane",
-            "pick": "1球",
-            "bet": 100,
-            "hit": true,
-            "return": 288,
-            "delta": 188
-          }
-        ]
       },
       "grok": {
-        "hits": 3,
-        "total": 6,
-        "delta": -21,
-        "balanceBefore": 529,
-        "balanceAfter": 508,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": "巴西",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "bn_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": true,
-            "return": 72,
-            "delta": 22
-          },
-          {
-            "key": "haaland",
-            "pick": "1球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "me_win",
-            "pick": "英格兰",
-            "bet": 100,
-            "hit": true,
-            "return": 148,
-            "delta": 48
-          },
-          {
-            "key": "me_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "kane",
-            "pick": "1球",
-            "bet": 50,
-            "hit": true,
-            "return": 144,
-            "delta": 94
-          }
-        ]
+        "total": 220,
+        "data": {
+          "ps_win": [
+            "西班牙",
+            100
+          ],
+          "cr7": [
+            "1球",
+            50
+          ],
+          "ub_win": [
+            "比利时",
+            50
+          ],
+          "pens": [
+            "否",
+            20
+          ]
+        }
+      },
+      "qwen": {
+        "total": 170,
+        "data": {
+          "ps_win": [
+            "西班牙",
+            50
+          ],
+          "cr7": [
+            "1球",
+            50
+          ],
+          "ub_win": [
+            "比利时",
+            50
+          ],
+          "pens": [
+            "否",
+            20
+          ]
+        }
       },
       "glm": {
-        "hits": 3,
-        "total": 6,
-        "delta": -21,
-        "balanceBefore": 892,
-        "balanceAfter": 871,
-        "details": [
-          {
-            "key": "bn_win",
-            "pick": "巴西",
-            "bet": 100,
-            "hit": false,
-            "return": 5,
-            "delta": -95
-          },
-          {
-            "key": "bn_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": true,
-            "return": 72,
-            "delta": 22
-          },
-          {
-            "key": "haaland",
-            "pick": "1球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "me_win",
-            "pick": "英格兰",
-            "bet": 100,
-            "hit": true,
-            "return": 148,
-            "delta": 48
-          },
-          {
-            "key": "me_goal",
-            "pick": "2-3球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "kane",
-            "pick": "1球",
-            "bet": 50,
-            "hit": true,
-            "return": 144,
-            "delta": 94
-          }
-        ]
+        "total": 270,
+        "data": {
+          "ps_win": [
+            "西班牙",
+            100
+          ],
+          "cr7": [
+            "1球",
+            50
+          ],
+          "ub_win": [
+            "比利时",
+            100
+          ],
+          "pens": [
+            "否",
+            20
+          ]
+        }
       }
     }
   }
