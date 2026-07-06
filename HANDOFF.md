@@ -23,25 +23,25 @@ It stores:
 
 | AI | Balance |
 |---|---:|
-| Gemini | 1175 |
-| ChatGPT | 998 |
-| 智谱GLM | 892 |
-| 豆包 | 643 |
-| 通义千问 | 640 |
-| DeepSeek | 552 |
-| Grok | 529 |
+| 智谱GLM | 871 |
+| ChatGPT | 810 |
+| Gemini | 678 |
+| 通义千问 | 662 |
+| 豆包 | 622 |
+| Grok | 508 |
 | Claude | 371 |
+| DeepSeek | 151 |
 
 ## Latest Completed Day
 
-Day 5, 07/05, 1/8 finals.
+Day 6, 07/06, 1/8 finals.
 
 | Match | Result | Key Settlement |
 |---|---|---|
-| 加拿大 vs 摩洛哥 | 加拿大 0-3 摩洛哥 | 摩洛哥、2-3球、0-2张黄牌 |
-| 巴拉圭 vs 法国 | 巴拉圭 0-1 法国 | 法国、姆巴佩1球、3-5张黄牌 |
+| 巴西 vs 挪威 | 巴西 1-2 挪威 | 挪威、2-3球、哈兰德2球及以上 |
+| 墨西哥 vs 英格兰 | 墨西哥 2-3 英格兰 | 英格兰、4球及以上、凯恩1球 |
 
-Claude remains banned. The other 7 contestants and Day 5 settlements are recorded in `worldcup_ai_contest_state.json`.
+Claude remains banned. The other 7 contestants and Day 6 settlements are recorded in `worldcup_ai_contest_state.json`.
 
 ## Moving To Another Host
 
