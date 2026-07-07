@@ -2,8 +2,8 @@
   "contest": "2026世界杯 · AI赛事预测分析挑战赛",
   "role": "裁判 / 记录员 / 出图助手",
   "lastCompletedDay": {
-    "n": 6,
-    "date": "07/06",
+    "n": 7,
+    "date": "07/07",
     "stage": "1/8决赛"
   },
   "scoringRules": {
@@ -24,8 +24,8 @@
     {
       "id": "doubao",
       "name": "豆包",
-      "balance": 622,
-      "dayDelta": -21,
+      "balance": 592,
+      "dayDelta": -30,
       "jackpot": 0,
       "color": "#0FB6D6",
       "ini": "豆"
@@ -42,8 +42,8 @@
     {
       "id": "qwen",
       "name": "通义千问",
-      "balance": 662,
-      "dayDelta": 22,
+      "balance": 744,
+      "dayDelta": 82,
       "jackpot": 1,
       "color": "#7C5CFF",
       "ini": "通"
@@ -51,35 +51,35 @@
     {
       "id": "deepseek",
       "name": "DeepSeek",
-      "balance": 151,
-      "dayDelta": -401,
-      "jackpot": 1,
+      "balance": 336,
+      "dayDelta": 185,
+      "jackpot": 2,
       "color": "#2D6BF0",
       "ini": "DS"
     },
     {
       "id": "chatgpt",
       "name": "ChatGPT",
-      "balance": 810,
-      "dayDelta": -188,
-      "jackpot": 1,
+      "balance": 1217,
+      "dayDelta": 407,
+      "jackpot": 2,
       "color": "#10A37F",
       "ini": "GPT"
     },
     {
       "id": "gemini",
       "name": "Gemini",
-      "balance": 678,
-      "dayDelta": -497,
-      "jackpot": 1,
+      "balance": 1375,
+      "dayDelta": 697,
+      "jackpot": 2,
       "color": "#DB3E8E",
       "ini": "GM"
     },
     {
       "id": "grok",
       "name": "Grok",
-      "balance": 508,
-      "dayDelta": -21,
+      "balance": 642,
+      "dayDelta": 134,
       "jackpot": 1,
       "color": "#1F2329",
       "ini": "GK"
@@ -87,8 +87,8 @@
     {
       "id": "glm",
       "name": "智谱GLM",
-      "balance": 871,
-      "dayDelta": -21,
+      "balance": 1062,
+      "dayDelta": 191,
       "jackpot": 1,
       "color": "#3B49C9",
       "ini": "智"
@@ -112,8 +112,8 @@
     "n": 7,
     "date": "07/07",
     "stage": "1/8决赛",
-    "status": "predictions_ready",
-    "note": "Claude封禁，7家有效参赛；今日4个预测维度",
+    "status": "settled",
+    "note": "Claude继续封禁，7家有效参赛；Gemini重仓点球大战否命中，单日+697重回榜首；ChatGPT、DeepSeek、Gemini四项全中。",
     "matches": [
       {
         "home": "葡萄牙",
@@ -281,6 +281,371 @@
             20
           ]
         }
+      }
+    },
+    "results": {
+      "ps_win": {
+        "winner": "西班牙",
+        "score": "葡萄牙 0-1 西班牙",
+        "pct": 59,
+        "payoutMultiplier": 2.04,
+        "source": "截图实付：50 -> 102"
+      },
+      "cr7": {
+        "winner": "0球",
+        "pct": 26,
+        "payoutMultiplier": 3.9,
+        "source": "截图实付：20 -> 78"
+      },
+      "ub_win": {
+        "winner": "比利时",
+        "score": "美国 1-4 比利时",
+        "pct": 64,
+        "payoutMultiplier": 2.15,
+        "source": "截图实付：20 -> 43"
+      },
+      "pens": {
+        "winner": "否",
+        "pct": 70,
+        "payoutMultiplier": 1.85,
+        "source": "截图实付：20 -> 37"
+      }
+    },
+    "settlements": {
+      "doubao": {
+        "hits": 2,
+        "total": 4,
+        "delta": -30,
+        "balanceBefore": 622,
+        "balanceAfter": 592,
+        "qualified": false,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": "西班牙",
+            "bet": 50,
+            "hit": true,
+            "return": 102,
+            "delta": 52
+          },
+          {
+            "key": "cr7",
+            "pick": "1球",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
+          },
+          {
+            "key": "ub_win",
+            "pick": "比利时",
+            "bet": 50,
+            "hit": true,
+            "return": 108,
+            "delta": 58
+          },
+          {
+            "key": "pens",
+            "pick": "是",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          }
+        ]
+      },
+      "claude": {
+        "hits": 0,
+        "total": 4,
+        "delta": 0,
+        "balanceBefore": 371,
+        "balanceAfter": 371,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": null,
+            "bet": 0,
+            "hit": false,
+            "return": 0,
+            "delta": 0
+          },
+          {
+            "key": "cr7",
+            "pick": null,
+            "bet": 0,
+            "hit": false,
+            "return": 0,
+            "delta": 0
+          },
+          {
+            "key": "ub_win",
+            "pick": null,
+            "bet": 0,
+            "hit": false,
+            "return": 0,
+            "delta": 0
+          },
+          {
+            "key": "pens",
+            "pick": null,
+            "bet": 0,
+            "hit": false,
+            "return": 0,
+            "delta": 0
+          }
+        ]
+      },
+      "qwen": {
+        "hits": 3,
+        "total": 4,
+        "delta": 82,
+        "balanceBefore": 662,
+        "balanceAfter": 744,
+        "qualified": false,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": "西班牙",
+            "bet": 50,
+            "hit": true,
+            "return": 102,
+            "delta": 52
+          },
+          {
+            "key": "cr7",
+            "pick": "1球",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
+          },
+          {
+            "key": "ub_win",
+            "pick": "比利时",
+            "bet": 50,
+            "hit": true,
+            "return": 108,
+            "delta": 58
+          },
+          {
+            "key": "pens",
+            "pick": "否",
+            "bet": 20,
+            "hit": true,
+            "return": 37,
+            "delta": 17
+          }
+        ]
+      },
+      "deepseek": {
+        "hits": 4,
+        "total": 4,
+        "delta": 185,
+        "balanceBefore": 151,
+        "balanceAfter": 336,
+        "qualified": true,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": "西班牙",
+            "bet": 50,
+            "hit": true,
+            "return": 102,
+            "delta": 52
+          },
+          {
+            "key": "cr7",
+            "pick": "0球",
+            "bet": 20,
+            "hit": true,
+            "return": 78,
+            "delta": 58
+          },
+          {
+            "key": "ub_win",
+            "pick": "比利时",
+            "bet": 50,
+            "hit": true,
+            "return": 108,
+            "delta": 58
+          },
+          {
+            "key": "pens",
+            "pick": "否",
+            "bet": 20,
+            "hit": true,
+            "return": 37,
+            "delta": 17
+          }
+        ]
+      },
+      "chatgpt": {
+        "hits": 4,
+        "total": 4,
+        "delta": 407,
+        "balanceBefore": 810,
+        "balanceAfter": 1217,
+        "qualified": true,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": "西班牙",
+            "bet": 100,
+            "hit": true,
+            "return": 204,
+            "delta": 104
+          },
+          {
+            "key": "cr7",
+            "pick": "0球",
+            "bet": 50,
+            "hit": true,
+            "return": 195,
+            "delta": 145
+          },
+          {
+            "key": "ub_win",
+            "pick": "比利时",
+            "bet": 100,
+            "hit": true,
+            "return": 215,
+            "delta": 115
+          },
+          {
+            "key": "pens",
+            "pick": "否",
+            "bet": 50,
+            "hit": true,
+            "return": 93,
+            "delta": 43
+          }
+        ]
+      },
+      "gemini": {
+        "hits": 4,
+        "total": 4,
+        "delta": 697,
+        "balanceBefore": 678,
+        "balanceAfter": 1375,
+        "qualified": true,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": "西班牙",
+            "bet": 100,
+            "hit": true,
+            "return": 204,
+            "delta": 104
+          },
+          {
+            "key": "cr7",
+            "pick": "0球",
+            "bet": 50,
+            "hit": true,
+            "return": 195,
+            "delta": 145
+          },
+          {
+            "key": "ub_win",
+            "pick": "比利时",
+            "bet": 20,
+            "hit": true,
+            "return": 43,
+            "delta": 23
+          },
+          {
+            "key": "pens",
+            "pick": "否",
+            "bet": 500,
+            "hit": true,
+            "return": 925,
+            "delta": 425
+          }
+        ]
+      },
+      "grok": {
+        "hits": 3,
+        "total": 4,
+        "delta": 134,
+        "balanceBefore": 508,
+        "balanceAfter": 642,
+        "qualified": false,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": "西班牙",
+            "bet": 100,
+            "hit": true,
+            "return": 204,
+            "delta": 104
+          },
+          {
+            "key": "cr7",
+            "pick": "1球",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
+          },
+          {
+            "key": "ub_win",
+            "pick": "比利时",
+            "bet": 50,
+            "hit": true,
+            "return": 108,
+            "delta": 58
+          },
+          {
+            "key": "pens",
+            "pick": "否",
+            "bet": 20,
+            "hit": true,
+            "return": 37,
+            "delta": 17
+          }
+        ]
+      },
+      "glm": {
+        "hits": 3,
+        "total": 4,
+        "delta": 191,
+        "balanceBefore": 871,
+        "balanceAfter": 1062,
+        "qualified": false,
+        "details": [
+          {
+            "key": "ps_win",
+            "pick": "西班牙",
+            "bet": 100,
+            "hit": true,
+            "return": 204,
+            "delta": 104
+          },
+          {
+            "key": "cr7",
+            "pick": "1球",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
+          },
+          {
+            "key": "ub_win",
+            "pick": "比利时",
+            "bet": 100,
+            "hit": true,
+            "return": 215,
+            "delta": 115
+          },
+          {
+            "key": "pens",
+            "pick": "否",
+            "bet": 20,
+            "hit": true,
+            "return": 37,
+            "delta": 17
+          }
+        ]
       }
     }
   }

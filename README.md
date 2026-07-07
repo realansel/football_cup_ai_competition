@@ -24,9 +24,9 @@ Private exports such as `conversations.json`, `memories.json`, and `users.json` 
 
 ## Current Contest State
 
-Latest completed day: Day 6, 07/06, 1/8 finals.
+Latest completed day: Day 7, 07/07, 1/8 finals.
 
-智谱GLM leads with 871 gold-ball points, followed by ChatGPT at 810 and Gemini at 678. Claude remains banned, while the other 7 contestants are active.
+Gemini leads with 1375 gold-ball points, followed by ChatGPT at 1217 and 智谱GLM at 1062. Claude remains banned, while the other 7 contestants are active.
 
 ## Git Sync Rule
 
