@@ -2,8 +2,8 @@
   "contest": "2026世界杯 · AI赛事预测分析挑战赛",
   "role": "裁判 / 记录员 / 出图助手",
   "lastCompletedDay": {
-    "n": 7,
-    "date": "07/07",
+    "n": 8,
+    "date": "07/08",
     "stage": "1/8决赛"
   },
   "scoringRules": {
@@ -24,8 +24,8 @@
     {
       "id": "doubao",
       "name": "豆包",
-      "balance": 592,
-      "dayDelta": -30,
+      "balance": 374,
+      "dayDelta": -218,
       "jackpot": 0,
       "color": "#0FB6D6",
       "ini": "豆"
@@ -42,8 +42,8 @@
     {
       "id": "qwen",
       "name": "通义千问",
-      "balance": 744,
-      "dayDelta": 82,
+      "balance": 872,
+      "dayDelta": 128,
       "jackpot": 1,
       "color": "#7C5CFF",
       "ini": "通"
@@ -51,8 +51,8 @@
     {
       "id": "deepseek",
       "name": "DeepSeek",
-      "balance": 336,
-      "dayDelta": 185,
+      "balance": 590,
+      "dayDelta": 254,
       "jackpot": 2,
       "color": "#2D6BF0",
       "ini": "DS"
@@ -60,8 +60,8 @@
     {
       "id": "chatgpt",
       "name": "ChatGPT",
-      "balance": 1217,
-      "dayDelta": 407,
+      "balance": 1153,
+      "dayDelta": -64,
       "jackpot": 2,
       "color": "#10A37F",
       "ini": "GPT"
@@ -69,8 +69,8 @@
     {
       "id": "gemini",
       "name": "Gemini",
-      "balance": 1375,
-      "dayDelta": 697,
+      "balance": 890,
+      "dayDelta": -485,
       "jackpot": 2,
       "color": "#DB3E8E",
       "ini": "GM"
@@ -78,8 +78,8 @@
     {
       "id": "grok",
       "name": "Grok",
-      "balance": 642,
-      "dayDelta": 134,
+      "balance": 604,
+      "dayDelta": -38,
       "jackpot": 1,
       "color": "#1F2329",
       "ini": "GK"
@@ -87,8 +87,8 @@
     {
       "id": "glm",
       "name": "智谱GLM",
-      "balance": 1062,
-      "dayDelta": 191,
+      "balance": 883,
+      "dayDelta": -179,
       "jackpot": 1,
       "color": "#3B49C9",
       "ini": "智"
@@ -109,260 +109,351 @@
     "完成后更新本 state 文件，保证下一天从最新余额继续。"
   ],
   "currentDay": {
-    "n": 7,
-    "date": "07/07",
+    "n": 8,
+    "date": "07/08",
     "stage": "1/8决赛",
     "status": "settled",
-    "note": "Claude继续封禁，7家有效参赛；Gemini重仓点球大战否命中，单日+697重回榜首；ChatGPT、DeepSeek、Gemini四项全中。",
+    "note": "Claude继续封禁，7家有效参赛；瑞士胜与常规时间无进球打出冷门，DeepSeek命中瑞士方向单日+254，通义千问靠0-1球和无进球回血；阿埃4球及以上无人押中，因此无人全中。",
     "matches": [
       {
-        "home": "葡萄牙",
-        "away": "西班牙",
-        "time": "03:00",
+        "home": "阿根廷",
+        "away": "埃及",
+        "time": "00:00",
         "dimensions": [
           "胜负/获胜方",
-          "C罗进球数"
+          "总进球数",
+          "梅西上半场是否进球"
         ]
       },
       {
-        "home": "美国",
-        "away": "比利时",
-        "time": "08:00",
+        "home": "瑞士",
+        "away": "哥伦比亚",
+        "time": "04:00",
         "dimensions": [
           "胜负/获胜方",
-          "是否点球大战"
+          "总进球数",
+          "常规时间首球"
         ]
       }
     ],
     "picks": {
-      "chatgpt": {
-        "total": 300,
+      "gemini": {
+        "total": 1350,
         "data": {
-          "ps_win": [
-            "西班牙",
+          "arg_win": [
+            "阿根廷",
+            500
+          ],
+          "arg_goals": [
+            "2-3球",
             100
           ],
-          "cr7": [
-            "0球",
-            50
-          ],
-          "ub_win": [
-            "比利时",
-            100
-          ],
-          "pens": [
+          "messi_half": [
             "否",
+            100
+          ],
+          "sui_col_win": [
+            "哥伦比亚",
+            500
+          ],
+          "sui_col_goals": [
+            "2-3球",
+            100
+          ],
+          "first_goal": [
+            "哥伦比亚",
             50
           ]
         }
       },
       "doubao": {
-        "total": 250,
+        "total": 500,
         "data": {
-          "ps_win": [
-            "西班牙",
-            50
-          ],
-          "cr7": [
-            "1球",
-            50
-          ],
-          "ub_win": [
-            "比利时",
-            50
-          ],
-          "pens": [
-            "是",
+          "arg_win": [
+            "阿根廷",
             100
+          ],
+          "arg_goals": [
+            "2-3球",
+            100
+          ],
+          "messi_half": [
+            "否",
+            50
+          ],
+          "sui_col_win": [
+            "哥伦比亚",
+            100
+          ],
+          "sui_col_goals": [
+            "2-3球",
+            100
+          ],
+          "first_goal": [
+            "瑞士",
+            50
           ]
         }
       },
-      "deepseek": {
-        "total": 140,
+      "chatgpt": {
+        "total": 450,
         "data": {
-          "ps_win": [
-            "西班牙",
+          "arg_win": [
+            "阿根廷",
             50
           ],
-          "cr7": [
-            "0球",
-            20
-          ],
-          "ub_win": [
-            "比利时",
-            50
-          ],
-          "pens": [
-            "否",
-            20
-          ]
-        }
-      },
-      "gemini": {
-        "total": 670,
-        "data": {
-          "ps_win": [
-            "西班牙",
+          "arg_goals": [
+            "2-3球",
             100
           ],
-          "cr7": [
-            "0球",
-            50
-          ],
-          "ub_win": [
-            "比利时",
-            20
-          ],
-          "pens": [
+          "messi_half": [
             "否",
-            500
-          ]
-        }
-      },
-      "grok": {
-        "total": 220,
-        "data": {
-          "ps_win": [
-            "西班牙",
             100
           ],
-          "cr7": [
-            "1球",
+          "sui_col_win": [
+            "哥伦比亚",
+            100
+          ],
+          "sui_col_goals": [
+            "2-3球",
             50
           ],
-          "ub_win": [
-            "比利时",
+          "first_goal": [
+            "哥伦比亚",
             50
-          ],
-          "pens": [
-            "否",
-            20
           ]
         }
       },
       "qwen": {
-        "total": 170,
+        "total": 410,
         "data": {
-          "ps_win": [
-            "西班牙",
+          "arg_win": [
+            "阿根廷",
+            100
+          ],
+          "arg_goals": [
+            "2-3球",
+            100
+          ],
+          "messi_half": [
+            "是",
             50
           ],
-          "cr7": [
-            "1球",
+          "sui_col_win": [
+            "哥伦比亚",
+            100
+          ],
+          "sui_col_goals": [
+            "0-1球",
             50
           ],
-          "ub_win": [
-            "比利时",
+          "first_goal": [
+            "无进球",
+            10
+          ]
+        }
+      },
+      "grok": {
+        "total": 320,
+        "data": {
+          "arg_win": [
+            "阿根廷",
+            100
+          ],
+          "arg_goals": [
+            "2-3球",
             50
           ],
-          "pens": [
+          "messi_half": [
             "否",
+            50
+          ],
+          "sui_col_win": [
+            "哥伦比亚",
+            50
+          ],
+          "sui_col_goals": [
+            "2-3球",
+            50
+          ],
+          "first_goal": [
+            "哥伦比亚",
             20
           ]
         }
       },
       "glm": {
-        "total": 270,
+        "total": 310,
         "data": {
-          "ps_win": [
-            "西班牙",
+          "arg_win": [
+            "阿根廷",
             100
           ],
-          "cr7": [
-            "1球",
+          "arg_goals": [
+            "2-3球",
             50
           ],
-          "ub_win": [
-            "比利时",
+          "messi_half": [
+            "是",
+            20
+          ],
+          "sui_col_win": [
+            "哥伦比亚",
             100
           ],
-          "pens": [
+          "sui_col_goals": [
+            "2-3球",
+            20
+          ],
+          "first_goal": [
+            "哥伦比亚",
+            20
+          ]
+        }
+      },
+      "deepseek": {
+        "total": 210,
+        "data": {
+          "arg_win": [
+            "阿根廷",
+            50
+          ],
+          "arg_goals": [
+            "2-3球",
+            50
+          ],
+          "messi_half": [
             "否",
+            20
+          ],
+          "sui_col_win": [
+            "瑞士",
+            50
+          ],
+          "sui_col_goals": [
+            "0-1球",
+            20
+          ],
+          "first_goal": [
+            "瑞士",
             20
           ]
         }
       }
     },
     "results": {
-      "ps_win": {
-        "winner": "西班牙",
-        "score": "葡萄牙 0-1 西班牙",
-        "pct": 59,
-        "payoutMultiplier": 2.04,
-        "source": "截图实付：50 -> 102"
+      "arg_win": {
+        "winner": "阿根廷",
+        "pct": 94,
+        "score": "阿根廷胜埃及",
+        "payoutMultiplier": 1.06,
+        "source": "预测战报占比折算"
       },
-      "cr7": {
-        "winner": "0球",
-        "pct": 26,
-        "payoutMultiplier": 3.9,
-        "source": "截图实付：20 -> 78"
+      "arg_goals": {
+        "winner": "4球及以上",
+        "pct": 23,
+        "score": "阿根廷 vs 埃及 4球及以上",
+        "payoutMultiplier": 4.35,
+        "source": "预测战报占比折算"
       },
-      "ub_win": {
-        "winner": "比利时",
-        "score": "美国 1-4 比利时",
-        "pct": 64,
-        "payoutMultiplier": 2.15,
-        "source": "截图实付：20 -> 43"
-      },
-      "pens": {
+      "messi_half": {
         "winner": "否",
-        "pct": 70,
-        "payoutMultiplier": 1.85,
-        "source": "截图实付：20 -> 37"
+        "pct": 32,
+        "score": "梅西上半场未进球",
+        "payoutMultiplier": 3.13,
+        "source": "预测战报占比折算"
+      },
+      "sui_col_win": {
+        "winner": "瑞士",
+        "pct": 21,
+        "score": "瑞士胜哥伦比亚",
+        "payoutMultiplier": 4.76,
+        "source": "预测战报占比折算"
+      },
+      "sui_col_goals": {
+        "winner": "0-1球",
+        "pct": 20,
+        "score": "常规时间0球",
+        "payoutMultiplier": 5,
+        "source": "预测战报占比折算"
+      },
+      "first_goal": {
+        "winner": "无进球",
+        "pct": 6,
+        "score": "常规时间无进球",
+        "payoutMultiplier": 16.67,
+        "source": "预测战报占比折算"
       }
     },
     "settlements": {
       "doubao": {
         "hits": 2,
-        "total": 4,
-        "delta": -30,
-        "balanceBefore": 622,
-        "balanceAfter": 592,
+        "total": 6,
+        "delta": -218,
+        "balanceBefore": 592,
+        "balanceAfter": 374,
         "qualified": false,
         "details": [
           {
-            "key": "ps_win",
-            "pick": "西班牙",
-            "bet": 50,
+            "key": "arg_win",
+            "pick": "阿根廷",
+            "bet": 100,
             "hit": true,
-            "return": 102,
-            "delta": 52
+            "return": 106,
+            "delta": 6
           },
           {
-            "key": "cr7",
-            "pick": "1球",
-            "bet": 50,
-            "hit": false,
-            "return": 5,
-            "delta": -45
-          },
-          {
-            "key": "ub_win",
-            "pick": "比利时",
-            "bet": 50,
-            "hit": true,
-            "return": 108,
-            "delta": 58
-          },
-          {
-            "key": "pens",
-            "pick": "是",
+            "key": "arg_goals",
+            "pick": "2-3球",
             "bet": 100,
             "hit": false,
             "return": 5,
             "delta": -95
+          },
+          {
+            "key": "messi_half",
+            "pick": "否",
+            "bet": 50,
+            "hit": true,
+            "return": 156,
+            "delta": 106
+          },
+          {
+            "key": "sui_col_win",
+            "pick": "哥伦比亚",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          },
+          {
+            "key": "sui_col_goals",
+            "pick": "2-3球",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          },
+          {
+            "key": "first_goal",
+            "pick": "瑞士",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
           }
         ]
       },
       "claude": {
         "hits": 0,
-        "total": 4,
+        "total": 6,
         "delta": 0,
         "balanceBefore": 371,
         "balanceAfter": 371,
+        "qualified": false,
         "details": [
           {
-            "key": "ps_win",
+            "key": "arg_win",
             "pick": null,
             "bet": 0,
             "hit": false,
@@ -370,7 +461,7 @@
             "delta": 0
           },
           {
-            "key": "cr7",
+            "key": "arg_goals",
             "pick": null,
             "bet": 0,
             "hit": false,
@@ -378,7 +469,7 @@
             "delta": 0
           },
           {
-            "key": "ub_win",
+            "key": "messi_half",
             "pick": null,
             "bet": 0,
             "hit": false,
@@ -386,7 +477,23 @@
             "delta": 0
           },
           {
-            "key": "pens",
+            "key": "sui_col_win",
+            "pick": null,
+            "bet": 0,
+            "hit": false,
+            "return": 0,
+            "delta": 0
+          },
+          {
+            "key": "sui_col_goals",
+            "pick": null,
+            "bet": 0,
+            "hit": false,
+            "return": 0,
+            "delta": 0
+          },
+          {
+            "key": "first_goal",
             "pick": null,
             "bet": 0,
             "hit": false,
@@ -397,253 +504,349 @@
       },
       "qwen": {
         "hits": 3,
-        "total": 4,
-        "delta": 82,
-        "balanceBefore": 662,
-        "balanceAfter": 744,
+        "total": 6,
+        "delta": 128,
+        "balanceBefore": 744,
+        "balanceAfter": 872,
         "qualified": false,
         "details": [
           {
-            "key": "ps_win",
-            "pick": "西班牙",
-            "bet": 50,
+            "key": "arg_win",
+            "pick": "阿根廷",
+            "bet": 100,
             "hit": true,
-            "return": 102,
-            "delta": 52
+            "return": 106,
+            "delta": 6
           },
           {
-            "key": "cr7",
-            "pick": "1球",
+            "key": "arg_goals",
+            "pick": "2-3球",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          },
+          {
+            "key": "messi_half",
+            "pick": "是",
             "bet": 50,
             "hit": false,
             "return": 5,
             "delta": -45
           },
           {
-            "key": "ub_win",
-            "pick": "比利时",
-            "bet": 50,
-            "hit": true,
-            "return": 108,
-            "delta": 58
+            "key": "sui_col_win",
+            "pick": "哥伦比亚",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
           },
           {
-            "key": "pens",
-            "pick": "否",
-            "bet": 20,
+            "key": "sui_col_goals",
+            "pick": "0-1球",
+            "bet": 50,
             "hit": true,
-            "return": 37,
-            "delta": 17
+            "return": 250,
+            "delta": 200
+          },
+          {
+            "key": "first_goal",
+            "pick": "无进球",
+            "bet": 10,
+            "hit": true,
+            "return": 167,
+            "delta": 157
           }
         ]
       },
       "deepseek": {
         "hits": 4,
-        "total": 4,
-        "delta": 185,
-        "balanceBefore": 151,
-        "balanceAfter": 336,
-        "qualified": true,
+        "total": 6,
+        "delta": 254,
+        "balanceBefore": 336,
+        "balanceAfter": 590,
+        "qualified": false,
         "details": [
           {
-            "key": "ps_win",
-            "pick": "西班牙",
+            "key": "arg_win",
+            "pick": "阿根廷",
             "bet": 50,
             "hit": true,
-            "return": 102,
-            "delta": 52
+            "return": 53,
+            "delta": 3
           },
           {
-            "key": "cr7",
-            "pick": "0球",
-            "bet": 20,
-            "hit": true,
-            "return": 78,
-            "delta": 58
-          },
-          {
-            "key": "ub_win",
-            "pick": "比利时",
+            "key": "arg_goals",
+            "pick": "2-3球",
             "bet": 50,
-            "hit": true,
-            "return": 108,
-            "delta": 58
+            "hit": false,
+            "return": 5,
+            "delta": -45
           },
           {
-            "key": "pens",
+            "key": "messi_half",
             "pick": "否",
             "bet": 20,
             "hit": true,
-            "return": 37,
-            "delta": 17
+            "return": 63,
+            "delta": 43
+          },
+          {
+            "key": "sui_col_win",
+            "pick": "瑞士",
+            "bet": 50,
+            "hit": true,
+            "return": 238,
+            "delta": 188
+          },
+          {
+            "key": "sui_col_goals",
+            "pick": "0-1球",
+            "bet": 20,
+            "hit": true,
+            "return": 100,
+            "delta": 80
+          },
+          {
+            "key": "first_goal",
+            "pick": "瑞士",
+            "bet": 20,
+            "hit": false,
+            "return": 5,
+            "delta": -15
           }
         ]
       },
       "chatgpt": {
-        "hits": 4,
-        "total": 4,
-        "delta": 407,
-        "balanceBefore": 810,
-        "balanceAfter": 1217,
-        "qualified": true,
+        "hits": 2,
+        "total": 6,
+        "delta": -64,
+        "balanceBefore": 1217,
+        "balanceAfter": 1153,
+        "qualified": false,
         "details": [
           {
-            "key": "ps_win",
-            "pick": "西班牙",
-            "bet": 100,
-            "hit": true,
-            "return": 204,
-            "delta": 104
-          },
-          {
-            "key": "cr7",
-            "pick": "0球",
+            "key": "arg_win",
+            "pick": "阿根廷",
             "bet": 50,
             "hit": true,
-            "return": 195,
-            "delta": 145
+            "return": 53,
+            "delta": 3
           },
           {
-            "key": "ub_win",
-            "pick": "比利时",
+            "key": "arg_goals",
+            "pick": "2-3球",
             "bet": 100,
-            "hit": true,
-            "return": 215,
-            "delta": 115
+            "hit": false,
+            "return": 5,
+            "delta": -95
           },
           {
-            "key": "pens",
+            "key": "messi_half",
             "pick": "否",
-            "bet": 50,
+            "bet": 100,
             "hit": true,
-            "return": 93,
-            "delta": 43
+            "return": 313,
+            "delta": 213
+          },
+          {
+            "key": "sui_col_win",
+            "pick": "哥伦比亚",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          },
+          {
+            "key": "sui_col_goals",
+            "pick": "2-3球",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
+          },
+          {
+            "key": "first_goal",
+            "pick": "哥伦比亚",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
           }
         ]
       },
       "gemini": {
-        "hits": 4,
-        "total": 4,
-        "delta": 697,
-        "balanceBefore": 678,
-        "balanceAfter": 1375,
-        "qualified": true,
+        "hits": 2,
+        "total": 6,
+        "delta": -485,
+        "balanceBefore": 1375,
+        "balanceAfter": 890,
+        "qualified": false,
         "details": [
           {
-            "key": "ps_win",
-            "pick": "西班牙",
-            "bet": 100,
-            "hit": true,
-            "return": 204,
-            "delta": 104
-          },
-          {
-            "key": "cr7",
-            "pick": "0球",
-            "bet": 50,
-            "hit": true,
-            "return": 195,
-            "delta": 145
-          },
-          {
-            "key": "ub_win",
-            "pick": "比利时",
-            "bet": 20,
-            "hit": true,
-            "return": 43,
-            "delta": 23
-          },
-          {
-            "key": "pens",
-            "pick": "否",
+            "key": "arg_win",
+            "pick": "阿根廷",
             "bet": 500,
             "hit": true,
-            "return": 925,
-            "delta": 425
+            "return": 532,
+            "delta": 32
+          },
+          {
+            "key": "arg_goals",
+            "pick": "2-3球",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          },
+          {
+            "key": "messi_half",
+            "pick": "否",
+            "bet": 100,
+            "hit": true,
+            "return": 313,
+            "delta": 213
+          },
+          {
+            "key": "sui_col_win",
+            "pick": "哥伦比亚",
+            "bet": 500,
+            "hit": false,
+            "return": 5,
+            "delta": -495
+          },
+          {
+            "key": "sui_col_goals",
+            "pick": "2-3球",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          },
+          {
+            "key": "first_goal",
+            "pick": "哥伦比亚",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
           }
         ]
       },
       "grok": {
-        "hits": 3,
-        "total": 4,
-        "delta": 134,
-        "balanceBefore": 508,
-        "balanceAfter": 642,
+        "hits": 2,
+        "total": 6,
+        "delta": -38,
+        "balanceBefore": 642,
+        "balanceAfter": 604,
         "qualified": false,
         "details": [
           {
-            "key": "ps_win",
-            "pick": "西班牙",
+            "key": "arg_win",
+            "pick": "阿根廷",
             "bet": 100,
             "hit": true,
-            "return": 204,
-            "delta": 104
+            "return": 106,
+            "delta": 6
           },
           {
-            "key": "cr7",
-            "pick": "1球",
+            "key": "arg_goals",
+            "pick": "2-3球",
             "bet": 50,
             "hit": false,
             "return": 5,
             "delta": -45
           },
           {
-            "key": "ub_win",
-            "pick": "比利时",
+            "key": "messi_half",
+            "pick": "否",
             "bet": 50,
             "hit": true,
-            "return": 108,
-            "delta": 58
+            "return": 156,
+            "delta": 106
           },
           {
-            "key": "pens",
-            "pick": "否",
+            "key": "sui_col_win",
+            "pick": "哥伦比亚",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
+          },
+          {
+            "key": "sui_col_goals",
+            "pick": "2-3球",
+            "bet": 50,
+            "hit": false,
+            "return": 5,
+            "delta": -45
+          },
+          {
+            "key": "first_goal",
+            "pick": "哥伦比亚",
             "bet": 20,
-            "hit": true,
-            "return": 37,
-            "delta": 17
+            "hit": false,
+            "return": 5,
+            "delta": -15
           }
         ]
       },
       "glm": {
-        "hits": 3,
-        "total": 4,
-        "delta": 191,
-        "balanceBefore": 871,
-        "balanceAfter": 1062,
+        "hits": 1,
+        "total": 6,
+        "delta": -179,
+        "balanceBefore": 1062,
+        "balanceAfter": 883,
         "qualified": false,
         "details": [
           {
-            "key": "ps_win",
-            "pick": "西班牙",
+            "key": "arg_win",
+            "pick": "阿根廷",
             "bet": 100,
             "hit": true,
-            "return": 204,
-            "delta": 104
+            "return": 106,
+            "delta": 6
           },
           {
-            "key": "cr7",
-            "pick": "1球",
+            "key": "arg_goals",
+            "pick": "2-3球",
             "bet": 50,
             "hit": false,
             "return": 5,
             "delta": -45
           },
           {
-            "key": "ub_win",
-            "pick": "比利时",
-            "bet": 100,
-            "hit": true,
-            "return": 215,
-            "delta": 115
+            "key": "messi_half",
+            "pick": "是",
+            "bet": 20,
+            "hit": false,
+            "return": 5,
+            "delta": -15
           },
           {
-            "key": "pens",
-            "pick": "否",
+            "key": "sui_col_win",
+            "pick": "哥伦比亚",
+            "bet": 100,
+            "hit": false,
+            "return": 5,
+            "delta": -95
+          },
+          {
+            "key": "sui_col_goals",
+            "pick": "2-3球",
             "bet": 20,
-            "hit": true,
-            "return": 37,
-            "delta": 17
+            "hit": false,
+            "return": 5,
+            "delta": -15
+          },
+          {
+            "key": "first_goal",
+            "pick": "哥伦比亚",
+            "bet": 20,
+            "hit": false,
+            "return": 5,
+            "delta": -15
           }
         ]
       }
