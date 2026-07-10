@@ -10,7 +10,7 @@
 <div class="toolbar">
   <button onclick="saveAll(this)">打包导出</button>
   <button onclick="saveOne('card1','预测战报_0710_cover')">导出封面</button>
-  <button onclick="saveOne('card5','预测战报_0710_status')">导出状态</button>
+  <button onclick="saveOne('card7','预测战报_0710_status')">导出状态</button>
 </div>
 <div class="stage">
   <section class="card cover" id="card1">
@@ -21,10 +21,12 @@
       <div class="warnbox">待修正：Grok 有 30 分非法档位；通义千问有 200 分非法档位。正式结算前需改为 10 / 20 / 50 / 100 / 500。</div>
     </div>
   </section>
-  <section class="card" id="card2"><div class="hd"><div class="ey">CONSENSUS</div><div class="ttl">胜负与总进球</div><div class="sub">西班牙 + 2-3球成为主线</div></div><div class="body" id="c2body"></div></section>
-  <section class="card" id="card3"><div class="hd"><div class="ey">PLAYER MARKET</div><div class="ttl">亚马尔进球数</div><div class="sub">0球 vs 1球</div></div><div class="body" id="c3body"></div></section>
-  <section class="card" id="card4"><div class="hd"><div class="ey">MATCH TEMPO</div><div class="ttl">上半场是否进球</div><div class="sub">多数押“是”，两家押“否”</div></div><div class="body" id="c4body"></div></section>
-  <section class="card" id="card5"><div class="hd"><div class="ey">CARDS & STATUS</div><div class="ttl">黄牌与记录状态</div><div class="sub">3-5张成为技术犯规共识</div></div><div class="body" id="c5body"></div></section>
+  <section class="card" id="card2"><div class="hd"><div class="ey">CONSENSUS</div><div class="ttl">胜负选择</div><div class="sub">7家全部站西班牙</div></div><div class="body" id="c2body"></div></section>
+  <section class="card" id="card3"><div class="hd"><div class="ey">GOALS MARKET</div><div class="ttl">总进球数</div><div class="sub">2-3球成为主线</div></div><div class="body" id="c3body"></div></section>
+  <section class="card" id="card4"><div class="hd"><div class="ey">PLAYER MARKET</div><div class="ttl">亚马尔进球数</div><div class="sub">0球 vs 1球</div></div><div class="body" id="c4body"></div></section>
+  <section class="card" id="card5"><div class="hd"><div class="ey">MATCH TEMPO</div><div class="ttl">上半场是否进球</div><div class="sub">多数押“是”，两家押“否”</div></div><div class="body" id="c5body"></div></section>
+  <section class="card" id="card6"><div class="hd"><div class="ey">CARDS MARKET</div><div class="ttl">黄牌数量</div><div class="sub">3-5张成为技术犯规共识</div></div><div class="body" id="c6body"></div></section>
+  <section class="card" id="card7"><div class="hd"><div class="ey">RECORD STATUS</div><div class="ttl">记录状态</div><div class="sub">5家有效，2家待修正</div></div><div class="body" id="c7body"></div></section>
 </div>
 <script>
 const MODELS={chatgpt:{name:'ChatGPT',ini:'GPT',color:'#10A37F'},deepseek:{name:'DeepSeek',ini:'DS',color:'#2D6BF0'},doubao:{name:'豆包',ini:'豆',color:'#0FB6D6'},gemini:{name:'Gemini',ini:'GM',color:'#DB3E8E'},grok:{name:'Grok',ini:'GK',color:'#1F2329',invalid:'上半场30'},qwen:{name:'通义千问',ini:'通',color:'#7C5CFF',invalid:'总进球200'},glm:{name:'智谱GLM',ini:'智',color:'#3B49C9'},claude:{name:'Claude',ini:'C',color:'#D97757',banned:true}};
@@ -43,10 +45,12 @@ function optClass(o){const p=parseInt(o[1]);return p>=70?'hot':p<=15?'dog':''}
 function optionList(dim){const d=DIMS[dim], buckets={};d.options.forEach(o=>buckets[o[0]]=[]);Object.keys(PICKS).forEach(id=>{const p=PICKS[id].data[dim];if(p)(buckets[p[0]]||=[]).push({id,bet:p[1]})});return d.options.map(o=>{const arr=(buckets[o[0]]||[]).sort((a,b)=>b.bet-a.bet);return `<div class="option ${optClass(o)}"><div class="top"><b>${o[0]}</b><span class="pct">大众 ${o[1]} · ${arr.length}票</span></div><div class="chips">${arr.length?arr.map(x=>avatar(x.id,x.bet)).join(''):'<span class="empty">无人押</span>'}</div></div>`}).join('')}
 function dimPanel(dim,note){const d=DIMS[dim];return `<div class="panel"><div class="ph"><div><div class="pn">${d.title}</div><div class="po">${d.sub}</div></div></div><div class="options">${optionList(dim)}</div></div><div class="note">${note}</div>`}
 document.getElementById('hist').innerHTML=Object.entries(PICKS).sort((a,b)=>b[1].total-a[1].total).map(([id,p])=>{const m=MODELS[id];const w=Math.max(8,p.total/900*100);return `<div class="hrow ${p.valid?'':'bad'}"><div class="dot" style="background:${m.color}">${m.ini}</div><div class="name">${m.name}</div><div class="bar"><i style="width:${w}%;background:${m.color}"></i></div><div class="val">${p.total}</div></div>`}).join('');
-document.getElementById('c2body').innerHTML=dimPanel('win','<b>共识：</b>7家全部选择西班牙，正式有效选手中 Gemini 对胜负重压500。')+dimPanel('goals','<b>共识：</b>所有选手都选择2-3球；通义千问此项200分非法，需修正后才能正式计入。');
-document.getElementById('c3body').innerHTML=dimPanel('yamal','<b>分歧：</b>ChatGPT、DeepSeek、Gemini、通义千问押0球；豆包、Grok、智谱GLM押1球。无人选择2球及以上。');
-document.getElementById('c4body').innerHTML=dimPanel('half','<b>节奏分歧：</b>多数选手押上半场有球；DeepSeek和通义千问押上半场无进球。Grok此项30分非法。');
-document.getElementById('c5body').innerHTML=dimPanel('cards','<b>黄牌共识：</b>7家全部选择3-5张，集体认为淘汰赛边路对抗和战术犯规会高于0-2张。')+`<div class="panel"><div class="pn">记录状态</div><div class="grid2" style="margin-top:10px"><div class="kpi"><b>5家</b><span>配置合法，可进入正式战报统计</span></div><div class="kpi"><b>2家</b><span>Grok、通义千问需修正非法配置</span></div><div class="kpi"><b>1家</b><span>Claude继续封禁，不进入首页焦点</span></div><div class="kpi"><b>0家</b><span>无人选择比利时、4球及以上、亚马尔2+</span></div></div></div>`;
+document.getElementById('c2body').innerHTML=dimPanel('win','<b>共识：</b>7家全部选择西班牙，正式有效选手中 Gemini 对胜负重压500。');
+document.getElementById('c3body').innerHTML=dimPanel('goals','<b>共识：</b>所有选手都选择2-3球；通义千问此项200分非法，需修正后才能正式计入。');
+document.getElementById('c4body').innerHTML=dimPanel('yamal','<b>分歧：</b>ChatGPT、DeepSeek、Gemini、通义千问押0球；豆包、Grok、智谱GLM押1球。无人选择2球及以上。');
+document.getElementById('c5body').innerHTML=dimPanel('half','<b>节奏分歧：</b>多数选手押上半场有球；DeepSeek和通义千问押上半场无进球。Grok此项30分非法。');
+document.getElementById('c6body').innerHTML=dimPanel('cards','<b>黄牌共识：</b>7家全部选择3-5张，集体认为淘汰赛边路对抗和战术犯规会高于0-2张。');
+document.getElementById('c7body').innerHTML=`<div class="panel"><div class="pn">记录状态</div><div class="grid2" style="margin-top:10px"><div class="kpi"><b>5家</b><span>配置合法，可进入正式战报统计</span></div><div class="kpi"><b>2家</b><span>Grok、通义千问需修正非法配置</span></div><div class="kpi"><b>1家</b><span>Claude继续封禁，不进入首页焦点</span></div><div class="kpi"><b>0家</b><span>无人选择比利时、4球及以上、亚马尔2+</span></div></div></div><div class="panel"><div class="pn">待修正项</div><div class="options" style="margin-top:10px"><div class="option warn"><div class="top"><b>Grok</b><span class="pct">上半场是否进球</span></div><div class="fine">配置 30 分不在允许档位内，需改为 10 / 20 / 50 / 100 / 500。</div></div><div class="option warn"><div class="top"><b>通义千问</b><span class="pct">总进球数</span></div><div class="fine">配置 200 分不在允许档位内，需改为 10 / 20 / 50 / 100 / 500。</div></div></div></div><div class="note"><b>裁判口径：</b>当前战报先展示原始提交；正式结算前，非法档位不应计入有效配置。</div>`;
 async function saveOne(id,name){const c=await html2canvas(document.getElementById(id),{scale:3,backgroundColor:null,useCORS:true});const b=await new Promise(r=>c.toBlob(r,'image/png'));const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=name+'.png';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
-async function saveAll(btn){const ids=['cover','consensus','yamal','half','cards_status'];const zip=new JSZip();if(btn){btn.disabled=true;btn.textContent='生成中...'}try{for(let i=0;i<ids.length;i++){if(btn)btn.textContent='生成 '+(i+1)+'/'+ids.length;const c=await html2canvas(document.getElementById('card'+(i+1)),{scale:3,backgroundColor:null,useCORS:true});const b=await new Promise(r=>c.toBlob(r,'image/png'));zip.file('预测战报_0710_'+ids[i]+'.png',b)}if(btn)btn.textContent='打包中...';const b=await zip.generateAsync({type:'blob'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='预测战报_0710_全部图片.zip';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}finally{if(btn){btn.disabled=false;btn.textContent='打包导出'}}}
+async function saveAll(btn){const ids=['cover','win','goals','yamal','half','cards','status'];const zip=new JSZip();if(btn){btn.disabled=true;btn.textContent='生成中...'}try{for(let i=0;i<ids.length;i++){if(btn)btn.textContent='生成 '+(i+1)+'/'+ids.length;const c=await html2canvas(document.getElementById('card'+(i+1)),{scale:3,backgroundColor:null,useCORS:true});const b=await new Promise(r=>c.toBlob(r,'image/png'));zip.file('预测战报_0710_'+ids[i]+'.png',b)}if(btn)btn.textContent='打包中...';const b=await zip.generateAsync({type:'blob'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='预测战报_0710_全部图片.zip';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}finally{if(btn){btn.disabled=false;btn.textContent='打包导出'}}}
 </script>
