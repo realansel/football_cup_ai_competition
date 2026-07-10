@@ -18,7 +18,7 @@
     <div class="body">
       <div class="hero"><div class="big">西班牙全员看好<br>亚马尔出现分歧</div><p>已收到7家预测，Claude继续封禁。胜负与总进球高度趋同，真正分歧集中在亚马尔是否进球、上半场是否破门。</p></div>
       <div class="panel"><div class="ph"><div><div class="pn">今日投注直方图</div><div class="po">按提交总配置排序；橙色为待修正</div></div><span class="tag">raw stake</span></div><div class="bars" id="hist"></div></div>
-      <div class="warnbox">待修正：Grok 有 30 分非法档位；通义千问有 200 分非法档位。正式结算前需改为 10 / 20 / 50 / 100 / 500。</div>
+      <div class="warnbox">待修正：通义千问有 200 分非法档位。正式结算前需改为 10 / 20 / 50 / 100 / 500。</div>
     </div>
   </section>
   <section class="card" id="card2"><div class="hd"><div class="ey">CONSENSUS</div><div class="ttl">胜负选择</div><div class="sub">7家全部站西班牙</div></div><div class="body" id="c2body"></div></section>
@@ -26,16 +26,16 @@
   <section class="card" id="card4"><div class="hd"><div class="ey">PLAYER MARKET</div><div class="ttl">亚马尔进球数</div><div class="sub">0球 vs 1球</div></div><div class="body" id="c4body"></div></section>
   <section class="card" id="card5"><div class="hd"><div class="ey">MATCH TEMPO</div><div class="ttl">上半场是否进球</div><div class="sub">多数押“是”，两家押“否”</div></div><div class="body" id="c5body"></div></section>
   <section class="card" id="card6"><div class="hd"><div class="ey">CARDS MARKET</div><div class="ttl">黄牌数量</div><div class="sub">3-5张成为技术犯规共识</div></div><div class="body" id="c6body"></div></section>
-  <section class="card" id="card7"><div class="hd"><div class="ey">RECORD STATUS</div><div class="ttl">记录状态</div><div class="sub">5家有效，2家待修正</div></div><div class="body" id="c7body"></div></section>
+  <section class="card" id="card7"><div class="hd"><div class="ey">RECORD STATUS</div><div class="ttl">记录状态</div><div class="sub">6家有效，1家待修正</div></div><div class="body" id="c7body"></div></section>
 </div>
 <script>
-const MODELS={chatgpt:{name:'ChatGPT',ini:'GPT',color:'#10A37F'},deepseek:{name:'DeepSeek',ini:'DS',color:'#2D6BF0'},doubao:{name:'豆包',ini:'豆',color:'#0FB6D6'},gemini:{name:'Gemini',ini:'GM',color:'#DB3E8E'},grok:{name:'Grok',ini:'GK',color:'#1F2329',invalid:'上半场30'},qwen:{name:'通义千问',ini:'通',color:'#7C5CFF',invalid:'总进球200'},glm:{name:'智谱GLM',ini:'智',color:'#3B49C9'},claude:{name:'Claude',ini:'C',color:'#D97757',banned:true}};
+const MODELS={chatgpt:{name:'ChatGPT',ini:'GPT',color:'#10A37F'},deepseek:{name:'DeepSeek',ini:'DS',color:'#2D6BF0'},doubao:{name:'豆包',ini:'豆',color:'#0FB6D6'},gemini:{name:'Gemini',ini:'GM',color:'#DB3E8E'},grok:{name:'Grok',ini:'GK',color:'#1F2329'},qwen:{name:'通义千问',ini:'通',color:'#7C5CFF',invalid:'总进球200'},glm:{name:'智谱GLM',ini:'智',color:'#3B49C9'},claude:{name:'Claude',ini:'C',color:'#D97757',banned:true}};
 const PICKS={
 chatgpt:{total:400,valid:true,data:{win:['西班牙',100],goals:['2-3球',100],yamal:['0球',50],half:['是',50],cards:['3-5张',100]}},
 deepseek:{total:360,valid:true,data:{win:['西班牙',10],goals:['2-3球',50],yamal:['0球',100],half:['否',100],cards:['3-5张',100]}},
 doubao:{total:500,valid:true,data:{win:['西班牙',100],goals:['2-3球',100],yamal:['1球',100],half:['是',100],cards:['3-5张',100]}},
 gemini:{total:800,valid:true,data:{win:['西班牙',500],goals:['2-3球',100],yamal:['0球',50],half:['是',100],cards:['3-5张',50]}},
-grok:{total:250,valid:false,data:{win:['西班牙',100],goals:['2-3球',50],yamal:['1球',50],half:['是',30],cards:['3-5张',20]}},
+grok:{total:240,valid:true,data:{win:['西班牙',100],goals:['2-3球',50],yamal:['1球',50],half:['是',20],cards:['3-5张',20]}},
 qwen:{total:900,valid:false,data:{win:['西班牙',500],goals:['2-3球',200],yamal:['0球',50],half:['否',50],cards:['3-5张',100]}},
 glm:{total:210,valid:true,data:{win:['西班牙',100],goals:['2-3球',50],yamal:['1球',20],half:['是',20],cards:['3-5张',20]}}
 };
@@ -48,9 +48,9 @@ document.getElementById('hist').innerHTML=Object.entries(PICKS).sort((a,b)=>b[1]
 document.getElementById('c2body').innerHTML=dimPanel('win','<b>共识：</b>7家全部选择西班牙，正式有效选手中 Gemini 对胜负重压500。');
 document.getElementById('c3body').innerHTML=dimPanel('goals','<b>共识：</b>所有选手都选择2-3球；通义千问此项200分非法，需修正后才能正式计入。');
 document.getElementById('c4body').innerHTML=dimPanel('yamal','<b>分歧：</b>ChatGPT、DeepSeek、Gemini、通义千问押0球；豆包、Grok、智谱GLM押1球。无人选择2球及以上。');
-document.getElementById('c5body').innerHTML=dimPanel('half','<b>节奏分歧：</b>多数选手押上半场有球；DeepSeek和通义千问押上半场无进球。Grok此项30分非法。');
+document.getElementById('c5body').innerHTML=dimPanel('half','<b>节奏分歧：</b>多数选手押上半场有球；DeepSeek和通义千问押上半场无进球。Grok已修正为20分合法配置。');
 document.getElementById('c6body').innerHTML=dimPanel('cards','<b>黄牌共识：</b>7家全部选择3-5张，集体认为淘汰赛边路对抗和战术犯规会高于0-2张。');
-document.getElementById('c7body').innerHTML=`<div class="panel"><div class="pn">记录状态</div><div class="grid2" style="margin-top:10px"><div class="kpi"><b>5家</b><span>配置合法，可进入正式战报统计</span></div><div class="kpi"><b>2家</b><span>Grok、通义千问需修正非法配置</span></div><div class="kpi"><b>1家</b><span>Claude继续封禁，不进入首页焦点</span></div><div class="kpi"><b>0家</b><span>无人选择比利时、4球及以上、亚马尔2+</span></div></div></div><div class="panel"><div class="pn">待修正项</div><div class="options" style="margin-top:10px"><div class="option warn"><div class="top"><b>Grok</b><span class="pct">上半场是否进球</span></div><div class="fine">配置 30 分不在允许档位内，需改为 10 / 20 / 50 / 100 / 500。</div></div><div class="option warn"><div class="top"><b>通义千问</b><span class="pct">总进球数</span></div><div class="fine">配置 200 分不在允许档位内，需改为 10 / 20 / 50 / 100 / 500。</div></div></div></div><div class="note"><b>裁判口径：</b>当前战报先展示原始提交；正式结算前，非法档位不应计入有效配置。</div>`;
+document.getElementById('c7body').innerHTML=`<div class="panel"><div class="pn">记录状态</div><div class="grid2" style="margin-top:10px"><div class="kpi"><b>6家</b><span>配置合法，可进入正式战报统计</span></div><div class="kpi"><b>1家</b><span>通义千问需修正非法配置</span></div><div class="kpi"><b>1家</b><span>Claude继续封禁，不进入首页焦点</span></div><div class="kpi"><b>0家</b><span>无人选择比利时、4球及以上、亚马尔2+</span></div></div></div><div class="panel"><div class="pn">待修正项</div><div class="options" style="margin-top:10px"><div class="option warn"><div class="top"><b>通义千问</b><span class="pct">总进球数</span></div><div class="fine">配置 200 分不在允许档位内，需改为 10 / 20 / 50 / 100 / 500。</div></div></div></div><div class="note"><b>裁判口径：</b>Grok已修正为合法配置；通义千问修正前，总进球200分不应计入有效配置。</div>`;
 async function saveOne(id,name){const c=await html2canvas(document.getElementById(id),{scale:3,backgroundColor:null,useCORS:true});const b=await new Promise(r=>c.toBlob(r,'image/png'));const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=name+'.png';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 async function saveAll(btn){const ids=['cover','win','goals','yamal','half','cards','status'];const zip=new JSZip();if(btn){btn.disabled=true;btn.textContent='生成中...'}try{for(let i=0;i<ids.length;i++){if(btn)btn.textContent='生成 '+(i+1)+'/'+ids.length;const c=await html2canvas(document.getElementById('card'+(i+1)),{scale:3,backgroundColor:null,useCORS:true});const b=await new Promise(r=>c.toBlob(r,'image/png'));zip.file('预测战报_0710_'+ids[i]+'.png',b)}if(btn)btn.textContent='打包中...';const b=await zip.generateAsync({type:'blob'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='预测战报_0710_全部图片.zip';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}finally{if(btn){btn.disabled=false;btn.textContent='打包导出'}}}
 </script>
