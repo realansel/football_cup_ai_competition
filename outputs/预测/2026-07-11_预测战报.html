@@ -1,0 +1,147 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>今日预测战报 · 07/11</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+:root{--green:#0d6b4b;--green2:#e9f6ef;--gold:#f2c94c;--red:#ff2442;--ink:#17251f;--muted:#6f7f76;--line:#e4ece7;--bg:#f7faf7;--cream:#fff8df}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:linear-gradient(180deg,#eaf5ef,#0b3b2b);font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;padding:24px 16px 56px;color:var(--ink);display:flex;flex-direction:column;align-items:center;gap:20px;font-variant-numeric:tabular-nums}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.toolbar button{border:0;border-radius:999px;background:var(--gold);color:#3a2c05;padding:9px 18px;font-weight:900;cursor:pointer}
+.stage{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.card{width:600px;height:800px;background:#fff;border-radius:30px;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.24);display:flex;flex-direction:column}
+.head{padding:24px 30px 18px;background:linear-gradient(135deg,#ffffff,#edf8f1);border-bottom:1px solid var(--line);position:relative;flex:0 0 auto}
+.head:after{content:"";position:absolute;left:30px;right:30px;bottom:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0 30px,transparent 30px 58px);opacity:.9}
+.ey{font-size:13px;font-weight:900;letter-spacing:.13em;color:var(--green);text-transform:uppercase}
+.ttl{font-size:36px;line-height:1.04;font-weight:950;margin-top:8px;color:#10251c}
+.sub{font-size:13px;color:var(--muted);margin-top:7px;font-weight:850}
+.body{padding:18px 22px 16px;display:flex;flex-direction:column;gap:12px;flex:1;min-height:0;background:linear-gradient(180deg,#fff,#fbfdfb)}
+.hero{border:1px solid #dfe9e4;border-radius:24px;background:linear-gradient(180deg,#ffffff,#f6fbf8);padding:16px}
+.heroTitle{font-size:35px;line-height:1.08;font-weight:950;color:#10251c}
+.heroTitle em{font-style:normal;color:var(--green)}
+.heroText{margin-top:8px;font-size:14px;line-height:1.48;font-weight:850;color:#34463e}
+.panel{border:1px solid var(--line);border-radius:20px;background:#fff;padding:14px}
+.pn{font-size:20px;font-weight:950;color:#12251d}
+.po{font-size:12px;color:var(--muted);font-weight:900;margin-top:3px}
+.row{display:grid;grid-template-columns:34px 86px 1fr 58px;align-items:center;gap:8px;border:1px solid var(--line);background:#f7faf7;border-radius:14px;padding:8px 10px}
+.rows{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:10px;font-weight:950;flex:0 0 auto}
+.name{font-size:13px;font-weight:950;white-space:nowrap}
+.bar{height:13px;background:#e4ece7;border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px}
+.val{text-align:right;font-size:13px;font-weight:950;color:#7c5c06}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{border:1px solid var(--line);border-radius:18px;background:var(--bg);padding:12px}
+.kpi b{display:block;font-size:28px;line-height:1;font-weight:950;color:var(--green)}
+.kpi span{display:block;margin-top:7px;font-size:13px;line-height:1.35;color:#34463e;font-weight:850}
+.options{display:flex;flex-direction:column;gap:9px}
+.option{border:1px solid #dde8e2;border-radius:17px;background:#edf4f1;padding:11px}
+.option.hot{background:#fff5dc;border-color:#ecd27a}
+.option.dog{background:#fff0f4;border-color:#f4c2cd}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.top b{font-size:18px}
+.pct{font-size:12px;color:var(--muted);font-weight:950}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:999px;padding:4px 8px 4px 4px;box-shadow:0 2px 8px rgba(0,0,0,.08);font-size:12px;font-weight:950}
+.chip .dot{width:22px;height:22px;font-size:9px}
+.bet{color:#8a6700}
+.empty{font-size:12px;color:#98a49d;font-weight:900;padding:5px}
+.note{background:#0d6b4b;color:#effff6;border-radius:18px;padding:13px 15px;font-size:13px;line-height:1.5;font-weight:850;margin-top:auto}
+.note b{color:var(--gold)}
+.cover .head{background:#fff}
+.cover .body{background:linear-gradient(180deg,#fff,#f4fbf7)}
+.risk{display:grid;grid-template-columns:1fr;gap:8px}
+.riskRow{display:grid;grid-template-columns:34px 82px 1fr 58px;align-items:center;gap:8px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:8px 10px}
+.riskRow.toprisk{background:#fff8df;border-color:#ecd27a}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini{border-radius:16px;border:1px solid var(--line);background:#f7faf7;padding:11px}
+.mini b{display:block;font-size:20px;color:var(--green)}
+.mini span{display:block;margin-top:5px;font-size:12px;font-weight:850;color:#56665e;line-height:1.35}
+</style>
+
+<div class="toolbar">
+  <button onclick="saveAll(this)">打包导出</button>
+  <button onclick="saveOne('card1','预测战报_0711_封面')">导出封面</button>
+  <button onclick="saveOne('card9','预测战报_0711_状态')">导出状态</button>
+</div>
+
+<div class="stage">
+  <section class="card cover" id="card1">
+    <div class="head">
+      <div class="ey">World Cup AI Challenge</div>
+      <div class="ttl">第11天预测战报</div>
+      <div class="sub">07/11 · 挪威vs英格兰；阿根廷vs瑞士 · 1/4决赛</div>
+    </div>
+    <div class="body">
+      <div class="hero">
+        <div class="heroTitle">今日魄力榜：<em>Gemini 87%</em></div>
+        <div class="heroText">以“今日配置积分 / 当前余额”衡量投入力度。Gemini 押下 1800，占余额 2061 的 87.3%；豆包 81.2% 紧随其后。</div>
+      </div>
+      <div class="panel">
+        <div class="pn">赌注占总资金百分比</div>
+        <div class="po">越高代表今日越敢压仓；Claude封禁不计入</div>
+        <div class="risk" id="riskChart"></div>
+      </div>
+      <div class="split">
+        <div class="mini"><b>6 / 7</b><span>有效选手押英格兰或挪威的分歧集中在首场胜负。</span></div>
+        <div class="mini"><b>7 / 7</b><span>全部选择两场总进球 2-3 球，进球区间高度一致。</span></div>
+      </div>
+      <div class="note"><b>首页改版：</b>白底为主，焦点从“谁押最多”升级为“谁把余额压得最狠”。</div>
+    </div>
+  </section>
+
+  <section class="card" id="card2"><div class="head"><div class="ey">Norway vs England</div><div class="ttl">首场胜负分歧</div><div class="sub">英格兰低占比方向获得5家支持</div></div><div class="body" id="card2body"></div></section>
+  <section class="card" id="card3"><div class="head"><div class="ey">Norway vs England</div><div class="ttl">总进球数</div><div class="sub">2-3球全票通过</div></div><div class="body" id="card3body"></div></section>
+  <section class="card" id="card4"><div class="head"><div class="ey">Norway vs England</div><div class="ttl">哈兰德上半场</div><div class="sub">是否破门成为球星分歧</div></div><div class="body" id="card4body"></div></section>
+  <section class="card" id="card5"><div class="head"><div class="ey">Argentina vs Switzerland</div><div class="ttl">阿根廷胜负</div><div class="sub">7家全部选择阿根廷</div></div><div class="body" id="card5body"></div></section>
+  <section class="card" id="card6"><div class="head"><div class="ey">Argentina vs Switzerland</div><div class="ttl">阿瑞总进球</div><div class="sub">2-3球再次全票</div></div><div class="body" id="card6body"></div></section>
+  <section class="card" id="card7"><div class="head"><div class="ey">Argentina vs Switzerland</div><div class="ttl">梅西进球数</div><div class="sub">1球成为完全共识</div></div><div class="body" id="card7body"></div></section>
+  <section class="card" id="card8"><div class="head"><div class="ey">Stakes</div><div class="ttl">重注选手</div><div class="sub">单项500与总仓位观察</div></div><div class="body" id="card8body"></div></section>
+  <section class="card" id="card9"><div class="head"><div class="ey">Record Status</div><div class="ttl">记录状态</div><div class="sub">7家有效，Claude继续封禁</div></div><div class="body" id="card9body"></div></section>
+</div>
+
+<script>
+const models={
+  chatgpt:{name:'ChatGPT',ini:'GPT',color:'#10A37F',balance:1832,total:500},
+  doubao:{name:'豆包',ini:'豆',color:'#0FB6D6',balance:1109,total:900},
+  deepseek:{name:'DeepSeek',ini:'DS',color:'#2D6BF0',balance:1273,total:350},
+  gemini:{name:'Gemini',ini:'GM',color:'#DB3E8E',balance:2061,total:1800},
+  grok:{name:'Grok',ini:'GK',color:'#1F2329',balance:965,total:380},
+  qwen:{name:'通义千问',ini:'通',color:'#7C5CFF',balance:1671,total:550},
+  glm:{name:'智谱GLM',ini:'智',color:'#3B49C9',balance:1195,total:340}
+};
+const picks={
+  chatgpt:{nWin:['英格兰',100],nGoals:['2-3球',100],haaland:['否',50],aWin:['阿根廷',100],aGoals:['2-3球',100],messi:['1球',50]},
+  doubao:{nWin:['英格兰',100],nGoals:['2-3球',50],haaland:['否',100],aWin:['阿根廷',500],aGoals:['2-3球',50],messi:['1球',100]},
+  deepseek:{nWin:['英格兰',100],nGoals:['2-3球',50],haaland:['否',50],aWin:['阿根廷',50],aGoals:['2-3球',50],messi:['1球',50]},
+  gemini:{nWin:['挪威',500],nGoals:['2-3球',500],haaland:['否',100],aWin:['阿根廷',500],aGoals:['2-3球',100],messi:['1球',100]},
+  grok:{nWin:['挪威',100],nGoals:['2-3球',50],haaland:['是',50],aWin:['阿根廷',100],aGoals:['2-3球',50],messi:['1球',30]},
+  qwen:{nWin:['英格兰',100],nGoals:['2-3球',100],haaland:['是',50],aWin:['阿根廷',100],aGoals:['2-3球',100],messi:['1球',100]},
+  glm:{nWin:['英格兰',100],nGoals:['2-3球',50],haaland:['否',20],aWin:['阿根廷',100],aGoals:['2-3球',50],messi:['1球',20]}
+};
+const dims={
+  nWin:{title:'本场哪方获胜',sub:'挪威 58% / 英格兰 42%',options:[['挪威','58%'],['英格兰','42%']]},
+  nGoals:{title:'总进球数',sub:'不含点球大战',options:[['0-1球','7%'],['2-3球','71%'],['4球及以上','22%']]},
+  haaland:{title:'哈兰德上半场是否进球',sub:'只统计常规时间上半场',options:[['是','61%'],['否','39%']]},
+  aWin:{title:'本场哪方获胜',sub:'阿根廷 87% / 瑞士 13%',options:[['阿根廷','87%'],['瑞士','13%']]},
+  aGoals:{title:'总进球数',sub:'不含点球大战',options:[['0-1球','10%'],['2-3球','77%'],['4球及以上','13%']]},
+  messi:{title:'梅西进球数',sub:'不含点球大战',options:[['0球','14%'],['1球','66%'],['2球及以上','20%']]}
+};
+function dot(id){const m=models[id];return `<span class="dot" style="background:${m.color}">${m.ini}</span>`}
+function chip(id,bet){const m=models[id];return `<span class="chip">${dot(id)}<span>${m.name}</span><span class="bet">${bet}</span></span>`}
+function cls(p){p=parseInt(p);return p>=70?'hot':p<=15?'dog':''}
+function dimPanel(key,note){const d=dims[key];const buckets={};d.options.forEach(o=>buckets[o[0]]=[]);Object.keys(picks).forEach(id=>{const p=picks[id][key];buckets[p[0]].push({id,bet:p[1]})});return `<div class="panel"><div class="pn">${d.title}</div><div class="po">${d.sub}</div><div class="options" style="margin-top:12px">${d.options.map(o=>{const arr=buckets[o[0]].sort((a,b)=>b.bet-a.bet);return `<div class="option ${cls(o[1])}"><div class="top"><b>${o[0]}</b><span class="pct">大众 ${o[1]} · ${arr.length}票</span></div><div class="chips">${arr.length?arr.map(x=>chip(x.id,x.bet)).join(''):'<span class="empty">无人押</span>'}</div></div>`}).join('')}</div></div><div class="note">${note}</div>`}
+document.getElementById('riskChart').innerHTML=Object.entries(models).sort((a,b)=>b[1].total/b[1].balance-a[1].total/a[1].balance).map(([id,m],i)=>{const pct=m.total/m.balance*100;return `<div class="riskRow ${i<2?'toprisk':''}">${dot(id)}<div class="name">${m.name}</div><div class="bar"><i style="width:${pct}%;background:${m.color}"></i></div><div class="val">${pct.toFixed(1)}%</div></div>`}).join('');
+document.getElementById('card2body').innerHTML=dimPanel('nWin','<b>今日最大分歧：</b>英格兰虽然只有42%大众占比，却获得5家AI支持；Gemini与Grok站挪威，且Gemini对挪威重压500。');
+document.getElementById('card3body').innerHTML=dimPanel('nGoals','<b>进球共识：</b>7家全部选择2-3球，其中Gemini在该维度重压500。');
+document.getElementById('card4body').innerHTML=dimPanel('haaland','<b>球星分歧：</b>Grok、通义千问押“是”；其余5家押“否”。市场偏向早段破门，但AI多数更谨慎。');
+document.getElementById('card5body').innerHTML=dimPanel('aWin','<b>胜负共识：</b>7家全部选择阿根廷获胜，豆包与Gemini各压500。');
+document.getElementById('card6body').innerHTML=dimPanel('aGoals','<b>进球共识：</b>2-3球获得全票，市场热度与AI判断完全重合。');
+document.getElementById('card7body').innerHTML=dimPanel('messi','<b>球星共识：</b>7家全部选择梅西1球，无人押0球或2球及以上。');
+document.getElementById('card8body').innerHTML=`<div class="panel"><div class="pn">单项500重注</div><div class="po">今日最大单项配置</div><div class="options" style="margin-top:12px"><div class="option hot"><div class="top"><b>Gemini · 挪威获胜</b><span class="pct">500</span></div><div class="chips">${chip('gemini',500)}</div></div><div class="option hot"><div class="top"><b>Gemini · 挪英2-3球</b><span class="pct">500</span></div><div class="chips">${chip('gemini',500)}</div></div><div class="option hot"><div class="top"><b>Gemini / 豆包 · 阿根廷获胜</b><span class="pct">各500</span></div><div class="chips">${chip('gemini',500)}${chip('doubao',500)}</div></div></div></div><div class="panel"><div class="pn">总仓位排行</div><div class="po">按今日配置积分排序</div><div class="rows">${Object.entries(models).sort((a,b)=>b[1].total-a[1].total).map(([id,m])=>`<div class="row">${dot(id)}<div class="name">${m.name}</div><div class="bar"><i style="width:${m.total/1800*100}%;background:${m.color}"></i></div><div class="val">${m.total}</div></div>`).join('')}</div></div><div class="note"><b>魄力观察：</b>Gemini总仓1800遥遥领先；豆包以900分投入成为第二激进选手。</div>`;
+document.getElementById('card9body').innerHTML=`<div class="panel"><div class="pn">记录状态</div><div class="grid2" style="margin-top:12px"><div class="kpi"><b>7家</b><span>有效AI全部提交，且6个维度均下注。</span></div><div class="kpi"><b>0家</b><span>当前没有非法配置或超余额问题。</span></div><div class="kpi"><b>1家</b><span>Claude继续封禁，不进入今日预测统计。</span></div><div class="kpi"><b>6项</b><span>今日每位有效选手均可冲击瓜分资格。</span></div></div></div><div class="panel"><div class="pn">今日一句话</div><div class="po">赛前阵营画像</div><div class="heroText">英格兰低占比方向获得更多AI支持，但Gemini用500重仓挪威形成对冲；阿根廷、两场2-3球、梅西1球则高度共识。</div></div><div class="note"><b>下一步：</b>赛后按平台最终开奖口径结算，错项按5金球币回血处理。</div>`;
+async function saveOne(id,name){const canvas=await html2canvas(document.getElementById(id),{scale:3,backgroundColor:null,useCORS:true});const blob=await new Promise(r=>canvas.toBlob(r,'image/png'));const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name+'.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+async function saveAll(btn){const names=['封面','挪英胜负','挪英总进球','哈兰德上半场','阿瑞胜负','阿瑞总进球','梅西进球','重注选手','记录状态'];const zip=new JSZip();if(btn){btn.disabled=true;btn.textContent='生成中...'}try{for(let i=1;i<=9;i++){if(btn)btn.textContent='生成 '+i+'/9';const canvas=await html2canvas(document.getElementById('card'+i),{scale:3,backgroundColor:null,useCORS:true});const blob=await new Promise(r=>canvas.toBlob(r,'image/png'));zip.file('预测战报_0711_'+names[i-1]+'.png',blob)}if(btn)btn.textContent='打包中...';const blob=await zip.generateAsync({type:'blob'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='预测战报_0711_全部图片.zip';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}finally{if(btn){btn.disabled=false;btn.textContent='打包导出'}}}
+</script>
