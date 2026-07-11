@@ -2,9 +2,9 @@
   "contest": "2026世界杯 · AI赛事预测分析挑战赛",
   "role": "裁判 / 记录员 / 出图助手",
   "lastCompletedDay": {
-    "n": 9,
-    "date": "07/09",
-    "stage": "1/4??"
+    "n": 10,
+    "date": "07/10",
+    "stage": "1/4决赛"
   },
   "scoringRules": {
     "currency": "金球币，虚拟积分，无现金价值",
@@ -24,8 +24,8 @@
     {
       "id": "doubao",
       "name": "豆包",
-      "balance": 661,
-      "dayDelta": 287,
+      "balance": 1109,
+      "dayDelta": 448,
       "jackpot": 0,
       "color": "#0FB6D6",
       "ini": "豆"
@@ -42,8 +42,8 @@
     {
       "id": "qwen",
       "name": "通义千问",
-      "balance": 1011,
-      "dayDelta": 139,
+      "balance": 1671,
+      "dayDelta": 660,
       "jackpot": 1,
       "color": "#7C5CFF",
       "ini": "通"
@@ -51,8 +51,8 @@
     {
       "id": "deepseek",
       "name": "DeepSeek",
-      "balance": 767,
-      "dayDelta": 177,
+      "balance": 1273,
+      "dayDelta": 506,
       "jackpot": 2,
       "color": "#2D6BF0",
       "ini": "DS"
@@ -60,26 +60,26 @@
     {
       "id": "chatgpt",
       "name": "ChatGPT",
-      "balance": 1213,
-      "dayDelta": 60,
-      "jackpot": 2,
+      "balance": 1832,
+      "dayDelta": 619,
+      "jackpot": 3,
       "color": "#10A37F",
       "ini": "GPT"
     },
     {
       "id": "gemini",
       "name": "Gemini",
-      "balance": 1367,
-      "dayDelta": 477,
-      "jackpot": 2,
+      "balance": 2061,
+      "dayDelta": 694,
+      "jackpot": 3,
       "color": "#DB3E8E",
       "ini": "GM"
     },
     {
       "id": "grok",
       "name": "Grok",
-      "balance": 835,
-      "dayDelta": 231,
+      "balance": 965,
+      "dayDelta": 130,
       "jackpot": 1,
       "color": "#1F2329",
       "ini": "GK"
@@ -87,8 +87,8 @@
     {
       "id": "glm",
       "name": "智谱GLM",
-      "balance": 1035,
-      "dayDelta": 152,
+      "balance": 1195,
+      "dayDelta": 160,
       "jackpot": 1,
       "color": "#3B49C9",
       "ini": "智"
@@ -109,93 +109,97 @@
     "完成后更新本 state 文件，保证下一天从最新余额继续。"
   ],
   "currentDay": {
-    "n": 9,
-    "date": "07/09",
-    "stage": "1/4??",
+    "n": 10,
+    "date": "07/10",
+    "stage": "1/4决赛",
     "status": "settled",
-    "note": "Claude?????7????????2-0???????1????0-2????????AI???????2-3???ChatGPT???????1????3-5???????????????Gemini????500??????1?????+477???",
+    "note": "Claude继续封禁，7家有效参赛；西班牙2-1比利时，2-3球、亚马尔0球、上半场有球、黄牌3-5张命中。ChatGPT与Gemini五项全中，Gemini单日+694继续领跑，ChatGPT追至第二。",
     "matches": [
       {
-        "home": "??",
-        "away": "???",
-        "time": "04:00",
+        "home": "西班牙",
+        "away": "比利时",
+        "time": "03:00",
         "dimensions": [
-          "??/???",
-          "????",
-          "??????",
-          "????"
+          "胜负/获胜方",
+          "总进球数",
+          "亚马尔进球数",
+          "上半场是否产生进球",
+          "黄牌数量"
         ]
       }
     ],
     "result": {
-      "score": "?? 2-0 ???",
-      "winner": "??",
-      "totalGoals": "2-3?",
-      "mbappeGoals": "1?",
-      "yellowCards": "0-2?",
+      "score": "西班牙 2-1 比利时",
+      "winner": "西班牙",
+      "totalGoals": "2-3球",
+      "yamalGoals": "0球",
+      "firstHalfGoal": "是",
+      "yellowCards": "3-5张",
       "payouts": {
-        "franceWin": "100?127",
-        "totalGoals_2_3": "100?273",
-        "mbappe_1": "50?182",
+        "spainWin": "500→682",
+        "totalGoals_2_3": "100→225",
+        "yamal_0": "50→186",
+        "firstHalf_yes": "100→220",
+        "yellowCards_3_5": "50→181",
         "wrongBetConsolation": 5
       }
     },
     "contestants": {
       "doubao": {
-        "hits": 3,
-        "total": 4,
-        "stake": 300,
-        "returned": 587,
-        "delta": 287,
-        "balance": 661
+        "hits": 4,
+        "total": 5,
+        "stake": 500,
+        "returned": 948,
+        "delta": 448,
+        "balance": 1109
       },
       "qwen": {
-        "hits": 3,
-        "total": 4,
-        "stake": 140,
-        "returned": 279,
-        "delta": 139,
-        "balance": 1011
+        "hits": 4,
+        "total": 5,
+        "stake": 800,
+        "returned": 1460,
+        "delta": 660,
+        "balance": 1671
       },
       "deepseek": {
-        "hits": 3,
-        "total": 4,
-        "stake": 160,
-        "returned": 337,
-        "delta": 177,
-        "balance": 767
+        "hits": 4,
+        "total": 5,
+        "stake": 360,
+        "returned": 866,
+        "delta": 506,
+        "balance": 1273
       },
       "chatgpt": {
-        "hits": 2,
-        "total": 4,
-        "stake": 350,
-        "returned": 410,
-        "delta": 60,
-        "balance": 1213
+        "hits": 5,
+        "total": 5,
+        "stake": 400,
+        "returned": 1019,
+        "delta": 619,
+        "balance": 1832
       },
       "gemini": {
-        "hits": 3,
-        "total": 4,
+        "hits": 5,
+        "total": 5,
         "stake": 800,
-        "returned": 1277,
-        "delta": 477,
-        "balance": 1367
+        "returned": 1494,
+        "delta": 694,
+        "balance": 2061
       },
       "grok": {
-        "hits": 3,
-        "total": 4,
-        "stake": 220,
-        "returned": 451,
-        "delta": 231,
-        "balance": 835
+        "hits": 4,
+        "total": 5,
+        "stake": 240,
+        "returned": 370,
+        "delta": 130,
+        "balance": 965
       },
       "glm": {
-        "hits": 3,
-        "total": 4,
-        "stake": 190,
-        "returned": 342,
-        "delta": 152,
-        "balance": 1035
+        "hits": 4,
+        "total": 5,
+        "stake": 210,
+        "returned": 370,
+        "delta": 160,
+        "balance": 1195
       },
       "claude": {
         "status": "banned",
@@ -208,13 +212,16 @@
       }
     },
     "jackpot": {
-      "todayAllHit": [],
-      "note": "????????????????"
+      "todayAllHit": [
+        "ChatGPT",
+        "Gemini"
+      ],
+      "note": "ChatGPT与Gemini五项全中，累计瓜分次数各+1。"
     },
     "outputs": {
-      "settlement": "outputs/???AI??_????_0709.html",
-      "settlementArchive": "outputs/??/2026-07-09_????.html",
-      "ledger": "outputs/???AI??_??????.md"
+      "settlement": "outputs/世界杯AI竞猜_结算战报_0710.html",
+      "settlementArchive": "outputs/结算/2026-07-10_结算战报.html",
+      "ledger": "outputs/世界杯AI竞猜_每日余额台账.md"
     }
   }
 }
