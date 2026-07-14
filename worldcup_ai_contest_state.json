@@ -2,9 +2,9 @@
     "contest":  "2026世界杯 · AI赛事预测分析挑战赛",
     "role":  "裁判 / 记录员 / 出图助手",
     "lastCompletedDay":  {
-                             "n":  11,
-                             "date":  "07/11",
-                             "stage":  "1/4决赛"
+                             "n":  12,
+                             "date":  "07/14",
+                             "stage":  "半决赛"
                          },
     "scoringRules":  {
                          "currency":  "金球币，虚拟积分，无现金价值",
@@ -24,8 +24,8 @@
                    {
                        "id":  "doubao",
                        "name":  "豆包",
-                       "balance":  1524,
-                       "dayDelta":  415,
+                       "balance":  1576,
+                       "dayDelta":  52,
                        "jackpot":  0,
                        "color":  "#0FB6D6",
                        "ini":  "豆"
@@ -43,8 +43,8 @@
                    {
                        "id":  "qwen",
                        "name":  "通义千问",
-                       "balance":  1726,
-                       "dayDelta":  55,
+                       "balance":  1404,
+                       "dayDelta":  -322,
                        "jackpot":  1,
                        "color":  "#7C5CFF",
                        "ini":  "通"
@@ -52,8 +52,8 @@
                    {
                        "id":  "deepseek",
                        "name":  "DeepSeek",
-                       "balance":  1488,
-                       "dayDelta":  215,
+                       "balance":  1972,
+                       "dayDelta":  484,
                        "jackpot":  2,
                        "color":  "#2D6BF0",
                        "ini":  "DS"
@@ -61,8 +61,8 @@
                    {
                        "id":  "chatgpt",
                        "name":  "ChatGPT",
-                       "balance":  2076,
-                       "dayDelta":  244,
+                       "balance":  2436,
+                       "dayDelta":  360,
                        "jackpot":  3,
                        "color":  "#10A37F",
                        "ini":  "GPT"
@@ -70,17 +70,17 @@
                    {
                        "id":  "gemini",
                        "name":  "Gemini",
-                       "balance":  2347,
-                       "dayDelta":  286,
-                       "jackpot":  3,
+                       "balance":  7336,
+                       "dayDelta":  4989,
+                       "jackpot":  4,
                        "color":  "#DB3E8E",
                        "ini":  "GM"
                    },
                    {
                        "id":  "grok",
                        "name":  "Grok",
-                       "balance":  851,
-                       "dayDelta":  -114,
+                       "balance":  799,
+                       "dayDelta":  -52,
                        "jackpot":  1,
                        "color":  "#1F2329",
                        "ini":  "GK"
@@ -88,8 +88,8 @@
                    {
                        "id":  "glm",
                        "name":  "智谱GLM",
-                       "balance":  1401,
-                       "dayDelta":  206,
+                       "balance":  1379,
+                       "dayDelta":  -22,
                        "jackpot":  1,
                        "color":  "#3B49C9",
                        "ini":  "智"
@@ -98,101 +98,92 @@
     "sourceFiles":  {
                         "promptTemplate":  "世界杯AI竞猜_每日提示词模板.md",
                         "predictionHtmlTemplate":  "outputs/世界杯AI竞猜_预测战报_0711.html",
-                        "settlementHtmlTemplate":  "outputs/世界杯AI竞猜_结算战报_0711.html"
+                        "settlementHtmlTemplate":  "outputs/世界杯AI竞猜_结算战报_0714.html"
                     },
     "currentDay":  {
-                       "n":  11,
-                       "date":  "07/11",
-                       "stage":  "1/4决赛",
+                       "n":  12,
+                       "date":  "07/14",
+                       "stage":  "半决赛",
                        "status":  "settled",
-                       "note":  "挪威1-2英格兰，阿根廷3-1瑞士；英格兰胜按43%最终占比估算，2-3球/哈兰德否/阿根廷胜使用截图实测奖励；阿瑞4+与梅西0球无人押中，无人全中。",
+                       "note":  "西班牙击败法国；2-3球、西班牙率先破门、3-5张黄牌。Gemini四项全中，四项奖励5571并获得1018瓜分奖励，兑奖总额6589。",
                        "matches":  [
                                        {
-                                           "home":  "挪威",
-                                           "away":  "英格兰",
-                                           "score":  "1-2",
+                                           "home":  "法国",
+                                           "away":  "西班牙",
+                                           "score":  "未提供",
                                            "result":  {
                                                           "totalGoals":  "2-3球",
-                                                          "haalandFirstHalf":  "否",
-                                                          "winner":  "英格兰"
-                                                      }
-                                       },
-                                       {
-                                           "home":  "阿根廷",
-                                           "away":  "瑞士",
-                                           "score":  "3-1",
-                                           "result":  {
-                                                          "totalGoals":  "4球及以上",
-                                                          "messiGoals":  "0球",
-                                                          "winner":  "阿根廷"
+                                                          "firstGoal":  "西班牙",
+                                                          "yellowCards":  "3-5张",
+                                                          "winner":  "西班牙"
                                                       }
                                        }
                                    ],
                        "payouts":  {
-                                       "englandWin":  "100→233（按43%估算）",
-                                       "norwayEnglandTotal_2_3":  "500→1110（截图实测）",
-                                       "haalandFirstHalf_no":  "100→287（截图实测）",
-                                       "argentinaWin":  "500→674（截图实测）",
-                                       "argentinaSwitzerlandTotal_4plus":  "无人押中",
-                                       "messi_0":  "无人押中",
+                                       "spainWin":  "500→2759",
+                                       "totalGoals_2_3":  "500→1081",
+                                       "spainFirstGoal":  "100→473",
+                                       "yellowCards_3_5":  "500→1258",
+                                       "jackpotBonus":  1018,
+                                       "geminiTotalClaim":  6589,
                                        "wrongBetConsolation":  5
                                    },
                        "contestants":  {
                                            "doubao":  {
-                                                          "hits":  4,
-                                                          "total":  6,
-                                                          "stake":  900,
-                                                          "returned":  1315,
-                                                          "delta":  415,
-                                                          "balance":  1524
+                                                          "hits":  2,
+                                                          "total":  4,
+                                                          "stake":  300,
+                                                          "returned":  352,
+                                                          "delta":  52,
+                                                          "balance":  1576
                                                       },
                                            "qwen":  {
-                                                        "hits":  3,
-                                                        "total":  6,
-                                                        "stake":  550,
-                                                        "returned":  605,
-                                                        "delta":  55,
-                                                        "balance":  1726
+                                                        "hits":  2,
+                                                        "total":  4,
+                                                        "stake":  800,
+                                                        "returned":  478,
+                                                        "delta":  -322,
+                                                        "balance":  1404
                                                     },
                                            "deepseek":  {
-                                                            "hits":  4,
-                                                            "total":  6,
-                                                            "stake":  350,
-                                                            "returned":  565,
-                                                            "delta":  215,
-                                                            "balance":  1488
+                                                            "hits":  3,
+                                                            "total":  4,
+                                                            "stake":  250,
+                                                            "returned":  734,
+                                                            "delta":  484,
+                                                            "balance":  1972
                                                         },
                                            "chatgpt":  {
-                                                           "hits":  4,
-                                                           "total":  6,
-                                                           "stake":  500,
-                                                           "returned":  744,
-                                                           "delta":  244,
-                                                           "balance":  2076
+                                                           "hits":  3,
+                                                           "total":  4,
+                                                           "stake":  350,
+                                                           "returned":  710,
+                                                           "delta":  360,
+                                                           "balance":  2436
                                                        },
                                            "gemini":  {
-                                                          "hits":  3,
-                                                          "total":  6,
-                                                          "stake":  1800,
-                                                          "returned":  2086,
-                                                          "delta":  286,
-                                                          "balance":  2347
+                                                          "hits":  4,
+                                                          "total":  4,
+                                                          "stake":  1600,
+                                                          "returned":  6589,
+                                                          "delta":  4989,
+                                                          "balance":  7336
                                                       },
                                            "grok":  {
                                                         "hits":  2,
-                                                        "total":  6,
-                                                        "stake":  380,
-                                                        "returned":  266,
-                                                        "delta":  -114,
-                                                        "balance":  851
+                                                        "total":  4,
+                                                        "stake":  220,
+                                                        "returned":  168,
+                                                        "delta":  -52,
+                                                        "balance":  799
                                                     },
                                            "glm":  {
-                                                       "hits":  4,
-                                                       "total":  6,
-                                                       "stake":  340,
-                                                       "returned":  546,
-                                                       "delta":  206,
-                                                       "balance":  1401
+                                                       "hits":  2,
+                                                       "total":  4,
+                                                       "stake":  190,
+                                                       "returned":  168,
+                                                       "delta":  -22,
+                                                       "balance":  1379
                                                    },
                                            "claude":  {
                                                           "status":  "banned",
@@ -206,13 +197,13 @@
                                        },
                        "jackpot":  {
                                        "todayAllHit":  [
-
+                                                           "Gemini"
                                                        ],
-                                       "note":  "无人全中，累计瓜分次数不变。"
+                                       "note":  "Gemini唯一四项全中，获得1018瓜分奖励，累计瓜分次数升至4次。"
                                    },
                        "outputs":  {
-                                       "settlement":  "outputs/世界杯AI竞猜_结算战报_0711.html",
-                                       "settlementArchive":  "outputs/结算/2026-07-11_结算战报.html",
+                                       "settlement":  "outputs/世界杯AI竞猜_结算战报_0714.html",
+                                       "settlementArchive":  "outputs/结算/2026-07-14_结算战报.html",
                                        "ledger":  "outputs/世界杯AI竞猜_每日余额台账.md"
                                    }
                    }
