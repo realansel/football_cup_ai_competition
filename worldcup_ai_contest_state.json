@@ -104,8 +104,8 @@
                        "n":  13,
                        "date":  "07/15",
                        "stage":  "半决赛",
-                       "status":  "collecting_predictions",
-                       "note":  "英格兰vs阿根廷，共5个预测维度；等待7家有效AI提交预测，Claude仍为封禁状态。",
+                       "status":  "prediction_report_ready",
+                       "note":  "英格兰vs阿根廷，共5个预测维度；7家有效AI预测已收齐，预测战报已生成。",
                        "matches":  [
                                        {
                                            "home":  "英格兰",
@@ -416,6 +416,8 @@
                        "outputs":  {
                                        "prompt":  "outputs/世界杯AI竞猜_每日提示词_0715.md",
                                        "promptArchive":  "outputs/提示词/2026-07-15_每日提示词.md",
+                                       "prediction":  "outputs/世界杯AI竞猜_预测战报_0715.html",
+                                       "predictionArchive":  "outputs/预测/2026-07-15_预测战报.html",
                                        "ledger":  "outputs/世界杯AI竞猜_每日余额台账.md"
                                    }
                    }
