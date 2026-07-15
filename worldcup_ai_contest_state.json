@@ -1,424 +1,433 @@
-﻿{
-    "contest":  "2026世界杯 · AI赛事预测分析挑战赛",
-    "role":  "裁判 / 记录员 / 出图助手",
-    "lastCompletedDay":  {
-                             "n":  12,
-                             "date":  "07/14",
-                             "stage":  "半决赛"
-                         },
-    "scoringRules":  {
-                         "currency":  "金球币，虚拟积分，无现金价值",
-                         "carryOver":  true,
-                         "allowedBets":  [
-                                             10,
-                                             20,
-                                             50,
-                                             100,
-                                             500
-                                         ],
-                         "wrongBetConsolation":  5,
-                         "payout":  "押中回报含本金；优先使用截图实测奖励，缺失时按最终占比公式估算",
-                         "jackpotQualification":  "必须对当日全部维度实际下注且全部命中；未下注不算全中"
-                     },
-    "models":  [
-                   {
-                       "id":  "doubao",
-                       "name":  "豆包",
-                       "balance":  1576,
-                       "dayDelta":  52,
-                       "jackpot":  0,
-                       "color":  "#0FB6D6",
-                       "ini":  "豆"
-                   },
-                   {
-                       "id":  "claude",
-                       "name":  "Claude",
-                       "balance":  371,
-                       "dayDelta":  0,
-                       "jackpot":  0,
-                       "color":  "#D97757",
-                       "ini":  "C",
-                       "status":  "banned"
-                   },
-                   {
-                       "id":  "qwen",
-                       "name":  "通义千问",
-                       "balance":  1404,
-                       "dayDelta":  -322,
-                       "jackpot":  1,
-                       "color":  "#7C5CFF",
-                       "ini":  "通"
-                   },
-                   {
-                       "id":  "deepseek",
-                       "name":  "DeepSeek",
-                       "balance":  1972,
-                       "dayDelta":  484,
-                       "jackpot":  2,
-                       "color":  "#2D6BF0",
-                       "ini":  "DS"
-                   },
-                   {
-                       "id":  "chatgpt",
-                       "name":  "ChatGPT",
-                       "balance":  2436,
-                       "dayDelta":  360,
-                       "jackpot":  3,
-                       "color":  "#10A37F",
-                       "ini":  "GPT"
-                   },
-                   {
-                       "id":  "gemini",
-                       "name":  "Gemini",
-                       "balance":  7336,
-                       "dayDelta":  4989,
-                       "jackpot":  4,
-                       "color":  "#DB3E8E",
-                       "ini":  "GM"
-                   },
-                   {
-                       "id":  "grok",
-                       "name":  "Grok",
-                       "balance":  799,
-                       "dayDelta":  -52,
-                       "jackpot":  1,
-                       "color":  "#1F2329",
-                       "ini":  "GK"
-                   },
-                   {
-                       "id":  "glm",
-                       "name":  "智谱GLM",
-                       "balance":  1379,
-                       "dayDelta":  -22,
-                       "jackpot":  1,
-                       "color":  "#3B49C9",
-                       "ini":  "智"
-                   }
-               ],
-    "sourceFiles":  {
-                        "promptTemplate":  "世界杯AI竞猜_每日提示词模板.md",
-                        "predictionHtmlTemplate":  "outputs/世界杯AI竞猜_预测战报_0711.html",
-                        "settlementHtmlTemplate":  "outputs/世界杯AI竞猜_结算战报_0714.html"
-                    },
-    "currentDay":  {
-                       "n":  13,
-                       "date":  "07/15",
-                       "stage":  "半决赛",
-                       "status":  "prediction_report_ready",
-                       "note":  "英格兰vs阿根廷，共5个预测维度；7家有效AI预测已收齐，预测战报已生成。",
-                       "matches":  [
-                                       {
-                                           "home":  "英格兰",
-                                           "away":  "阿根廷",
-                                           "time":  "03:00",
-                                           "dimensions":  {
-                                                              "winner":  {
-                                                                              "英格兰":  56,
-                                                                              "阿根廷":  44
-                                                                          },
-                                                              "totalGoals":  {
-                                                                                  "0-1球":  8,
-                                                                                  "2-3球":  73,
-                                                                                  "4球及以上":  19
-                                                                              },
-                                                              "decisionStage":  {
-                                                                                    "常规":  53,
-                                                                                    "加时":  37,
-                                                                                    "点球大战":  10
-                                                                                },
-                                                              "messiGoals":  {
-                                                                                  "0球":  30,
-                                                                                  "1球":  59,
-                                                                                  "2球及以上":  11
-                                                                              },
-                                                              "englandFirstHalfGoal":  {
-                                                                                              "是":  68,
-                                                                                              "否":  32
-                                                                                          }
-                                                          }
-                                       }
-                                   ],
-                       "submissions":  {
-                                           "chatgpt":  {
-                                                           "status":  "valid",
-                                                           "balance":  2436,
-                                                           "stake":  800,
-                                                           "qualification":  true,
-                                                           "picks":  [
-                                                                         {
-                                                                             "dimension":  "winner",
-                                                                             "choice":  "阿根廷",
-                                                                             "share":  44,
-                                                                             "stake":  500
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "totalGoals",
-                                                                             "choice":  "2-3球",
-                                                                             "share":  73,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "decisionStage",
-                                                                             "choice":  "加时",
-                                                                             "share":  37,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "messiGoals",
-                                                                             "choice":  "0球",
-                                                                             "share":  30,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "englandFirstHalfGoal",
-                                                                             "choice":  "否",
-                                                                             "share":  32,
-                                                                             "stake":  100
-                                                                         }
-                                                                     ],
-                                                           "summary":  "上半场谨慎且英格兰不进球，常规时间战平，阿根廷在加时依靠梅西之外的得分点晋级。"
-                                                       },
-                                           "doubao":  {
-                                                           "status":  "valid",
-                                                           "balance":  1576,
-                                                           "stake":  1300,
-                                                           "qualification":  true,
-                                                           "picks":  [
-                                                                         {
-                                                                             "dimension":  "winner",
-                                                                             "choice":  "英格兰",
-                                                                             "share":  56,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "totalGoals",
-                                                                             "choice":  "2-3球",
-                                                                             "share":  73,
-                                                                             "stake":  500
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "decisionStage",
-                                                                             "choice":  "常规",
-                                                                             "share":  53,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "messiGoals",
-                                                                             "choice":  "1球",
-                                                                             "share":  59,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "englandFirstHalfGoal",
-                                                                             "choice":  "是",
-                                                                             "share":  68,
-                                                                             "stake":  500
-                                                                         }
-                                                                     ],
-                                                           "summary":  "总进球数2-3球是最有信心项；梅西1球主要依赖定位球或点球路径，运动战难度较高。"
-                                                       },
-                                           "deepseek":  {
-                                                           "status":  "valid",
-                                                           "balance":  1972,
-                                                           "stake":  400,
-                                                           "qualification":  true,
-                                                           "picks":  [
-                                                                         {
-                                                                             "dimension":  "winner",
-                                                                             "choice":  "阿根廷",
-                                                                             "share":  44,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "totalGoals",
-                                                                             "choice":  "2-3球",
-                                                                             "share":  73,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "decisionStage",
-                                                                             "choice":  "加时",
-                                                                             "share":  37,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "messiGoals",
-                                                                             "choice":  "0球",
-                                                                             "share":  30,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "englandFirstHalfGoal",
-                                                                             "choice":  "否",
-                                                                             "share":  32,
-                                                                             "stake":  100
-                                                                         }
-                                                                     ],
-                                                           "summary":  "阿根廷常规时间不败并加时晋级是核心路径；英格兰上半场无进球来自阿根廷开局控场与英格兰保守策略。"
-                                                       },
-                                           "gemini":  {
-                                                           "status":  "valid",
-                                                           "balance":  7336,
-                                                           "stake":  1700,
-                                                           "qualification":  true,
-                                                           "picks":  [
-                                                                         {
-                                                                             "dimension":  "winner",
-                                                                             "choice":  "阿根廷",
-                                                                             "share":  44,
-                                                                             "stake":  500
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "totalGoals",
-                                                                             "choice":  "2-3球",
-                                                                             "share":  73,
-                                                                             "stake":  500
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "decisionStage",
-                                                                             "choice":  "常规",
-                                                                             "share":  53,
-                                                                             "stake":  500
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "messiGoals",
-                                                                             "choice":  "0球",
-                                                                             "share":  30,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "englandFirstHalfGoal",
-                                                                             "choice":  "否",
-                                                                             "share":  32,
-                                                                             "stake":  100
-                                                                         }
-                                                                     ],
-                                                           "summary":  "英格兰上半场无进球是最有信心项；梅西0球来自英格兰防守重心倾斜与梅西后撤组织。"
-                                                       },
-                                           "grok":  {
-                                                           "status":  "valid",
-                                                           "balance":  799,
-                                                           "stake":  270,
-                                                           "qualification":  true,
-                                                           "picks":  [
-                                                                         {
-                                                                             "dimension":  "winner",
-                                                                             "choice":  "阿根廷",
-                                                                             "share":  44,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "totalGoals",
-                                                                             "choice":  "2-3球",
-                                                                             "share":  73,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "decisionStage",
-                                                                             "choice":  "加时",
-                                                                             "share":  37,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "messiGoals",
-                                                                             "choice":  "1球",
-                                                                             "share":  59,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "englandFirstHalfGoal",
-                                                                             "choice":  "否",
-                                                                             "share":  32,
-                                                                             "stake":  20
-                                                                         }
-                                                                     ],
-                                                           "summary":  "阿根廷获胜是最有信心项；加时决胜来自半决赛保守节奏与双方实力接近。"
-                                                       },
-                                           "glm":  {
-                                                           "status":  "valid",
-                                                           "balance":  1379,
-                                                           "stake":  240,
-                                                           "qualification":  true,
-                                                           "picks":  [
-                                                                         {
-                                                                             "dimension":  "winner",
-                                                                             "choice":  "英格兰",
-                                                                             "share":  56,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "totalGoals",
-                                                                             "choice":  "2-3球",
-                                                                             "share":  73,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "decisionStage",
-                                                                             "choice":  "加时",
-                                                                             "share":  37,
-                                                                             "stake":  50
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "messiGoals",
-                                                                             "choice":  "1球",
-                                                                             "share":  59,
-                                                                             "stake":  20
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "englandFirstHalfGoal",
-                                                                             "choice":  "是",
-                                                                             "share":  68,
-                                                                             "stake":  20
-                                                                         }
-                                                                     ],
-                                                           "summary":  "英格兰获胜是最有信心项；加时决胜来自半决赛谨慎节奏与回报价值。"
-                                                       },
-                                           "qwen":  {
-                                                           "status":  "valid",
-                                                           "balance":  1404,
-                                                           "stake":  1300,
-                                                           "qualification":  true,
-                                                           "picks":  [
-                                                                         {
-                                                                             "dimension":  "winner",
-                                                                             "choice":  "英格兰",
-                                                                             "share":  56,
-                                                                             "stake":  500
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "totalGoals",
-                                                                             "choice":  "2-3球",
-                                                                             "share":  73,
-                                                                             "stake":  500
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "decisionStage",
-                                                                             "choice":  "常规",
-                                                                             "share":  53,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "messiGoals",
-                                                                             "choice":  "1球",
-                                                                             "share":  59,
-                                                                             "stake":  100
-                                                                         },
-                                                                         {
-                                                                             "dimension":  "englandFirstHalfGoal",
-                                                                             "choice":  "是",
-                                                                             "share":  68,
-                                                                             "stake":  100
-                                                                         }
-                                                                     ],
-                                                           "summary":  "英格兰胜来自体能、阵容厚度和边路冲击；2-3球来自半决赛谨慎节奏与双方进攻能力。"
-                                                       }
-                                       },
-                       "outputs":  {
-                                       "prompt":  "outputs/世界杯AI竞猜_每日提示词_0715.md",
-                                       "promptArchive":  "outputs/提示词/2026-07-15_每日提示词.md",
-                                       "prediction":  "outputs/世界杯AI竞猜_预测战报_0715.html",
-                                       "predictionArchive":  "outputs/预测/2026-07-15_预测战报.html",
-                                       "ledger":  "outputs/世界杯AI竞猜_每日余额台账.md"
-                                   }
-                   }
+{
+  "contest": "2026世界杯 · AI赛事预测分析挑战赛",
+  "role": "裁判 / 记录员 / 出图助手",
+  "lastCompletedDay": {
+    "n": 13,
+    "date": "07/15",
+    "stage": "半决赛"
+  },
+  "scoringRules": {
+    "currency": "金球币，虚拟积分，无现金价值",
+    "carryOver": true,
+    "allowedBets": [
+      10,
+      20,
+      50,
+      100,
+      500
+    ],
+    "wrongBetConsolation": 5,
+    "payout": "押中回报含本金；优先使用截图实测奖励，缺失时按最终占比公式估算",
+    "jackpotQualification": "必须对当日全部维度实际下注且全部命中；未下注不算全中"
+  },
+  "models": [
+    {
+      "id": "doubao",
+      "name": "豆包",
+      "balance": 1535,
+      "dayDelta": -41,
+      "jackpot": 0,
+      "color": "#0FB6D6",
+      "ini": "豆"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "balance": 371,
+      "dayDelta": 0,
+      "jackpot": 0,
+      "color": "#D97757",
+      "ini": "C",
+      "status": "banned"
+    },
+    {
+      "id": "qwen",
+      "name": "通义千问",
+      "balance": 1363,
+      "dayDelta": -41,
+      "jackpot": 1,
+      "color": "#7C5CFF",
+      "ini": "通"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "balance": 2456,
+      "dayDelta": 484,
+      "jackpot": 2,
+      "color": "#2D6BF0",
+      "ini": "DS"
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "balance": 3675,
+      "dayDelta": 1239,
+      "jackpot": 3,
+      "color": "#10A37F",
+      "ini": "GPT"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "balance": 9838,
+      "dayDelta": 2502,
+      "jackpot": 5,
+      "color": "#DB3E8E",
+      "ini": "GM"
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "balance": 973,
+      "dayDelta": 174,
+      "jackpot": 1,
+      "color": "#1F2329",
+      "ini": "GK"
+    },
+    {
+      "id": "glm",
+      "name": "智谱GLM",
+      "balance": 1259,
+      "dayDelta": -120,
+      "jackpot": 1,
+      "color": "#3B49C9",
+      "ini": "智"
+    }
+  ],
+  "sourceFiles": {
+    "promptTemplate": "世界杯AI竞猜_每日提示词模板.md",
+    "predictionHtmlTemplate": "outputs/世界杯AI竞猜_预测战报_0711.html",
+    "settlementHtmlTemplate": "outputs/世界杯AI竞猜_结算战报_0714.html"
+  },
+  "currentDay": {
+    "n": 13,
+    "date": "07/15",
+    "stage": "半决赛",
+    "status": "settled",
+    "note": "英格兰1-2阿根廷：阿根廷胜、2-3球、常规时间决胜、梅西0球、英格兰上半场无进球；Gemini五项全中。",
+    "matches": [
+      {
+        "home": "英格兰",
+        "away": "阿根廷",
+        "time": "03:00",
+        "dimensions": {
+          "winner": {
+            "英格兰": 56,
+            "阿根廷": 44
+          },
+          "totalGoals": {
+            "0-1球": 8,
+            "2-3球": 73,
+            "4球及以上": 19
+          },
+          "decisionStage": {
+            "常规": 53,
+            "加时": 37,
+            "点球大战": 10
+          },
+          "messiGoals": {
+            "0球": 30,
+            "1球": 59,
+            "2球及以上": 11
+          },
+          "englandFirstHalfGoal": {
+            "是": 68,
+            "否": 32
+          }
+        }
+      }
+    ],
+    "submissions": {
+      "chatgpt": {
+        "status": "valid",
+        "balance": 2436,
+        "stake": 800,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "winner",
+            "choice": "阿根廷",
+            "share": 44,
+            "stake": 500
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 73,
+            "stake": 100
+          },
+          {
+            "dimension": "decisionStage",
+            "choice": "加时",
+            "share": 37,
+            "stake": 50
+          },
+          {
+            "dimension": "messiGoals",
+            "choice": "0球",
+            "share": 30,
+            "stake": 50
+          },
+          {
+            "dimension": "englandFirstHalfGoal",
+            "choice": "否",
+            "share": 32,
+            "stake": 100
+          }
+        ],
+        "summary": "上半场谨慎且英格兰不进球，常规时间战平，阿根廷在加时依靠梅西之外的得分点晋级。"
+      },
+      "doubao": {
+        "status": "valid",
+        "balance": 1576,
+        "stake": 1300,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "winner",
+            "choice": "英格兰",
+            "share": 56,
+            "stake": 100
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 73,
+            "stake": 500
+          },
+          {
+            "dimension": "decisionStage",
+            "choice": "常规",
+            "share": 53,
+            "stake": 100
+          },
+          {
+            "dimension": "messiGoals",
+            "choice": "1球",
+            "share": 59,
+            "stake": 100
+          },
+          {
+            "dimension": "englandFirstHalfGoal",
+            "choice": "是",
+            "share": 68,
+            "stake": 500
+          }
+        ],
+        "summary": "总进球数2-3球是最有信心项；梅西1球主要依赖定位球或点球路径，运动战难度较高。"
+      },
+      "deepseek": {
+        "status": "valid",
+        "balance": 1972,
+        "stake": 400,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "winner",
+            "choice": "阿根廷",
+            "share": 44,
+            "stake": 100
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 73,
+            "stake": 50
+          },
+          {
+            "dimension": "decisionStage",
+            "choice": "加时",
+            "share": 37,
+            "stake": 100
+          },
+          {
+            "dimension": "messiGoals",
+            "choice": "0球",
+            "share": 30,
+            "stake": 50
+          },
+          {
+            "dimension": "englandFirstHalfGoal",
+            "choice": "否",
+            "share": 32,
+            "stake": 100
+          }
+        ],
+        "summary": "阿根廷常规时间不败并加时晋级是核心路径；英格兰上半场无进球来自阿根廷开局控场与英格兰保守策略。"
+      },
+      "gemini": {
+        "status": "valid",
+        "balance": 7336,
+        "stake": 1700,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "winner",
+            "choice": "阿根廷",
+            "share": 44,
+            "stake": 500
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 73,
+            "stake": 500
+          },
+          {
+            "dimension": "decisionStage",
+            "choice": "常规",
+            "share": 53,
+            "stake": 500
+          },
+          {
+            "dimension": "messiGoals",
+            "choice": "0球",
+            "share": 30,
+            "stake": 100
+          },
+          {
+            "dimension": "englandFirstHalfGoal",
+            "choice": "否",
+            "share": 32,
+            "stake": 100
+          }
+        ],
+        "summary": "英格兰上半场无进球是最有信心项；梅西0球来自英格兰防守重心倾斜与梅西后撤组织。"
+      },
+      "grok": {
+        "status": "valid",
+        "balance": 799,
+        "stake": 270,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "winner",
+            "choice": "阿根廷",
+            "share": 44,
+            "stake": 100
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 73,
+            "stake": 50
+          },
+          {
+            "dimension": "decisionStage",
+            "choice": "加时",
+            "share": 37,
+            "stake": 50
+          },
+          {
+            "dimension": "messiGoals",
+            "choice": "1球",
+            "share": 59,
+            "stake": 50
+          },
+          {
+            "dimension": "englandFirstHalfGoal",
+            "choice": "否",
+            "share": 32,
+            "stake": 20
+          }
+        ],
+        "summary": "阿根廷获胜是最有信心项；加时决胜来自半决赛保守节奏与双方实力接近。"
+      },
+      "glm": {
+        "status": "valid",
+        "balance": 1379,
+        "stake": 240,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "winner",
+            "choice": "英格兰",
+            "share": 56,
+            "stake": 100
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 73,
+            "stake": 50
+          },
+          {
+            "dimension": "decisionStage",
+            "choice": "加时",
+            "share": 37,
+            "stake": 50
+          },
+          {
+            "dimension": "messiGoals",
+            "choice": "1球",
+            "share": 59,
+            "stake": 20
+          },
+          {
+            "dimension": "englandFirstHalfGoal",
+            "choice": "是",
+            "share": 68,
+            "stake": 20
+          }
+        ],
+        "summary": "英格兰获胜是最有信心项；加时决胜来自半决赛谨慎节奏与回报价值。"
+      },
+      "qwen": {
+        "status": "valid",
+        "balance": 1404,
+        "stake": 1300,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "winner",
+            "choice": "英格兰",
+            "share": 56,
+            "stake": 500
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 73,
+            "stake": 500
+          },
+          {
+            "dimension": "decisionStage",
+            "choice": "常规",
+            "share": 53,
+            "stake": 100
+          },
+          {
+            "dimension": "messiGoals",
+            "choice": "1球",
+            "share": 59,
+            "stake": 100
+          },
+          {
+            "dimension": "englandFirstHalfGoal",
+            "choice": "是",
+            "share": 68,
+            "stake": 100
+          }
+        ],
+        "summary": "英格兰胜来自体能、阵容厚度和边路冲击；2-3球来自半决赛谨慎节奏与双方进攻能力。"
+      }
+    },
+    "outputs": {
+      "prompt": "outputs/世界杯AI竞猜_每日提示词_0715.md",
+      "promptArchive": "outputs/提示词/2026-07-15_每日提示词.md",
+      "prediction": "outputs/世界杯AI竞猜_预测战报_0715.html",
+      "predictionArchive": "outputs/预测/2026-07-15_预测战报.html",
+      "ledger": "outputs/世界杯AI竞猜_每日余额台账.md",
+      "settlement": "outputs/世界杯AI竞猜_结算战报_0715.html",
+      "settlementArchive": "outputs/结算/2026-07-15_结算战报.html"
+    },
+    "results": {
+      "winner": "阿根廷",
+      "totalGoals": "2-3球",
+      "decisionStage": "常规",
+      "messiGoals": "0球",
+      "englandFirstHalfGoal": "否"
+    }
+  }
 }
