@@ -139,7 +139,45 @@
                                        }
                                    ],
                        "submissions":  {
-
+                                           "chatgpt":  {
+                                                           "status":  "valid",
+                                                           "balance":  2436,
+                                                           "stake":  800,
+                                                           "qualification":  true,
+                                                           "picks":  [
+                                                                         {
+                                                                             "dimension":  "winner",
+                                                                             "choice":  "阿根廷",
+                                                                             "share":  44,
+                                                                             "stake":  500
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "totalGoals",
+                                                                             "choice":  "2-3球",
+                                                                             "share":  73,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "decisionStage",
+                                                                             "choice":  "加时",
+                                                                             "share":  37,
+                                                                             "stake":  50
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "messiGoals",
+                                                                             "choice":  "0球",
+                                                                             "share":  30,
+                                                                             "stake":  50
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "englandFirstHalfGoal",
+                                                                             "choice":  "否",
+                                                                             "share":  32,
+                                                                             "stake":  100
+                                                                         }
+                                                                     ],
+                                                           "summary":  "上半场谨慎且英格兰不进球，常规时间战平，阿根廷在加时依靠梅西之外的得分点晋级。"
+                                                       }
                                        },
                        "outputs":  {
                                        "prompt":  "outputs/世界杯AI竞猜_每日提示词_0715.md",
