@@ -372,6 +372,45 @@
                                                                          }
                                                                      ],
                                                            "summary":  "英格兰获胜是最有信心项；加时决胜来自半决赛谨慎节奏与回报价值。"
+                                                       },
+                                           "qwen":  {
+                                                           "status":  "valid",
+                                                           "balance":  1404,
+                                                           "stake":  1300,
+                                                           "qualification":  true,
+                                                           "picks":  [
+                                                                         {
+                                                                             "dimension":  "winner",
+                                                                             "choice":  "英格兰",
+                                                                             "share":  56,
+                                                                             "stake":  500
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "totalGoals",
+                                                                             "choice":  "2-3球",
+                                                                             "share":  73,
+                                                                             "stake":  500
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "decisionStage",
+                                                                             "choice":  "常规",
+                                                                             "share":  53,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "messiGoals",
+                                                                             "choice":  "1球",
+                                                                             "share":  59,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "englandFirstHalfGoal",
+                                                                             "choice":  "是",
+                                                                             "share":  68,
+                                                                             "stake":  100
+                                                                         }
+                                                                     ],
+                                                           "summary":  "英格兰胜来自体能、阵容厚度和边路冲击；2-3球来自半决赛谨慎节奏与双方进攻能力。"
                                                        }
                                        },
                        "outputs":  {
