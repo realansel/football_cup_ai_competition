@@ -101,109 +101,49 @@
                         "settlementHtmlTemplate":  "outputs/世界杯AI竞猜_结算战报_0714.html"
                     },
     "currentDay":  {
-                       "n":  12,
-                       "date":  "07/14",
+                       "n":  13,
+                       "date":  "07/15",
                        "stage":  "半决赛",
-                       "status":  "settled",
-                       "note":  "西班牙击败法国；2-3球、西班牙率先破门、3-5张黄牌。Gemini四项全中，四项奖励5571并获得1018瓜分奖励，兑奖总额6589。",
+                       "status":  "collecting_predictions",
+                       "note":  "英格兰vs阿根廷，共5个预测维度；等待7家有效AI提交预测，Claude仍为封禁状态。",
                        "matches":  [
                                        {
-                                           "home":  "法国",
-                                           "away":  "西班牙",
-                                           "score":  "未提供",
-                                           "result":  {
-                                                          "totalGoals":  "2-3球",
-                                                          "firstGoal":  "西班牙",
-                                                          "yellowCards":  "3-5张",
-                                                          "winner":  "西班牙"
-                                                      }
+                                           "home":  "英格兰",
+                                           "away":  "阿根廷",
+                                           "time":  "03:00",
+                                           "dimensions":  {
+                                                              "winner":  {
+                                                                              "英格兰":  56,
+                                                                              "阿根廷":  44
+                                                                          },
+                                                              "totalGoals":  {
+                                                                                  "0-1球":  8,
+                                                                                  "2-3球":  73,
+                                                                                  "4球及以上":  19
+                                                                              },
+                                                              "decisionStage":  {
+                                                                                    "常规":  53,
+                                                                                    "加时":  37,
+                                                                                    "点球大战":  10
+                                                                                },
+                                                              "messiGoals":  {
+                                                                                  "0球":  30,
+                                                                                  "1球":  59,
+                                                                                  "2球及以上":  11
+                                                                              },
+                                                              "englandFirstHalfGoal":  {
+                                                                                              "是":  68,
+                                                                                              "否":  32
+                                                                                          }
+                                                          }
                                        }
                                    ],
-                       "payouts":  {
-                                       "spainWin":  "500→2759",
-                                       "totalGoals_2_3":  "500→1081",
-                                       "spainFirstGoal":  "100→473",
-                                       "yellowCards_3_5":  "500→1258",
-                                       "jackpotBonus":  1018,
-                                       "geminiTotalClaim":  6589,
-                                       "wrongBetConsolation":  5
-                                   },
-                       "contestants":  {
-                                           "doubao":  {
-                                                          "hits":  2,
-                                                          "total":  4,
-                                                          "stake":  300,
-                                                          "returned":  352,
-                                                          "delta":  52,
-                                                          "balance":  1576
-                                                      },
-                                           "qwen":  {
-                                                        "hits":  2,
-                                                        "total":  4,
-                                                        "stake":  800,
-                                                        "returned":  478,
-                                                        "delta":  -322,
-                                                        "balance":  1404
-                                                    },
-                                           "deepseek":  {
-                                                            "hits":  3,
-                                                            "total":  4,
-                                                            "stake":  250,
-                                                            "returned":  734,
-                                                            "delta":  484,
-                                                            "balance":  1972
-                                                        },
-                                           "chatgpt":  {
-                                                           "hits":  3,
-                                                           "total":  4,
-                                                           "stake":  350,
-                                                           "returned":  710,
-                                                           "delta":  360,
-                                                           "balance":  2436
-                                                       },
-                                           "gemini":  {
-                                                          "hits":  4,
-                                                          "total":  4,
-                                                          "stake":  1600,
-                                                          "returned":  6589,
-                                                          "delta":  4989,
-                                                          "balance":  7336
-                                                      },
-                                           "grok":  {
-                                                        "hits":  2,
-                                                        "total":  4,
-                                                        "stake":  220,
-                                                        "returned":  168,
-                                                        "delta":  -52,
-                                                        "balance":  799
-                                                    },
-                                           "glm":  {
-                                                       "hits":  2,
-                                                       "total":  4,
-                                                       "stake":  190,
-                                                       "returned":  168,
-                                                       "delta":  -22,
-                                                       "balance":  1379
-                                                   },
-                                           "claude":  {
-                                                          "status":  "banned",
-                                                          "hits":  0,
-                                                          "total":  0,
-                                                          "stake":  0,
-                                                          "returned":  0,
-                                                          "delta":  0,
-                                                          "balance":  371
-                                                      }
+                       "submissions":  {
+
                                        },
-                       "jackpot":  {
-                                       "todayAllHit":  [
-                                                           "Gemini"
-                                                       ],
-                                       "note":  "Gemini唯一四项全中，获得1018瓜分奖励，累计瓜分次数升至4次。"
-                                   },
                        "outputs":  {
-                                       "settlement":  "outputs/世界杯AI竞猜_结算战报_0714.html",
-                                       "settlementArchive":  "outputs/结算/2026-07-14_结算战报.html",
+                                       "prompt":  "outputs/世界杯AI竞猜_每日提示词_0715.md",
+                                       "promptArchive":  "outputs/提示词/2026-07-15_每日提示词.md",
                                        "ledger":  "outputs/世界杯AI竞猜_每日余额台账.md"
                                    }
                    }
