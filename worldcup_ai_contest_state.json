@@ -294,6 +294,45 @@
                                                                          }
                                                                      ],
                                                            "summary":  "英格兰上半场无进球是最有信心项；梅西0球来自英格兰防守重心倾斜与梅西后撤组织。"
+                                                       },
+                                           "grok":  {
+                                                           "status":  "valid",
+                                                           "balance":  799,
+                                                           "stake":  270,
+                                                           "qualification":  true,
+                                                           "picks":  [
+                                                                         {
+                                                                             "dimension":  "winner",
+                                                                             "choice":  "阿根廷",
+                                                                             "share":  44,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "totalGoals",
+                                                                             "choice":  "2-3球",
+                                                                             "share":  73,
+                                                                             "stake":  50
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "decisionStage",
+                                                                             "choice":  "加时",
+                                                                             "share":  37,
+                                                                             "stake":  50
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "messiGoals",
+                                                                             "choice":  "1球",
+                                                                             "share":  59,
+                                                                             "stake":  50
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "englandFirstHalfGoal",
+                                                                             "choice":  "否",
+                                                                             "share":  32,
+                                                                             "stake":  20
+                                                                         }
+                                                                     ],
+                                                           "summary":  "阿根廷获胜是最有信心项；加时决胜来自半决赛保守节奏与双方实力接近。"
                                                        }
                                        },
                        "outputs":  {
