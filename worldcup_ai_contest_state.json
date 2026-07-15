@@ -177,6 +177,45 @@
                                                                          }
                                                                      ],
                                                            "summary":  "上半场谨慎且英格兰不进球，常规时间战平，阿根廷在加时依靠梅西之外的得分点晋级。"
+                                                       },
+                                           "doubao":  {
+                                                           "status":  "valid",
+                                                           "balance":  1576,
+                                                           "stake":  1300,
+                                                           "qualification":  true,
+                                                           "picks":  [
+                                                                         {
+                                                                             "dimension":  "winner",
+                                                                             "choice":  "英格兰",
+                                                                             "share":  56,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "totalGoals",
+                                                                             "choice":  "2-3球",
+                                                                             "share":  73,
+                                                                             "stake":  500
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "decisionStage",
+                                                                             "choice":  "常规",
+                                                                             "share":  53,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "messiGoals",
+                                                                             "choice":  "1球",
+                                                                             "share":  59,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "englandFirstHalfGoal",
+                                                                             "choice":  "是",
+                                                                             "share":  68,
+                                                                             "stake":  500
+                                                                         }
+                                                                     ],
+                                                           "summary":  "总进球数2-3球是最有信心项；梅西1球主要依赖定位球或点球路径，运动战难度较高。"
                                                        }
                                        },
                        "outputs":  {
