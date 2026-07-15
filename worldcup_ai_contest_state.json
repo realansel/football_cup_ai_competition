@@ -216,6 +216,84 @@
                                                                          }
                                                                      ],
                                                            "summary":  "总进球数2-3球是最有信心项；梅西1球主要依赖定位球或点球路径，运动战难度较高。"
+                                                       },
+                                           "deepseek":  {
+                                                           "status":  "valid",
+                                                           "balance":  1972,
+                                                           "stake":  400,
+                                                           "qualification":  true,
+                                                           "picks":  [
+                                                                         {
+                                                                             "dimension":  "winner",
+                                                                             "choice":  "阿根廷",
+                                                                             "share":  44,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "totalGoals",
+                                                                             "choice":  "2-3球",
+                                                                             "share":  73,
+                                                                             "stake":  50
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "decisionStage",
+                                                                             "choice":  "加时",
+                                                                             "share":  37,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "messiGoals",
+                                                                             "choice":  "0球",
+                                                                             "share":  30,
+                                                                             "stake":  50
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "englandFirstHalfGoal",
+                                                                             "choice":  "否",
+                                                                             "share":  32,
+                                                                             "stake":  100
+                                                                         }
+                                                                     ],
+                                                           "summary":  "阿根廷常规时间不败并加时晋级是核心路径；英格兰上半场无进球来自阿根廷开局控场与英格兰保守策略。"
+                                                       },
+                                           "gemini":  {
+                                                           "status":  "valid",
+                                                           "balance":  7336,
+                                                           "stake":  1700,
+                                                           "qualification":  true,
+                                                           "picks":  [
+                                                                         {
+                                                                             "dimension":  "winner",
+                                                                             "choice":  "阿根廷",
+                                                                             "share":  44,
+                                                                             "stake":  500
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "totalGoals",
+                                                                             "choice":  "2-3球",
+                                                                             "share":  73,
+                                                                             "stake":  500
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "decisionStage",
+                                                                             "choice":  "常规",
+                                                                             "share":  53,
+                                                                             "stake":  500
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "messiGoals",
+                                                                             "choice":  "0球",
+                                                                             "share":  30,
+                                                                             "stake":  100
+                                                                         },
+                                                                         {
+                                                                             "dimension":  "englandFirstHalfGoal",
+                                                                             "choice":  "否",
+                                                                             "share":  32,
+                                                                             "stake":  100
+                                                                         }
+                                                                     ],
+                                                           "summary":  "英格兰上半场无进球是最有信心项；梅西0球来自英格兰防守重心倾斜与梅西后撤组织。"
                                                        }
                                        },
                        "outputs":  {
