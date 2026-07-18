@@ -101,39 +101,34 @@
     "settlementHtmlTemplate": "outputs/世界杯AI竞猜_结算战报_0714.html"
   },
   "currentDay": {
-    "n": 13,
-    "date": "07/15",
-    "stage": "半决赛",
-    "status": "settled",
-    "note": "英格兰1-2阿根廷：阿根廷胜、2-3球、常规时间决胜、梅西0球、英格兰上半场无进球；Gemini五项全中。",
+    "n": 14,
+    "date": "07/18",
+    "stage": "季军争夺战",
+    "status": "predicted",
+    "note": "法国 vs 英格兰：7 家有效选手预测已收齐，季军战预测战报已生成。",
     "matches": [
       {
-        "home": "英格兰",
-        "away": "阿根廷",
-        "time": "03:00",
+        "home": "法国",
+        "away": "英格兰",
+        "time": "05:00",
         "dimensions": {
-          "winner": {
-            "英格兰": 56,
-            "阿根廷": 44
+          "thirdPlace": {
+            "法国": 70,
+            "英格兰": 30
           },
           "totalGoals": {
-            "0-1球": 8,
-            "2-3球": 73,
-            "4球及以上": 19
-          },
-          "decisionStage": {
-            "常规": 53,
-            "加时": 37,
-            "点球大战": 10
-          },
-          "messiGoals": {
-            "0球": 30,
-            "1球": 59,
-            "2球及以上": 11
+            "0-1球": 6,
+            "2-3球": 71,
+            "4球及以上": 23
           },
           "englandFirstHalfGoal": {
-            "是": 68,
-            "否": 32
+            "是": 57,
+            "否": 43
+          },
+          "mbappeGoals": {
+            "0球": 18,
+            "1球": 61,
+            "2球及以上": 21
           }
         }
       }
@@ -141,293 +136,242 @@
     "submissions": {
       "chatgpt": {
         "status": "valid",
-        "balance": 2436,
-        "stake": 800,
+        "balance": 3675,
+        "stake": 1600,
         "qualification": true,
         "picks": [
           {
-            "dimension": "winner",
-            "choice": "阿根廷",
-            "share": 44,
+            "dimension": "thirdPlace",
+            "choice": "法国",
+            "share": 70,
             "stake": 500
           },
           {
             "dimension": "totalGoals",
             "choice": "2-3球",
-            "share": 73,
-            "stake": 100
-          },
-          {
-            "dimension": "decisionStage",
-            "choice": "加时",
-            "share": 37,
-            "stake": 50
-          },
-          {
-            "dimension": "messiGoals",
-            "choice": "0球",
-            "share": 30,
-            "stake": 50
+            "share": 71,
+            "stake": 500
           },
           {
             "dimension": "englandFirstHalfGoal",
-            "choice": "否",
-            "share": 32,
+            "choice": "是",
+            "share": 57,
             "stake": 100
+          },
+          {
+            "dimension": "mbappeGoals",
+            "choice": "1球",
+            "share": 61,
+            "stake": 500
           }
         ],
-        "summary": "上半场谨慎且英格兰不进球，常规时间战平，阿根廷在加时依靠梅西之外的得分点晋级。"
+        "summary": "姆巴佩1球是最有信心项；法国的阵容深度和个人能力优势仍支持其获得季军。"
       },
       "doubao": {
         "status": "valid",
-        "balance": 1576,
-        "stake": 1300,
+        "balance": 1535,
+        "stake": 750,
         "qualification": true,
         "picks": [
           {
-            "dimension": "winner",
-            "choice": "英格兰",
-            "share": 56,
+            "dimension": "thirdPlace",
+            "choice": "法国",
+            "share": 70,
             "stake": 100
           },
           {
             "dimension": "totalGoals",
             "choice": "2-3球",
-            "share": 73,
+            "share": 71,
             "stake": 500
-          },
-          {
-            "dimension": "decisionStage",
-            "choice": "常规",
-            "share": 53,
-            "stake": 100
-          },
-          {
-            "dimension": "messiGoals",
-            "choice": "1球",
-            "share": 59,
-            "stake": 100
           },
           {
             "dimension": "englandFirstHalfGoal",
             "choice": "是",
-            "share": 68,
-            "stake": 500
+            "share": 57,
+            "stake": 50
+          },
+          {
+            "dimension": "mbappeGoals",
+            "choice": "1球",
+            "share": 61,
+            "stake": 100
           }
         ],
-        "summary": "总进球数2-3球是最有信心项；梅西1球主要依赖定位球或点球路径，运动战难度较高。"
+        "summary": "总进球2-3球是最有信心项；法国硬实力占优，但季军战战意会降低胜负维度的确定性。"
       },
       "deepseek": {
         "status": "valid",
-        "balance": 1972,
-        "stake": 400,
+        "balance": 2456,
+        "stake": 260,
         "qualification": true,
         "picks": [
           {
-            "dimension": "winner",
-            "choice": "阿根廷",
-            "share": 44,
-            "stake": 100
+            "dimension": "thirdPlace",
+            "choice": "法国",
+            "share": 70,
+            "stake": 10
           },
           {
             "dimension": "totalGoals",
-            "choice": "2-3球",
-            "share": 73,
-            "stake": 50
-          },
-          {
-            "dimension": "decisionStage",
-            "choice": "加时",
-            "share": 37,
+            "choice": "4球及以上",
+            "share": 23,
             "stake": 100
-          },
-          {
-            "dimension": "messiGoals",
-            "choice": "0球",
-            "share": 30,
-            "stake": 50
           },
           {
             "dimension": "englandFirstHalfGoal",
-            "choice": "否",
-            "share": 32,
+            "choice": "是",
+            "share": 57,
+            "stake": 50
+          },
+          {
+            "dimension": "mbappeGoals",
+            "choice": "2球及以上",
+            "share": 21,
             "stake": 100
           }
         ],
-        "summary": "阿根廷常规时间不败并加时晋级是核心路径；英格兰上半场无进球来自阿根廷开局控场与英格兰保守策略。"
+        "summary": "总进球4球及以上是最有信心项；季军战开放节奏与金靴驱动共同支持姆巴佩2球及以上。"
       },
       "gemini": {
         "status": "valid",
-        "balance": 7336,
-        "stake": 1700,
+        "balance": 9838,
+        "stake": 1200,
         "qualification": true,
         "picks": [
           {
-            "dimension": "winner",
-            "choice": "阿根廷",
-            "share": 44,
+            "dimension": "thirdPlace",
+            "choice": "英格兰",
+            "share": 30,
             "stake": 500
           },
           {
             "dimension": "totalGoals",
             "choice": "2-3球",
-            "share": 73,
+            "share": 71,
             "stake": 500
-          },
-          {
-            "dimension": "decisionStage",
-            "choice": "常规",
-            "share": 53,
-            "stake": 500
-          },
-          {
-            "dimension": "messiGoals",
-            "choice": "0球",
-            "share": 30,
-            "stake": 100
           },
           {
             "dimension": "englandFirstHalfGoal",
-            "choice": "否",
-            "share": 32,
+            "choice": "是",
+            "share": 57,
+            "stake": 100
+          },
+          {
+            "dimension": "mbappeGoals",
+            "choice": "0球",
+            "share": 18,
             "stake": 100
           }
         ],
-        "summary": "英格兰上半场无进球是最有信心项；梅西0球来自英格兰防守重心倾斜与梅西后撤组织。"
+        "summary": "总进球2-3球是最有信心项；季军战的轮换与出场时间不确定性支持姆巴佩0球。"
       },
       "grok": {
         "status": "valid",
-        "balance": 799,
-        "stake": 270,
+        "balance": 973,
+        "stake": 230,
         "qualification": true,
         "picks": [
           {
-            "dimension": "winner",
-            "choice": "阿根廷",
-            "share": 44,
+            "dimension": "thirdPlace",
+            "choice": "法国",
+            "share": 70,
             "stake": 100
           },
           {
             "dimension": "totalGoals",
             "choice": "2-3球",
-            "share": 73,
-            "stake": 50
-          },
-          {
-            "dimension": "decisionStage",
-            "choice": "加时",
-            "share": 37,
-            "stake": 50
-          },
-          {
-            "dimension": "messiGoals",
-            "choice": "1球",
-            "share": 59,
+            "share": 71,
             "stake": 50
           },
           {
             "dimension": "englandFirstHalfGoal",
             "choice": "否",
-            "share": 32,
-            "stake": 20
-          }
-        ],
-        "summary": "阿根廷获胜是最有信心项；加时决胜来自半决赛保守节奏与双方实力接近。"
-      },
-      "glm": {
-        "status": "valid",
-        "balance": 1379,
-        "stake": 240,
-        "qualification": true,
-        "picks": [
-          {
-            "dimension": "winner",
-            "choice": "英格兰",
-            "share": 56,
-            "stake": 100
-          },
-          {
-            "dimension": "totalGoals",
-            "choice": "2-3球",
-            "share": 73,
+            "share": 43,
             "stake": 50
           },
           {
-            "dimension": "decisionStage",
-            "choice": "加时",
-            "share": 37,
-            "stake": 50
-          },
-          {
-            "dimension": "messiGoals",
+            "dimension": "mbappeGoals",
             "choice": "1球",
-            "share": 59,
-            "stake": 20
-          },
-          {
-            "dimension": "englandFirstHalfGoal",
-            "choice": "是",
-            "share": 68,
-            "stake": 20
+            "share": 61,
+            "stake": 30
           }
         ],
-        "summary": "英格兰获胜是最有信心项；加时决胜来自半决赛谨慎节奏与回报价值。"
+        "summary": "法国季军是最有信心项；英格兰上半场无进球来自开局谨慎与法国控球压迫。"
       },
       "qwen": {
         "status": "valid",
-        "balance": 1404,
-        "stake": 1300,
+        "balance": 1363,
+        "stake": 190,
         "qualification": true,
         "picks": [
           {
-            "dimension": "winner",
-            "choice": "英格兰",
-            "share": 56,
-            "stake": 500
+            "dimension": "thirdPlace",
+            "choice": "法国",
+            "share": 70,
+            "stake": 100
           },
           {
             "dimension": "totalGoals",
             "choice": "2-3球",
-            "share": 73,
-            "stake": 500
+            "share": 71,
+            "stake": 50
           },
           {
-            "dimension": "decisionStage",
-            "choice": "常规",
-            "share": 53,
-            "stake": 100
+            "dimension": "englandFirstHalfGoal",
+            "choice": "否",
+            "share": 43,
+            "stake": 20
           },
           {
-            "dimension": "messiGoals",
+            "dimension": "mbappeGoals",
             "choice": "1球",
-            "share": 59,
+            "share": 61,
+            "stake": 20
+          }
+        ],
+        "summary": "法国季军是最有信心项；英格兰上半场无进球来自法国中场限制与英格兰体能消耗。"
+      },
+      "glm": {
+        "status": "valid",
+        "balance": 1259,
+        "stake": 190,
+        "qualification": true,
+        "picks": [
+          {
+            "dimension": "thirdPlace",
+            "choice": "法国",
+            "share": 70,
             "stake": 100
+          },
+          {
+            "dimension": "totalGoals",
+            "choice": "2-3球",
+            "share": 71,
+            "stake": 50
           },
           {
             "dimension": "englandFirstHalfGoal",
             "choice": "是",
-            "share": 68,
-            "stake": 100
+            "share": 57,
+            "stake": 20
+          },
+          {
+            "dimension": "mbappeGoals",
+            "choice": "1球",
+            "share": 61,
+            "stake": 20
           }
         ],
-        "summary": "英格兰胜来自体能、阵容厚度和边路冲击；2-3球来自半决赛谨慎节奏与双方进攻能力。"
+        "summary": "法国季军是最有信心项；姆巴佩1球来自其核心射手定位与季军战进攻环境。"
       }
     },
     "outputs": {
-      "prompt": "outputs/世界杯AI竞猜_每日提示词_0715.md",
-      "promptArchive": "outputs/提示词/2026-07-15_每日提示词.md",
-      "prediction": "outputs/世界杯AI竞猜_预测战报_0715.html",
-      "predictionArchive": "outputs/预测/2026-07-15_预测战报.html",
+      "prompt": "outputs/世界杯AI竞猜_每日提示词_0718.md",
+      "promptArchive": "outputs/提示词/2026-07-18_每日提示词.md",
       "ledger": "outputs/世界杯AI竞猜_每日余额台账.md",
-      "settlement": "outputs/世界杯AI竞猜_结算战报_0715.html",
-      "settlementArchive": "outputs/结算/2026-07-15_结算战报.html"
-    },
-    "results": {
-      "winner": "阿根廷",
-      "totalGoals": "2-3球",
-      "decisionStage": "常规",
-      "messiGoals": "0球",
-      "englandFirstHalfGoal": "否"
+      "prediction": "outputs/世界杯AI竞猜_预测战报_0718.html",
+      "predictionArchive": "outputs/预测/2026-07-18_预测战报.html"
     }
   }
 }
