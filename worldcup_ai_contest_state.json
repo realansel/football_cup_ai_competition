@@ -2,9 +2,9 @@
   "contest": "2026世界杯 · AI赛事预测分析挑战赛",
   "role": "裁判 / 记录员 / 出图助手",
   "lastCompletedDay": {
-    "n": 13,
-    "date": "07/15",
-    "stage": "半决赛"
+    "n": 14,
+    "date": "07/18",
+    "stage": "季军争夺战"
   },
   "scoringRules": {
     "currency": "金球币，虚拟积分，无现金价值",
@@ -24,8 +24,8 @@
     {
       "id": "doubao",
       "name": "豆包",
-      "balance": 1535,
-      "dayDelta": -41,
+      "balance": 888,
+      "dayDelta": -647,
       "jackpot": 0,
       "color": "#0FB6D6",
       "ini": "豆"
@@ -43,8 +43,8 @@
     {
       "id": "qwen",
       "name": "通义千问",
-      "balance": 1363,
-      "dayDelta": -41,
+      "balance": 1193,
+      "dayDelta": -170,
       "jackpot": 1,
       "color": "#7C5CFF",
       "ini": "通"
@@ -52,8 +52,8 @@
     {
       "id": "deepseek",
       "name": "DeepSeek",
-      "balance": 2456,
-      "dayDelta": 484,
+      "balance": 3200,
+      "dayDelta": 744,
       "jackpot": 2,
       "color": "#2D6BF0",
       "ini": "DS"
@@ -61,8 +61,8 @@
     {
       "id": "chatgpt",
       "name": "ChatGPT",
-      "balance": 3675,
-      "dayDelta": 1239,
+      "balance": 2265,
+      "dayDelta": -1410,
       "jackpot": 3,
       "color": "#10A37F",
       "ini": "GPT"
@@ -70,8 +70,8 @@
     {
       "id": "gemini",
       "name": "Gemini",
-      "balance": 9838,
-      "dayDelta": 2502,
+      "balance": 10490,
+      "dayDelta": 652,
       "jackpot": 5,
       "color": "#DB3E8E",
       "ini": "GM"
@@ -79,8 +79,8 @@
     {
       "id": "grok",
       "name": "Grok",
-      "balance": 973,
-      "dayDelta": 174,
+      "balance": 763,
+      "dayDelta": -210,
       "jackpot": 1,
       "color": "#1F2329",
       "ini": "GK"
@@ -88,8 +88,8 @@
     {
       "id": "glm",
       "name": "智谱GLM",
-      "balance": 1259,
-      "dayDelta": -120,
+      "balance": 1119,
+      "dayDelta": -140,
       "jackpot": 1,
       "color": "#3B49C9",
       "ini": "智"
@@ -104,8 +104,8 @@
     "n": 14,
     "date": "07/18",
     "stage": "季军争夺战",
-    "status": "predicted",
-    "note": "法国 vs 英格兰：7 家有效选手预测已收齐，季军战预测战报已生成。",
+    "status": "settled",
+    "note": "法国4-6英格兰：英格兰获得季军、总进球4球及以上、英格兰上半场进球、姆巴佩2球及以上；7家有效选手无人全中。",
     "matches": [
       {
         "home": "法国",
@@ -165,7 +165,46 @@
             "stake": 500
           }
         ],
-        "summary": "姆巴佩1球是最有信心项；法国的阵容深度和个人能力优势仍支持其获得季军。"
+        "summary": "姆巴佩1球是最有信心项；法国的阵容深度和个人能力优势仍支持其获得季军。",
+        "settlement": {
+          "hits": 1,
+          "returns": 190,
+          "delta": -1410,
+          "picks": [
+            {
+              "dimension": "thirdPlace",
+              "choice": "法国",
+              "share": 70,
+              "stake": 500,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "totalGoals",
+              "choice": "2-3球",
+              "share": 71,
+              "stake": 500,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "englandFirstHalfGoal",
+              "choice": "是",
+              "share": 57,
+              "stake": 100,
+              "hit": true,
+              "payout": 175
+            },
+            {
+              "dimension": "mbappeGoals",
+              "choice": "1球",
+              "share": 61,
+              "stake": 500,
+              "hit": false,
+              "payout": 5
+            }
+          ]
+        }
       },
       "doubao": {
         "status": "valid",
@@ -198,7 +237,46 @@
             "stake": 100
           }
         ],
-        "summary": "总进球2-3球是最有信心项；法国硬实力占优，但季军战战意会降低胜负维度的确定性。"
+        "summary": "总进球2-3球是最有信心项；法国硬实力占优，但季军战战意会降低胜负维度的确定性。",
+        "settlement": {
+          "hits": 1,
+          "returns": 103,
+          "delta": -647,
+          "picks": [
+            {
+              "dimension": "thirdPlace",
+              "choice": "法国",
+              "share": 70,
+              "stake": 100,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "totalGoals",
+              "choice": "2-3球",
+              "share": 71,
+              "stake": 500,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "englandFirstHalfGoal",
+              "choice": "是",
+              "share": 57,
+              "stake": 50,
+              "hit": true,
+              "payout": 88
+            },
+            {
+              "dimension": "mbappeGoals",
+              "choice": "1球",
+              "share": 61,
+              "stake": 100,
+              "hit": false,
+              "payout": 5
+            }
+          ]
+        }
       },
       "deepseek": {
         "status": "valid",
@@ -231,7 +309,46 @@
             "stake": 100
           }
         ],
-        "summary": "总进球4球及以上是最有信心项；季军战开放节奏与金靴驱动共同支持姆巴佩2球及以上。"
+        "summary": "总进球4球及以上是最有信心项；季军战开放节奏与金靴驱动共同支持姆巴佩2球及以上。",
+        "settlement": {
+          "hits": 3,
+          "returns": 1004,
+          "delta": 744,
+          "picks": [
+            {
+              "dimension": "thirdPlace",
+              "choice": "法国",
+              "share": 70,
+              "stake": 10,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "totalGoals",
+              "choice": "4球及以上",
+              "share": 23,
+              "stake": 100,
+              "hit": true,
+              "payout": 435
+            },
+            {
+              "dimension": "englandFirstHalfGoal",
+              "choice": "是",
+              "share": 57,
+              "stake": 50,
+              "hit": true,
+              "payout": 88
+            },
+            {
+              "dimension": "mbappeGoals",
+              "choice": "2球及以上",
+              "share": 21,
+              "stake": 100,
+              "hit": true,
+              "payout": 476
+            }
+          ]
+        }
       },
       "gemini": {
         "status": "valid",
@@ -264,7 +381,46 @@
             "stake": 100
           }
         ],
-        "summary": "总进球2-3球是最有信心项；季军战的轮换与出场时间不确定性支持姆巴佩0球。"
+        "summary": "总进球2-3球是最有信心项；季军战的轮换与出场时间不确定性支持姆巴佩0球。",
+        "settlement": {
+          "hits": 2,
+          "returns": 1852,
+          "delta": 652,
+          "picks": [
+            {
+              "dimension": "thirdPlace",
+              "choice": "英格兰",
+              "share": 30,
+              "stake": 500,
+              "hit": true,
+              "payout": 1667
+            },
+            {
+              "dimension": "totalGoals",
+              "choice": "2-3球",
+              "share": 71,
+              "stake": 500,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "englandFirstHalfGoal",
+              "choice": "是",
+              "share": 57,
+              "stake": 100,
+              "hit": true,
+              "payout": 175
+            },
+            {
+              "dimension": "mbappeGoals",
+              "choice": "0球",
+              "share": 18,
+              "stake": 100,
+              "hit": false,
+              "payout": 5
+            }
+          ]
+        }
       },
       "grok": {
         "status": "valid",
@@ -297,7 +453,46 @@
             "stake": 30
           }
         ],
-        "summary": "法国季军是最有信心项；英格兰上半场无进球来自开局谨慎与法国控球压迫。"
+        "summary": "法国季军是最有信心项；英格兰上半场无进球来自开局谨慎与法国控球压迫。",
+        "settlement": {
+          "hits": 0,
+          "returns": 20,
+          "delta": -210,
+          "picks": [
+            {
+              "dimension": "thirdPlace",
+              "choice": "法国",
+              "share": 70,
+              "stake": 100,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "totalGoals",
+              "choice": "2-3球",
+              "share": 71,
+              "stake": 50,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "englandFirstHalfGoal",
+              "choice": "否",
+              "share": 43,
+              "stake": 50,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "mbappeGoals",
+              "choice": "1球",
+              "share": 61,
+              "stake": 30,
+              "hit": false,
+              "payout": 5
+            }
+          ]
+        }
       },
       "qwen": {
         "status": "valid",
@@ -330,7 +525,46 @@
             "stake": 20
           }
         ],
-        "summary": "法国季军是最有信心项；英格兰上半场无进球来自法国中场限制与英格兰体能消耗。"
+        "summary": "法国季军是最有信心项；英格兰上半场无进球来自法国中场限制与英格兰体能消耗。",
+        "settlement": {
+          "hits": 0,
+          "returns": 20,
+          "delta": -170,
+          "picks": [
+            {
+              "dimension": "thirdPlace",
+              "choice": "法国",
+              "share": 70,
+              "stake": 100,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "totalGoals",
+              "choice": "2-3球",
+              "share": 71,
+              "stake": 50,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "englandFirstHalfGoal",
+              "choice": "否",
+              "share": 43,
+              "stake": 20,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "mbappeGoals",
+              "choice": "1球",
+              "share": 61,
+              "stake": 20,
+              "hit": false,
+              "payout": 5
+            }
+          ]
+        }
       },
       "glm": {
         "status": "valid",
@@ -363,7 +597,46 @@
             "stake": 20
           }
         ],
-        "summary": "法国季军是最有信心项；姆巴佩1球来自其核心射手定位与季军战进攻环境。"
+        "summary": "法国季军是最有信心项；姆巴佩1球来自其核心射手定位与季军战进攻环境。",
+        "settlement": {
+          "hits": 1,
+          "returns": 50,
+          "delta": -140,
+          "picks": [
+            {
+              "dimension": "thirdPlace",
+              "choice": "法国",
+              "share": 70,
+              "stake": 100,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "totalGoals",
+              "choice": "2-3球",
+              "share": 71,
+              "stake": 50,
+              "hit": false,
+              "payout": 5
+            },
+            {
+              "dimension": "englandFirstHalfGoal",
+              "choice": "是",
+              "share": 57,
+              "stake": 20,
+              "hit": true,
+              "payout": 35
+            },
+            {
+              "dimension": "mbappeGoals",
+              "choice": "1球",
+              "share": 61,
+              "stake": 20,
+              "hit": false,
+              "payout": 5
+            }
+          ]
+        }
       }
     },
     "outputs": {
@@ -372,6 +645,12 @@
       "ledger": "outputs/世界杯AI竞猜_每日余额台账.md",
       "prediction": "outputs/世界杯AI竞猜_预测战报_0718.html",
       "predictionArchive": "outputs/预测/2026-07-18_预测战报.html"
+    },
+    "results": {
+      "thirdPlace": "英格兰",
+      "totalGoals": "4球及以上",
+      "englandFirstHalfGoal": "是",
+      "mbappeGoals": "2球及以上"
     }
   }
 }
